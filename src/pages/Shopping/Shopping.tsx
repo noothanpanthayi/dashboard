@@ -3,13 +3,15 @@ import styles from './shopping.module.css'
 import { useDispatch } from 'react-redux'
 import { setCartList } from '../../redux/slices/cartlist'
 import { useGetProductsQuery } from '../../redux/api/productsapi';
+// import { ICartList } from '../../interfaces/IcartList';
+// import { AnyPtrRecord } from 'dns';
 
 const Shopping = () => {
   const dispatch = useDispatch()
 
 const {data,isLoading, error} =useGetProductsQuery(null);
 
-  const addToCart = (item:object) => {
+  const addToCart = (item:Iproduct|any) => {
     dispatch(setCartList(item))
   }
 

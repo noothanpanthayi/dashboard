@@ -7,6 +7,7 @@ export const cartListSlice = createSlice({
   },
   reducers: {
     setCartList: (state, action) => {
+      console.log((Array.isArray(state.cartlist)))
       state.cartlist.push(action.payload)
     },
     removeItem:(state,action)=>{
@@ -14,7 +15,6 @@ export const cartListSlice = createSlice({
       return row.id!==parseInt(action.payload)
      })
      state.cartlist=[...updatedList]
-    //  state.cartlist.splice(parseInt(action.payload),1)
     }
   },
 })

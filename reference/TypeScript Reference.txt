@@ -1,7 +1,26 @@
 
 
+  const {cartlist}:any=useSelector<any>(state=>state.cartlist);
+
+   interface Iproduct {
+    id:string,
+    title:string,
+    description:string,
+    price:number
+  }
+  const { cartlist }:NonNullable<any>= useSelector((state:Iproduct|any) => state?.cartlist)
+
+  
+
+  
   const deleteItem = (e:Event & {target:HTMLButtonElement})=> {
     dispatch(removeItem(e.target.id))
   }
+
+    const total = cartlist.reduce((accum:number, row:Iproduct) => {}
+
+const {data,isLoading, error} =useGetProductsQuery(null); //argument need to be passed
+
+
 
   
