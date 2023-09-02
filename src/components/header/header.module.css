@@ -1,0 +1,30 @@
+header {
+  background-color: darkblue;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  position:fixed;
+  top:0;
+  width:-webkit-fill-available;
+}
+
+nav {
+  max-width: 1024px;
+  display: flex;
+  margin: 0 auto;
+}
+
+nav a:link,
+nav a:visited  {
+  color: #fff;
+  margin: 0 5px;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+

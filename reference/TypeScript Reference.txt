@@ -1,0 +1,7 @@
+
+
+  const deleteItem = (e:Event & {target:HTMLButtonElement})=> {
+    dispatch(removeItem(e.target.id))
+  }
+
+  

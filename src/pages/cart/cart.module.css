@@ -1,0 +1,29 @@
+.grid {
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    border-left:solid 1px silver;
+    border-bottom:solid 1px silver;
+    margin-top:40px;
+    /* margin:45px; */
+
+}
+
+.grid div {
+    padding:10px;
+    border-top:solid 1px silver;
+    border-right:solid 1px silver;
+}
+
+.grid div:nth-child(-n+4) {
+  background-color: blue;
+  font-weight: bold;
+  color:#fff
+}
+
+.right {
+    text-align: right;
+}
+
+.pointer {
+    cursor: pointer;
+}
