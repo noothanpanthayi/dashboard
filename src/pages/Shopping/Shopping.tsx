@@ -1,18 +1,17 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import styles from './shopping.module.css'
 import { useDispatch } from 'react-redux'
-import { setCartList } from '../../redux/slices/cartlist'
+import { removeProduct, setCartList } from '../../redux/slices/cartlist'
 import { useGetProductsQuery } from '../../redux/api/productsapi';
-// import { ICartList } from '../../interfaces/IcartList';
-// import { AnyPtrRecord } from 'dns';
 
 const Shopping = () => {
   const dispatch = useDispatch()
 
 const {data,isLoading, error} =useGetProductsQuery(null);
 
-  const addToCart = (item:Iproduct|any) => {
-    dispatch(setCartList(item))
+  const addToCart = (item:Iproduct|any, index:number) => {
+    dispatch(setCartList(item));
+    
   }
 
   interface Iproduct {
@@ -28,7 +27,7 @@ const {data,isLoading, error} =useGetProductsQuery(null);
       {error&&<div>error</div>}
       {isLoading&&<div>Loading...</div>}
         <div className={styles.grid}>
-          {data?.products?.map((item:Iproduct) => {
+          {data?.products?.map((item:Iproduct, index:number) => {
             return (
               <Fragment key={item.id}>
                 <div className={styles.card}>
@@ -45,7 +44,7 @@ const {data,isLoading, error} =useGetProductsQuery(null);
                   </div>
                   <div className={styles.price}>Price:{item.price}</div>
                   <div className={styles.footer}>
-                    <button onClick={() => addToCart(item)}>Add to Cart</button>
+                    <button onClick={() => addToCart(item, index)}>Add to Cart</button>
                   </div>
                 </div>
               </Fragment>
@@ -56,9 +55,7 @@ const {data,isLoading, error} =useGetProductsQuery(null);
     )
   }
   return (
-    <>
       <Grid />
-    </>
   )
 }
 
