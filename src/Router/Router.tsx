@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home/Home'
 import Shopping from '../pages/Shopping/Shopping';
@@ -12,6 +11,7 @@ const AppRouter = () => {
       <Route  path="/dashboard" element={<Home />}></Route>
       <Route  path="/shopping" element={<Shopping />}></Route>
       <Route  path="/cart" element={<ShoppingCart />}></Route>
+      <Route  path="*" element={<Shopping />} />
     </Routes>
     </div>
   )
