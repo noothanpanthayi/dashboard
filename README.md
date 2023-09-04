@@ -1,5 +1,16 @@
 # Getting Started with Create React App
 
+This web-based app is developed in ReactJs using TypeScript.
+
+The following ReactJs features are used to develop this app:
+(a) React Router is used to navigate across the application
+(b) Redux Toolkit is used to maintain state across the application
+(c) RTK Query is used to fetch the fake JSON api data from a remote server
+(d) Custom Hook is used to encapsulate all business logic and API calls
+(e) CSS Module is used for styling the application
+(f) CSS Grid is used to tile the products and to make it responsive across devices
+Source code of this app can be viewed at the following Github location:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
