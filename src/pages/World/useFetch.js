@@ -53,7 +53,10 @@ const useFetch = (country) => {
         setState(prevState=>{
             return {
                 ...prevState,
-                resposne:[]
+                response:[],
+                error: false,
+                errorMsg: '',
+                loading: false,
             }
         })
     }

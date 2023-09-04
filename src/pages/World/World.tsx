@@ -17,19 +17,34 @@ function World() {
   const Row = ({ row, index }: WorldProps) => {
     return (
       <Fragment key={index}>
-   
         <div className={styles.card}>
-     
-        <div style={{display:'flex', flexDirection:'column', }}>
-        <div style={{fontSize:20, fontWeight:'bold', color:'blue',marginBottom:5}}>{row.name.official}</div>
-        <div><strong>Capital:</strong>{row && row.capital && row?.capital[0]}</div>
-        <div><strong>Population:</strong>{row?.population}</div>
-     
-        <div><strong>Map:</strong><a href={row.maps.googleMaps} target="_blank">View in Google Map</a></div>
-        </div>
-      
+          <div className={styles.infoContainer}>
+            <div className={styles.cardHeader}>{row.name.official}</div>
+            <div className={styles.infoText}>
+              <strong>Capital:</strong>
+              {row && row.capital && row?.capital[0]}
+            </div>
+            <div className={styles.infoText}>
+              <strong>Population:</strong>
+              {(row?.population).toLocaleString('en-US')}
+            </div>
 
-          <div><img className={styles.image} alt="flag" src={row.flags.png}  /></div>
+            <div className={styles.infoText}>
+              <strong>Map:</strong>
+              <a
+                className={styles.mapLink}
+                href={row.maps.googleMaps}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View in Google Map
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <img className={styles.image} alt="flag" src={row.flags.png} />
+          </div>
         </div>
       </Fragment>
     )
@@ -39,16 +54,18 @@ function World() {
     <>
       <Fragment>
         <div className={styles.container}>
-          {error && <h2>Error {errorMsg}</h2>}
+          {error && <h2>Error Encountered, check the spelling!</h2>}
           {loading && <h2>Loading...</h2>}
-          <div style={{width:600,display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-          <label className={styles.inputLabel}>Type a Country Name</label><input
-            className={styles.textInput}
-            type="text"
-            onChange={getUserInputTxt}
-            value={state.userInputTxt}
-            placeholder='eg. type USA'
-          />
+          <div className={styles.searchContainer}>
+            <label className={styles.inputLabel}>Type a Country Name</label>
+            <input
+              className={styles.textInput}
+              type="text"
+              autoFocus
+              onChange={getUserInputTxt}
+              value={state.userInputTxt}
+              placeholder="eg. type USA"
+            />
           </div>
 
           <div>

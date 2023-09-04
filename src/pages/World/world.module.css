@@ -1,7 +1,7 @@
 
 .container {
     margin-top:60px;
-    min-height:88vh;
+    min-height:91vh;
 }
 
 .textInput {
@@ -11,7 +11,7 @@
     border:solid 5px darkblue;
     padding:5px;
     border-radius:6px;
-    width:600px;
+    /* width:600px; */
     max-width: 600px;
     margin-bottom:20px
 }
@@ -19,23 +19,57 @@
 .inputLabel {
     font-size:18px;
     font-weight:bold;
-    color:green
+    color:#666
 }
 
 .image {
     margin:3px;
+    width:100%;
     border:solid 3px silver
 }
 
 .card {
-    padding:10px;
+    padding:10px 20px;
     border:solid 2px silver;
     border-radius:8px;
     display:flex; 
     flex-direction:row;
     justify-content:space-between;
-    width:600px;
+    max-width:600px;
     margin:20px 0;
     box-shadow:2px 6px 8px 1px silver;
     background-color:lightyellow
+}
+
+.cardHeader {
+    font-size:20px;
+    font-weight:bold;
+    color:blue;
+    margin-bottom:5px
+}
+
+.infoContainer {
+   display:flex;
+   flex-direction:column
+}
+
+
+
+.infoText {
+    line-height: 30px;
+    font-family:arial;
+    color:darkblue!important;
+    font-weight: bold;
+}
+
+.mapLink:link, 
+.mapLink:visited{
+    color:blue!important
+}
+
+.searchContainer {
+    max-width:600;
+    display:flex;
+    flex-direction:column; 
+    justify-content:space-between
 }
