@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# ReactJs Applications
 
 This web-based app is developed in ReactJs using TypeScript.
 
