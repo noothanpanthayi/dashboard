@@ -5,10 +5,10 @@ import { ShoppingCartProps } from './interface/types'
 import { useShoppingCart } from './useShoppingCart'
 
 const ShoppingCart = () => {
-  const { state, dispatch, cartlist, deleteItem } = useShoppingCart()
 
-  const Row = ({ row, index }: ShoppingCartProps) => {
-    //or :React.ReactElement
+  const { state, cartlist, deleteItem } = useShoppingCart();
+
+  const Row = ({ row, index }: ShoppingCartProps) => { //or :React.ReactElement
     return (
       <Fragment key={index}>
         <div>{row.id} </div> <div>{row.description} </div>

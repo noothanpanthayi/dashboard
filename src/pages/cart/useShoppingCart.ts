@@ -5,13 +5,6 @@ import { IreduxState } from '../../interfaces/state'
 import { CartItem } from './interface/interface'
 import { removeItem } from '../../redux/slices/cartlist'
 
-// type SCReturns={
-// state:{total:number},
-// dispatch:React.Dispatch<any>,
-// cartlist:NonNullable<ICartList | any>,
-// deleteItem:React.MouseEvent<HTMLDivElement>
-// }
-
 export function useShoppingCart() {
   const [state, setState] = useState({
     total: 0,
@@ -46,3 +39,14 @@ export function useShoppingCart() {
 
   return { state, dispatch, cartlist, deleteItem }
 }
+
+
+//Reference
+/*
+type SCReturns={
+state:{total:number},
+dispatch:React.Dispatch<any>,
+cartlist:NonNullable<ICartList | any>,
+deleteItem:React.MouseEvent<HTMLDivElement>
+}
+*/
