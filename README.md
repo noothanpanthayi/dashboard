@@ -2,7 +2,7 @@
 
 This web-based app is developed in ReactJs using TypeScript.
 
-The following ReactJs features are used to develop this app:
+The following ReactJs features are used to develop the Online Shopping app:
 
 (a) React Router is used to navigate across the application
 
