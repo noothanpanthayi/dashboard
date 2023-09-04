@@ -5,7 +5,7 @@ export interface World {
   flags: {
     png: string
   }
-  capital:string,
+  capital:string
   maps:{
     googleMaps:string
   }

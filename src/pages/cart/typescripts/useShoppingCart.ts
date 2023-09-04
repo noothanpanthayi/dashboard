@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { ICartList } from '../../interfaces/IcartList'
-import { IreduxState } from '../../interfaces/state'
-import { CartItem } from './interface/interface'
-import { removeItem } from '../../redux/slices/cartlist'
+import { ICartList } from '../../../interfaces/IcartList'
+import { IreduxState } from '../../../interfaces/state'
+import { CartItem } from '../types/interface'
+import { removeItem } from '../../../redux/slices/cartlist'
 
 export function useShoppingCart() {
+
   const [state, setState] = useState({
     total: 0,
   })
@@ -39,12 +40,4 @@ export function useShoppingCart() {
   return { state, dispatch, cartlist, deleteItem }
 }
 
-//Reference
-/*
-type SCReturns={
-state:{total:number},
-dispatch:React.Dispatch<any>,
-cartlist:NonNullable<ICartList | any>,
-deleteItem:React.MouseEvent<HTMLDivElement>
-}
-*/
+

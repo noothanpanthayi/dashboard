@@ -1,70 +1,47 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { UseCountryInfo } from './UseCountryInfo'
 import { WorldProps } from './types'
 import styles from './world.module.css'
 
 function World() {
   const {
-    state,
     getUserInputTxt,
     response,
     error,
-    errorMsg,
     loading,
     responseOkay,
   } = UseCountryInfo()
 
-  const Row = ({ row, index }: WorldProps) => {
-    return (
-      <Fragment key={index}>
-        <div className={styles.card}>
-          <div className={styles.infoContainer}>
-            <div className={styles.cardHeader}>{row.name.official}</div>
-            <div className={styles.infoText}>
-              <strong>Capital:</strong>
-              {row && row.capital && row?.capital[0]}
-            </div>
-            <div className={styles.infoText}>
-              <strong>Population:</strong>
-              {(row?.population).toLocaleString('en-US')}
-            </div>
-
-            <div className={styles.infoText}>
-              <strong>Map:</strong>
-              <a
-                className={styles.mapLink}
-                href={row.maps.googleMaps}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View in Google Map
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <img className={styles.image} alt="flag" src={row.flags.png} />
-          </div>
-        </div>
-      </Fragment>
-    )
-  }
+  const {
+    container,
+    searchContainer,
+    inputLabel,
+    textInput,
+    userInputTxt,
+    card,
+    infoContainer,
+    cardHeader,
+    infoText,
+    mapLink,
+    image,
+  } = styles
 
   return (
     <>
       <Fragment>
-        <div className={styles.container}>
+        <div className={container}>
           {error && <h2>Error Encountered, check the spelling!</h2>}
           {loading && <h2>Loading...</h2>}
-          <div className={styles.searchContainer}>
-            <label className={styles.inputLabel}>Type a Country Name</label>
+
+          <div className={searchContainer}>
+            <label className={inputLabel}>Type a Country Name</label>
             <input
-              className={styles.textInput}
+              className={textInput}
               type="text"
               autoFocus
               onChange={getUserInputTxt}
-              value={state.userInputTxt}
-              placeholder="eg. type USA"
+              value={userInputTxt}
+              placeholder="eg. type usa"
             />
           </div>
 
@@ -78,25 +55,42 @@ function World() {
       </Fragment>
     </>
   )
+
+  function Row({ row, row: { name, capital, population }, index }: WorldProps) {
+    return (
+      <Fragment key={index}>
+        <div className={card}>
+          <div className={infoContainer}>
+            <div className={cardHeader}>{name.official}</div>
+            <div className={infoText}>
+              <strong>Capital:</strong>
+              {capital && capital[0]}
+            </div>
+            <div className={infoText}>
+              <strong>Population:</strong>
+              {population.toLocaleString('en-US')}
+            </div>
+
+            <div className={infoText}>
+              <strong>Map:</strong>
+              <a
+                className={mapLink}
+                href={row.maps.googleMaps}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View in Google Map
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <img className={image} alt="flag" src={row.flags.png} />
+          </div>
+        </div>
+      </Fragment>
+    )
+  }
 }
 
 export default World
-
-//Reference
-// type WorldError={
-//     errorObj:{
-//         error:boolean
-//         errorMsg:string
-//     }
-//   }
-
-// type WorldLoading={
-// loading:boolean
-// }
-//   const OnError = ({ errorObj }:WorldError) => {
-//     return errorObj.error && <h2>Error {errorObj.errorMsg}</h2>
-//   }
-
-//   const OnLoading = ({ loading }:WorldLoading) => {
-//     return loading && <h2>Loading...</h2>
-//   }

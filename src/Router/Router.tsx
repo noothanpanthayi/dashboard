@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home/Home'
 import Shopping from '../pages/Shopping/Shopping';
 import styles from './router.module.css'
-import ShoppingCart from '../pages/Cart/ShoppingCart';
 import World from '../pages/World/World';
+import ShoppingCart from '../pages/Cart/components/ShoppingCart';
 
 const AppRouter = () => {
   return (

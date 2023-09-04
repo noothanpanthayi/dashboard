@@ -22,5 +22,32 @@
 const {data,isLoading, error} =useGetProductsQuery(null); //argument need to be passed
 
 
-
+//Reference
+/*
+type SCReturns={
+state:{total:number},
+dispatch:React.Dispatch<any>,
+cartlist:NonNullable<ICartList | any>,
+deleteItem:React.MouseEvent<HTMLDivElement>
+}
+*/
   
+
+//Reference
+// type WorldError={
+//     errorObj:{
+//         error:boolean
+//         errorMsg:string
+//     }
+//   }
+
+// type WorldLoading={
+// loading:boolean
+// }
+//   const OnError = ({ errorObj }:WorldError) => {
+//     return errorObj.error && <h2>Error {errorObj.errorMsg}</h2>
+//   }
+
+//   const OnLoading = ({ loading }:WorldLoading) => {
+//     return loading && <h2>Loading...</h2>
+//   }

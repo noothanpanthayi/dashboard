@@ -1,2 +1,2 @@
-export { default } from './ShoppingCart';
+export { default } from './components/ShoppingCart';
 

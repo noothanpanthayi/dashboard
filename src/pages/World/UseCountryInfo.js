@@ -3,7 +3,6 @@ import { useDebounce } from './useDebounce'
 import useFetch from './useFetch'
 
 export const UseCountryInfo = () => {
-
   const [state, setState] = useState({
     response: [],
     error: false,
@@ -12,8 +11,8 @@ export const UseCountryInfo = () => {
     userInputTxt: '',
   })
 
-  const debouncedValue = useDebounce(state.userInputTxt, 500);
-  const { response, error, errorMsg, loading } = useFetch(debouncedValue);
+  const debouncedValue = useDebounce(state.userInputTxt, 500)
+  const { response, error, errorMsg, loading } = useFetch(debouncedValue)
 
   const getUserInputTxt = (e) => {
     setState((prevState) => {
@@ -25,13 +24,7 @@ export const UseCountryInfo = () => {
   }
 
   const responseOkay = (state) => {
-    return <>
-    {
-        console.log(state.userInputTxt)
-  }
-      {  state.userInputTxt && state.userInputTxt.length > 0 
-    }
-      </>
+    return <>{state.userInputTxt && state.userInputTxt.length > 0}</>
   }
 
   return {
