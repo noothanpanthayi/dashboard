@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { UseCountryInfo } from './UseCountryInfo'
 import { WorldProps } from './types'
 import styles from './world.module.css'
+import About from './About'
 
 function World() {
   const {
@@ -28,6 +29,7 @@ function World() {
 
   return (
     <>
+    <About/>
       <Fragment>
         <div className={container}>
           {error && <h2>Error Encountered, check the spelling!</h2>}
@@ -48,7 +50,7 @@ function World() {
           <div>
             {responseOkay(response) &&
               response?.map((row, index) => {
-                return <Row row={row} index={index} />
+                return <Row key={index} row={row} index={index} />
               })}
           </div>
         </div>
