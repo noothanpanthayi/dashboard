@@ -20,7 +20,6 @@ export function useShoppingCart() {
     let total = cartlist.reduce((accum: number, row: CartItem) => {
       return accum + row.price
     }, 0)
-
     setState((prevState) => {
       return {
         total,
@@ -35,11 +34,10 @@ export function useShoppingCart() {
 
   useEffect(() => {
     getTotal()
-  }, [])
+  }, [cartlist])
 
   return { state, dispatch, cartlist, deleteItem }
 }
-
 
 //Reference
 /*

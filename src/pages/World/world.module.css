@@ -1,0 +1,41 @@
+
+.container {
+    margin-top:60px;
+    min-height:88vh;
+}
+
+.textInput {
+    font-size:18px;
+    font-weight:bold;
+    color:blue;
+    border:solid 5px darkblue;
+    padding:5px;
+    border-radius:6px;
+    width:600px;
+    max-width: 600px;
+    margin-bottom:20px
+}
+
+.inputLabel {
+    font-size:18px;
+    font-weight:bold;
+    color:green
+}
+
+.image {
+    margin:3px;
+    border:solid 3px silver
+}
+
+.card {
+    padding:10px;
+    border:solid 2px silver;
+    border-radius:8px;
+    display:flex; 
+    flex-direction:row;
+    justify-content:space-between;
+    width:600px;
+    margin:20px 0;
+    box-shadow:2px 6px 8px 1px silver;
+    background-color:lightyellow
+}

@@ -5,15 +5,16 @@ import AppRouter from './router/Router'
 import Footer from './components/footer/footer'
 
 function App() {
-  return (
-    <div>
+  return <>
+
       <Router>
         <Header />
         <AppRouter />
         <Footer/>
       </Router>
-    </div>
-  )
+    {/* </div> */}
+  
+  </>
 }
 
 export default App
