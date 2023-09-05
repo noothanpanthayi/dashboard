@@ -7,7 +7,7 @@ import { useShoppingCart } from '../typescripts/useShoppingCart'
 const ShoppingCart = () => {
 
   const { state, cartlist, deleteItem } = useShoppingCart()
-  const { right, pointer, grid } = styles
+  const { right, pointer, grid, bold, totalValue } = styles
 
   return (
     <div className={grid}>
@@ -16,8 +16,8 @@ const ShoppingCart = () => {
         <Row key={index} row={row} index={index} />
       ))}
       <div>&nbsp;</div>
-      <div className={right}>Total:</div>
-      <div className={right}>{state.total.toFixed(2)}</div>
+      <div className={`${right} ${bold}`}>Total:</div>
+      <div className={`${right} ${totalValue}`}>{state.total.toFixed(2)}</div>
       <div>&nbsp;</div>
     </div>
   )

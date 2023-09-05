@@ -35,7 +35,7 @@
   bottom: 0;
   color: #fff;
   background-color: gray;
-  padding: 3px;
+  padding: 5px;
   width: -webkit-fill-available;
   text-align: center;
   background-color: steelblue;
@@ -48,7 +48,7 @@
   padding: 0px 10px;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -66,5 +66,5 @@
   color: blue;
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }

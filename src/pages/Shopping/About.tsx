@@ -35,7 +35,7 @@ function About() {
   }
             <span className={aboutHeader}>
               {' '}
-              About Online Shopping App
+              About Shopping App
             </span>
           </div>
           {!state.aboutHidden && (

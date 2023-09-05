@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <div>Online Shopping</div>
-      <p>This application is developed in ReactJs incorporating TypeScript and Redux Toolkit.</p>
+      {/* <p>This application is developed in ReactJs incorporating TypeScript and Redux Toolkit.</p> */}
 <ShoppingAbout/>
 <WorldAbout/>
 

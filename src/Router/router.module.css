@@ -1,5 +1,5 @@
 .container {
     max-width: 1024px;
-    margin:0 auto;
+    margin:0 auto 40px auto;
     z-index: -1;
 }

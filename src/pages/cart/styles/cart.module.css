@@ -3,20 +3,21 @@
   grid-template-columns: 100px 500px 100px 150px;
   border-left: solid 1px silver;
   border-bottom: solid 1px silver;
-  margin: 40px 0;
+  margin: 55px 0;
   max-width: fit-content;
 }
 
 .grid div {
+  
   padding: 10px;
   border-top: solid 1px silver;
   border-right: solid 1px silver;
 }
 
 .grid div:nth-child(-n + 4) {
-  background-color: blue;
+  background-color: #ffcc00;
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 
 
@@ -26,4 +27,15 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.bold {
+  font-weight:bold;
+
+}
+
+.totalValue {
+  text-decoration: underline;
+  text-decoration-style: double;
+  font-weight:bold
 }

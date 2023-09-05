@@ -5,4 +5,7 @@ footer {
     padding:5px;
     text-align: left;
     margin-top:10px;
+    position:fixed;
+    bottom:0;
+    width:-webkit-fill-available
 }
