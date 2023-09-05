@@ -5,13 +5,14 @@ import styles from './world.module.css'
 import About from './About'
 
 function World() {
+
   const {
     getUserInputTxt,
     response,
     error,
     loading,
     responseOkay,
-  } = UseCountryInfo()
+  } = UseCountryInfo() //All functions are encapsulted in this Custom Hook
 
   const {
     container,

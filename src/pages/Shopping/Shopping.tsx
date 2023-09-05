@@ -10,13 +10,13 @@ import About from './About'
 const Shopping = () => {
   const dispatch = useDispatch()
 
-  const { data, isLoading, error } = useGetProductsQuery(null)
+  const { data, isLoading, error } = useGetProductsQuery(null); //fetch API using RTK Query
 
-  const addToCart = (item: Product | any, index: number) => {
+  const addToCart = (item: Product | any, index: number) => { //updating the Redux State
     dispatch(setCartList(item))
   }
 
-  const { grid, card, header, image, price: displayPrice, footer } = styles
+  const { grid, card, header, image, price: displayPrice, footer } = styles //fetching the styles from css module
 
   const Grid = () => {
     return (
@@ -25,7 +25,7 @@ const Shopping = () => {
         {error && <div>error</div>}
         {isLoading && <div>Loading...</div>}
         <div className={grid}>
-          {data?.products?.map((item: Product, index: number) => (
+          {data?.products?.map((item: Product, index: number) => ( //Interface Product specifies the type for item
             <Row key={index} item={item} index={index} />
           ))}
         </div>
@@ -37,7 +37,7 @@ const Shopping = () => {
     item,
     item: { id, title, price, images },
     index,
-  }: ProductProps) {
+  }: ProductProps) { //Type ProductProps specifies the type for the props
     return (
       <Fragment key={id}>
         <div className={card}>

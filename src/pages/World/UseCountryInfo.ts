@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDebounce } from './useDebounce'
 import useFetch from './useFetch'
+import { ResponseType } from './types'
 
 export const UseCountryInfo = () => {
   const [state, setState] = useState({
@@ -11,8 +12,9 @@ export const UseCountryInfo = () => {
     userInputTxt: '',
   })
 
-  const debouncedValue = useDebounce(state.userInputTxt, 500)
-  const { response, error, errorMsg, loading } = useFetch(debouncedValue)
+  const debouncedValue = useDebounce(state.userInputTxt, 500); //Debounce feature is incorporated in this Custom Hook
+
+  const { response, error, errorMsg, loading } = useFetch(debouncedValue); //Fetch API feature is encapsulted in this Custom Hook
 
   const getUserInputTxt = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.trim().length > 0) {
@@ -25,15 +27,7 @@ export const UseCountryInfo = () => {
     }
   }
 
-  type ResponseType = {
-    response: Array<string>
-    error: boolean
-    errorMsg: string
-    loading: boolean
-    userInputTxt: string
-  }
-
-  function responseOkay(state: ResponseType) {
+  function responseOkay(state: ResponseType) { //ResponseType spcified the type for the State
     return state.userInputTxt && state.userInputTxt.length > 0
   }
 

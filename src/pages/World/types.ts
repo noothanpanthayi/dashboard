@@ -16,3 +16,11 @@ export type WorldProps = {
   row: World
   index: number
 }
+
+export type ResponseType = {
+  response: Array<string>
+  error: boolean
+  errorMsg: string
+  loading: boolean
+  userInputTxt: string
+} 

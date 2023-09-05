@@ -7,15 +7,17 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
   const {cartlist}:any=useSelector<any>(state=>state.cartlist);
-
+  
+  const {bold, yellow}=styles;
+  
   return (
     <header>
         <nav>
-     <NavLink  to="/dashboard" className="active">Home</NavLink>
-
-          <NavLink to="/shopping"  className="active">Shopping</NavLink>
-          <NavLink to="/world"  className="active">WorldInfo</NavLink>
-          <NavLink to="/cart"  className="active">Cart<span className={styles.bold}>({cartlist.length})</span></NavLink>
+     <NavLink  to="/dashboard" className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Home</NavLink>
+          <NavLink to="/shopping"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Shopping</NavLink>
+          <NavLink to="/world"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>WorldInfo</NavLink>
+          <NavLink to="/cart"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Cart <span className={yellow}>({cartlist.length})</span></NavLink>
+        
       </nav>
     </header>
   )

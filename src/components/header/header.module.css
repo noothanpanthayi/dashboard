@@ -24,8 +24,13 @@ nav a:visited  {
   text-decoration: none;
 }
 
-.bold {
+a span.bold:visited {
   font-weight: bold;
+}
+
+.yellow {
+  color:greenyellow;
+  font-weight:bold
 }
 
 
