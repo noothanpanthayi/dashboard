@@ -13,7 +13,7 @@ const ShoppingCart = () => {
     <div className={grid}>
       <Header />
       {cartlist?.map((row: CartItem, index: number) => (
-        <Row row={row} index={index} />
+        <Row key={index} row={row} index={index} />
       ))}
       <div>&nbsp;</div>
       <div className={right}>Total:</div>

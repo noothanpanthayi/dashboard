@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const useFetch = (country) => {
+const useFetch = (country: string) => {
   const [state, setState] = useState({
     response: [],
     error: false,
@@ -9,22 +9,22 @@ const useFetch = (country) => {
   })
 
   const fetchAPI = async () => {
-    if (!country){
-        setState((prevState) => {
-            return {
-              ...prevState,
-              loading:false,
-              response:[],
-            }
-          });
-          return false
+    if (!country) {
+      setState((prevState) => {
+        return {
+          ...prevState,
+          loading: false,
+          response: [],
+        }
+      })
+      return false
     }
     try {
       const header = await fetch(
         `https://restcountries.com/v3.1/name/${country}`,
       )
-      if (!header.ok) {
-        throw new Error(header.status)
+      if (!header?.ok) {
+        throw new Error('header.status')
       }
       const response = await header.json()
       setState((prevState) => {
@@ -34,11 +34,11 @@ const useFetch = (country) => {
           loading: false,
         }
       })
-    } catch ({ name, message }) {
-      setState((prevState) => {
+    } catch ({ name, message }:any) {
+      setState((prevState:any) => {
         return {
           ...prevState,
-          response:[],
+          response: [],
           error: true,
           errorMsg: message,
           loading: false,
@@ -49,16 +49,16 @@ const useFetch = (country) => {
 
   useEffect(() => {
     fetchAPI()
-    return ()=>{
-        setState(prevState=>{
-            return {
-                ...prevState,
-                response:[],
-                error: false,
-                errorMsg: '',
-                loading: false,
-            }
-        })
+    return () => {
+      setState((prevState) => {
+        return {
+          ...prevState,
+          response: [],
+          error: false,
+          errorMsg: '',
+          loading: false,
+        }
+      })
     }
   }, [country])
 

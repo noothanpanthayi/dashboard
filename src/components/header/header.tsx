@@ -11,7 +11,6 @@ const Header = () => {
   return (
     <header>
         <nav>
-          <NavLink  to="/dashboard" className="active">Home</NavLink>
           <NavLink to="/shopping"  className="active">Shopping</NavLink>
           <NavLink to="/world"  className="active">WorldInfo</NavLink>
           <NavLink to="/cart"  className="active">Cart<span className={styles.bold}>({cartlist.length})</span></NavLink>

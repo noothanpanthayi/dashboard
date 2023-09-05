@@ -48,7 +48,7 @@ function World() {
           </div>
 
           <div>
-            {responseOkay(response) &&
+            {response.length>0 &&
               response?.map((row, index) => {
                 return <Row key={index} row={row} index={index} />
               })}

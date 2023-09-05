@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useDebounce } from './useDebounce'
 import useFetch from './useFetch'
 
@@ -14,17 +14,27 @@ export const UseCountryInfo = () => {
   const debouncedValue = useDebounce(state.userInputTxt, 500)
   const { response, error, errorMsg, loading } = useFetch(debouncedValue)
 
-  const getUserInputTxt = (e) => {
-    setState((prevState) => {
-      return {
-        ...prevState,
-        userInputTxt: e.target.value,
-      }
-    })
+  const getUserInputTxt = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value.trim().length > 0) {
+      setState((prevState) => {
+        return {
+          ...prevState,
+          userInputTxt: e.target.value,
+        }
+      })
+    }
   }
 
-  const responseOkay = (state) => {
-    return <>{state.userInputTxt && state.userInputTxt.length > 0}</>
+  type ResponseType = {
+    response: Array<string>
+    error: boolean
+    errorMsg: string
+    loading: boolean
+    userInputTxt: string
+  }
+
+  function responseOkay(state: ResponseType) {
+    return state.userInputTxt && state.userInputTxt.length > 0
   }
 
   return {

@@ -6,7 +6,8 @@ const {
     aboutContainer,
     aboutHeader,
     arrow,
-    codeLink
+    codeLink,
+    aboutContent
   } = styles
 
 
@@ -38,39 +39,45 @@ function About() {
   }
             <span className={aboutHeader}>
               {' '}
-              About World Info  App
+              About Online Shopping App
             </span>
           </div>
           {!state.aboutHidden && (
-            <div>
+            <div className={aboutContent}>
               <p>
                 <strong>
-                  This web-based app is developed in{' '}
-                  <span style={{ color: 'blue' }}>ReactJs</span> using{' '}
-                  <span>TypeScript</span>.
+                  This web-based app is developed in {' '}
+                  <span style={{ color: 'blue' }}>ReactJs.</span> using TypeScript.
                 </strong>
               </p>
               <p>
                 The following ReactJs features are used to develop this app:
+              </p>
                 <ul>
                   <li>
-                    (a) Native fetch is used to fetch a free-to-use api from a remote server 
+                    (a) React Router is used to navigate across the application
                   </li>
                   <li>
-                    (b) Debounce concept is incorporated into a React custom hook, 
-                    to prevent making api request on each letter typed by the user
+                    (b) Redux Toolkit is used to maintain state across the
+                    application
+                  </li>
+                  <li>
+                    (c) RTK Query is used to fetch the fake JSON api data from a
+                    remote server
+                  </li>
+                  <li>
+                    (d) Custom Hook is used to encapsulate all business logic and API calls
                   </li>
                   <li>(e) CSS Module is used for styling the application</li>
                   <li>
-                    (f) CSS Grid is used to tile the products and to make it responsive across devices
+                    (f) CSS flex is used to make card responsive across devices
                   </li>
                 </ul>
                 <p>Source code of this app can be viewed at the following Github location:<br/>
                   <a title="Opens in another tab of this browser" className={codeLink} target="_blank" rel="noreferrer" 
-                  href="https://github.com/noothanpanthayi/dashboard/tree/master/src/pages/World">View Source Code</a>
+                  href="https://github.com/noothanpanthayi/dashboard/tree/master/src/pages/Shopping">View Source Code</a>
                   <span title="Opens in another tab of this browser" style={{color:'green'}}>◥</span>
                 </p>
-              </p>
             </div>
           )}
         </div>

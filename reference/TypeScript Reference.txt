@@ -11,6 +11,7 @@
   const { cartlist }:NonNullable<any>= useSelector((state:Iproduct|any) => state?.cartlist)
 
   
+  const getUserInputTxt = (e: React.ChangeEvent<HTMLInputElement>) => {
 
   
   const deleteItem = (e:Event & {target:HTMLButtonElement})=> {

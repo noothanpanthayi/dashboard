@@ -26,7 +26,7 @@ const Shopping = () => {
         {isLoading && <div>Loading...</div>}
         <div className={grid}>
           {data?.products?.map((item: Product, index: number) => (
-            <Row item={item} index={index} />
+            <Row key={index} item={item} index={index} />
           ))}
         </div>
       </>
