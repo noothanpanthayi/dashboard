@@ -1,1 +1,2 @@
      <NavLink  to="/dashboard" className="active">Home</NavLink>
+     <Route  path="/dashboard" element={<Home />}></Route> 
