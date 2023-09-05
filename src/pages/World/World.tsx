@@ -26,7 +26,7 @@ function World() {
     mapLink,
     image,
     errorTxt
-  } = styles
+  } = styles //fetching the styles from css module
 
   return (
     <>
