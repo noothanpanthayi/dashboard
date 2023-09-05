@@ -1,9 +1,10 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 100px 500px 100px 150px;
   border-left: solid 1px silver;
   border-bottom: solid 1px silver;
   margin: 40px 0;
+  max-width: fit-content;
 }
 
 .grid div {
@@ -17,6 +18,7 @@
   font-weight: bold;
   color: #fff;
 }
+
 
 .right {
   text-align: right;
