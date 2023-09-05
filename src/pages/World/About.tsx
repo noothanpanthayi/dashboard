@@ -34,6 +34,11 @@ function About() {
               </strong>
             </p>
             <p>
+              This is to demo a search feature to fetch a user typed country info from a free-to-use API.
+              <br/> Debounce concept is incorporated to improve the performance of the search.
+
+            </p>
+            <p>
               The following ReactJs features are used to develop this app:
             </p>
               <ul>
@@ -42,12 +47,12 @@ function About() {
                   remote server
                 </li>
                 <li>
-                  (b) Debounce concept is incorporated into a React custom hook,
+                  (b) Debounce feature is encapsulated into a React custom hook,
                   to prevent making api request on each letter typed by the user
                 </li>
                 <li>(e) CSS Module is used for styling the application</li>
                 <li>
-                  (f) CSS flex is used to style the card make it
+                  (f) CSS flex is used to style the card and make it
                   responsive across devices
                 </li>
               </ul>

@@ -11,7 +11,6 @@ function World() {
     response,
     error,
     loading,
-    responseOkay,
   } = UseCountryInfo() //All functions are encapsulted in this Custom Hook
 
   const {
@@ -26,6 +25,7 @@ function World() {
     infoText,
     mapLink,
     image,
+    errorTxt
   } = styles
 
   return (
@@ -33,7 +33,7 @@ function World() {
     <About/>
       <Fragment>
         <div className={container}>
-          {error && <h2>Error Encountered, check the spelling!</h2>}
+          {error && <div className={errorTxt}>Invalid or Empty Country Name!</div>}
           {loading && <h2>Loading...</h2>}
 
           <div className={searchContainer}>

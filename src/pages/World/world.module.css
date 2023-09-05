@@ -62,6 +62,12 @@
     font-weight: bold;
 }
 
+.errorTxt {
+    color:#cc0066;
+    font-family: arial;
+    font-size:14px;
+}
+
 .mapLink:link, 
 .mapLink:visited{
     color:blue!important

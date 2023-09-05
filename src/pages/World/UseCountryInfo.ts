@@ -17,14 +17,12 @@ export const UseCountryInfo = () => {
   const { response, error, errorMsg, loading } = useFetch(debouncedValue); //Fetch API feature is encapsulted in this Custom Hook
 
   const getUserInputTxt = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value.trim().length > 0) {
       setState((prevState) => {
         return {
           ...prevState,
           userInputTxt: e.target.value,
         }
       })
-    }
   }
 
   function responseOkay(state: ResponseType) { //ResponseType spcified the type for the State
