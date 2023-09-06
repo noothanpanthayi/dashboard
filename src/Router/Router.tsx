@@ -4,6 +4,7 @@ import Shopping from '../pages/Shopping/Shopping';
 import styles from './router.module.css'
 import World from '../pages/World/World';
 import ShoppingCart from '../pages/Cart/components/ShoppingCart';
+import ToDo from '../pages/ToDo/ToDo';
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,9 @@ const AppRouter = () => {
       <Route  path="/shopping" element={<Shopping />}></Route>
       <Route  path="/world" element={<World />}></Route>
       <Route  path="/cart" element={<ShoppingCart />}></Route>
+
+      <Route  path="/todo" element={<ToDo />}></Route>
+
     </Routes>
     </div>
   )

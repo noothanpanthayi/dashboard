@@ -5,35 +5,17 @@ import styles from './world.module.css'
 import About from './About'
 
 function World() {
-
-  const {
-    getUserInputTxt,
-    response,
-    error,
-    loading,
-  } = UseCountryInfo() //All functions are encapsulted in this Custom Hook
-
-  const {
-    container,
-    searchContainer,
-    inputLabel,
-    textInput,
-    userInputTxt,
-    card,
-    infoContainer,
-    cardHeader,
-    infoText,
-    mapLink,
-    image,
-    errorTxt
-  } = styles //fetching the styles from css module
+  const { getUserInputTxt, response, error, loading } = UseCountryInfo()
+  //All functions are encapsulted in the above Custom Hook
 
   return (
     <>
-    <About/>
+      <About />
       <Fragment>
         <div className={container}>
-          {error && <div className={errorTxt}>Invalid or Empty Country Name!</div>}
+          {error && (
+            <div className={errorTxt}>Invalid or Empty Country Name!</div>
+          )}
           {loading && <h2>Loading...</h2>}
 
           <div className={searchContainer}>
@@ -49,7 +31,7 @@ function World() {
           </div>
 
           <div>
-            {response.length>0 &&
+            {response.length > 0 &&
               response?.map((row, index) => {
                 return <Row key={index} row={row} index={index} />
               })}
@@ -94,6 +76,23 @@ function World() {
       </Fragment>
     )
   }
+
 }
+
+const {
+  container,
+  searchContainer,
+  inputLabel,
+  textInput,
+  userInputTxt,
+  card,
+  infoContainer,
+  cardHeader,
+  infoText,
+  mapLink,
+  image,
+  errorTxt,
+} = styles //fetching the styles from css module
+
 
 export default World
