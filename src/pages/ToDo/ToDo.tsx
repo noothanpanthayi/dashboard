@@ -5,18 +5,6 @@ import { useToDo } from './useToDo'
 import About from './About'
 import { ToDoListProp, ToDoType } from './types'
 
-const {
-  container,
-  button,
-  todoGrid,
-  todo,
-  userInput,
-  card,
-  greenHdr,
-  trash,
-  maroonHdr,
-} = styles
-
 const ToDo = () => {
   const inputTxt: MutableRefObject<null> = useRef(null)
 
@@ -88,5 +76,17 @@ const ToDo = () => {
     </>
   )
 }
+
+const {
+  container,
+  button,
+  todoGrid,
+  todo,
+  userInput,
+  card,
+  greenHdr,
+  trash,
+  maroonHdr,
+} = styles
 
 export default ToDo

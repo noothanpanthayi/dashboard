@@ -47,9 +47,11 @@ function About() {
                 </strong>
               </p>
               <p>This is to demo an online shopping feature. It fetches a free-to-use products API data
-                from a remote server using React Toolkit Query. React CreateSlice is used  to manage the state of the 
-                shopping cart. When the user selects an item by clicking on Add to Cart, the number of items selected
-                will be showed in the Cart link on the top right of the navigation bar. When clicked on the Cart, it shows the list of the user selected items.
+                from a remote server using React Toolkit Query. React CreateSlice is used to manage the state of the 
+                shopping cart. When the user selects an item by clicking on Add to Cart, it navigates to the Cart page. User can then 
+                click on Continue Shopping button and navigate back to the shopping page. The number of items selected
+                will be showed in the Cart link on the top right of the navigation bar. 
+                When clicked on the Cart link, it navigates to the Cart page and shows the list of the user selected items.
                 User has the provision to delete any unwanted item in the cart.
               </p>
               <p>

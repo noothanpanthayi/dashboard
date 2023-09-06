@@ -14,13 +14,14 @@ const Header = () => {
     <header>
         <nav style={{display:'flex', justifyContent:'space-between'}}>
           <div>
-          <NavLink  to="/dashboard" className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Home</NavLink>
-          <NavLink to="/shopping"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Shopping</NavLink>
-          <NavLink to="/world"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>WorldInfo</NavLink>
-          <NavLink to="/todo"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>ToDo</NavLink>
+          <NavLink  to="/dashboard" className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Home</NavLink>
+
+          <NavLink to="/world"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>WorldInfo</NavLink>
+          <NavLink to="/todo"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>ToDo</NavLink>
+          <NavLink to="/shopping"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Shopping</NavLink>
           </div>
           <div>
-          <NavLink to="/cart"  className={({isActive, isPending}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Cart <span className={yellow}>({cartlist.length})</span></NavLink>
+          <NavLink to="/cart"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Cart <span className={yellow}>({cartlist.length})</span></NavLink>
           </div>
       </nav>
     </header>

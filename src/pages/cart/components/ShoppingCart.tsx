@@ -3,14 +3,21 @@ import styles from '../styles/cart.module.css'
 import { CartItem } from '../types/interface'
 import { ShoppingCartProps } from '../types/types'
 import { useShoppingCart } from '../typescripts/useShoppingCart'
+import { useNavigate } from 'react-router-dom'
 
 const ShoppingCart = () => {
 
   const { state, cartlist, deleteItem } = useShoppingCart()
-  const { right, pointer, grid, bold, totalValue } = styles
+  const { right, pointer, grid, bold, totalValue, navHomeButton, buttonSpacer, checkout } = styles;
+  const navigate=useNavigate();
 
-  return (
-    <div className={grid}>
+
+  const HomePage=()=>{
+    navigate('/shopping');
+
+  }
+
+  return <>    <div className={grid}>
       <Header />
       {cartlist?.map((row: CartItem, index: number) => (
         <Row key={index} row={row} index={index} />
@@ -20,7 +27,13 @@ const ShoppingCart = () => {
       <div className={`${right} ${totalValue}`}>{state.total.toFixed(2)}</div>
       <div>&nbsp;</div>
     </div>
-  )
+    <div style={{display:'flex', justifyContent:'right'}}>
+    <div className={`${navHomeButton} ${checkout}`} >Checkout</div>
+
+    <div className={navHomeButton} onClick={HomePage}>Continue Shopping</div>
+
+    </div>
+    </>
 
   function Header() {
     return (

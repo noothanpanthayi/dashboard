@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 100px 500px 100px 150px;
+  grid-template-columns: 100px 672px 100px 150px;
   border-left: solid 1px silver;
   border-bottom: solid 1px silver;
   margin: 55px 0;
@@ -38,4 +38,21 @@
   text-decoration: underline;
   text-decoration-style: double;
   font-weight:bold
+}
+
+.navHomeButton {
+  display: flexbox;
+  background-color: darkblue;
+  color:#fff;
+  padding:10px;
+  max-width: 200px;
+  justify-content: right;
+  align-items: right;
+  text-align:center;
+  cursor: pointer;
+}
+
+.checkout {
+  background-color: green;
+  margin-right:10px
 }

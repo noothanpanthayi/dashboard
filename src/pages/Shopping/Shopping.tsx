@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { useNavigate } from 'react-router-dom';
 import styles from './shopping.module.css'
 import { useDispatch } from 'react-redux'
 import { setCartList } from '../../redux/slices/cartlist'
@@ -9,12 +10,15 @@ import About from './About'
 
 const Shopping = () => {
   const dispatch = useDispatch()
+  const navigate=useNavigate();
 
   const { data, isLoading, error } = useGetProductsQuery(null) //fetch API using RTK Query
 
   const addToCart = (item: Product | any, index: number) => {
+
     //updating the Redux State
-    dispatch(setCartList(item))
+    dispatch(setCartList(item));
+    navigate('/cart');
   }
 
   const { grid, card, header, image, price: displayPrice, footer } = styles //fetching the styles from css module
