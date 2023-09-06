@@ -29,8 +29,7 @@ function About() {
             <p>
               <strong>
                 This web-based app is developed in{' '}
-                <span style={{ color: 'blue' }}>ReactJs.</span> using
-                TypeScript.
+                <span style={{ color: 'blue' }}>ReactJs.</span>
               </strong>
             </p>
             <p>
@@ -48,7 +47,7 @@ function About() {
                 className={codeLink}
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/noothanpanthayi/dashboard/tree/master/src/pages/Shopping"
+                href="https://github.com/noothanpanthayi/dashboard/tree/master/src/pages/ToDo"
               >
                 View Source Code
               </a>

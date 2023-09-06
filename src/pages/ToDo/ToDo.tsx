@@ -70,6 +70,7 @@ const ToDo = () => {
             onKeyUp={handleEnter}
             ref={inputTxt}
             type="text"
+            autoFocus
           />
           <button onClick={addToDo} className={button}>
             Add
