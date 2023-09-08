@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './about.module.css'
 
-const { aboutContainer, aboutHeader, arrow, codeLink, aboutContent } = styles
+const { aboutContainer, aboutHeader, arrow, aboutContent } = styles
 
 function About() {
   const [state, setState] = useState({
@@ -22,15 +22,14 @@ function About() {
         <div onClick={toggleContent}>
           {state.aboutHidden && <span className={arrow}>▶</span>}
           {!state.aboutHidden && <span className={arrow}>▼</span>}
-          <span className={aboutHeader}> About World Info App</span>
+          <span className={aboutHeader}>World Info App</span>
         </div>
         {!state.aboutHidden && (
           <div className={aboutContent}>
             <p>
               <strong>
                 This web-based app is developed in{' '}
-                <span style={{ color: 'blue' }}>ReactJs</span> using {' '}
-                <span>TypeScript</span>.
+                <span style={{ color: 'blue' }}>ReactJs</span>.
               </strong>
             </p>
             <p>
@@ -56,26 +55,7 @@ function About() {
                   responsive across devices
                 </li>
               </ul>
-              <p>
-                Source code of this app can be viewed at the following Github
-                location:
-                <br />
-                <a
-                  title="Opens in another tab of this browser"
-                  className={codeLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/noothanpanthayi/dashboard/tree/master/src/pages/World"
-                >
-                  View Source Code
-                </a>
-                <span
-                  title="Opens in another tab of this browser"
-                  style={{ color: 'green' }}
-                >
-                  ◥
-                </span>
-              </p>
+             
           </div>
         )}
       </div>

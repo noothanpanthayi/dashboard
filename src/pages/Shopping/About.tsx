@@ -34,8 +34,7 @@ function About() {
               !state.aboutHidden && <span className={arrow}>▼</span>
   }
             <span className={aboutHeader}>
-              {' '}
-              About Shopping App
+              Shopping App
             </span>
           </div>
           {!state.aboutHidden && (
@@ -77,11 +76,6 @@ function About() {
                     (f) CSS flex is used to make card responsive across devices
                   </li>
                 </ul>
-                <p>Source code of this app can be viewed at the following Github location:<br/>
-                  <a title="Opens in another tab of this browser" className={codeLink} target="_blank" rel="noreferrer" 
-                  href="https://github.com/noothanpanthayi/dashboard/tree/master/src/pages/Shopping">View Source Code</a>
-                  <span title="Opens in another tab of this browser" style={{color:'green'}}>◥</span>
-                </p>
             </div>
           )}
         </div>

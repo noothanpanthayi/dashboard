@@ -19,6 +19,8 @@ const Header = () => {
           <NavLink to="/world"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>WorldInfo</NavLink>
           <NavLink to="/todo"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>ToDo</NavLink>
           <NavLink to="/shopping"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Shopping</NavLink>
+          <NavLink to="/grid"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Custom Grid</NavLink>
+         
           </div>
           <div>
           <NavLink to="/cart"  className={({isActive}: { isActive: boolean; isPending: boolean;}|any)=>isActive?'active':''}>Cart <span className={yellow}>({cartlist.length})</span></NavLink>

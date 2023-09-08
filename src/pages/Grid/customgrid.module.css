@@ -1,0 +1,65 @@
+
+.info {
+    margin-top:10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 300px;
+  border-top: solid 1px silver;
+  border-right: solid 1px silver;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.grid div {
+  padding: 3px 5px;
+  border-left: solid 1px silver;
+  border-bottom: solid 1px silver;
+}
+
+.grid div:nth-child(-n + 3) {
+    background-color: steelblue;
+    font-weight: bold;
+    color: #fff;
+  }
+
+.grid input {
+  border: none;
+  font-size: 16px;
+  width: 60px;
+  width: fit-content;
+}
+
+.grid input:focus {
+  outline: none;
+}
+
+div {
+  font-size: 16px;
+}
+
+.grid div span {
+  display: block;
+}
+
+.readOnlyTxt {
+  height: 77%;
+  width: -webkit-fill-available;
+}
+
+.jsonView {
+    width:700px;
+    border:solid 1px silver;
+    font-size:12px;
+    height:350px;
+    overflow:scroll;
+}
+
+.jsonHdr {
+    margin-Top:20px
+}
+
+.infoTxt {
+    max-width: 700px;
+}

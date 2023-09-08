@@ -3,6 +3,7 @@ import styles from './home.module.css'
 import ShoppingAbout from '../Shopping/About'
 import WorldAbout from '../World/About'
 import ToDoAbout from '../ToDo/About';
+import CustomGridAbout from '../Grid/About';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <WorldAbout />
       <ToDoAbout/>
       <ShoppingAbout/>
+      <CustomGridAbout/>
         <div className={header}>JavaScript Application - JSON to HTML table</div>
         <a  className={externalLink} rel="noreferrer" 
       target="_blank" 

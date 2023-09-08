@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './about.module.css'
 
-const { aboutContainer, aboutHeader, arrow, aboutContent } = styles
+const { aboutContainer, aboutHeader, arrow, aboutContent, blue } = styles
 
 function About() {
   const [state, setState] = useState({
@@ -22,23 +22,18 @@ function About() {
         <div onClick={toggleContent}>
           {state.aboutHidden && <span className={arrow}>▶</span>}
           {!state.aboutHidden && <span className={arrow}>▼</span>}
-          <span className={aboutHeader}>ToDo App</span>
+          <span className={aboutHeader}>Custom Grid App</span>
         </div>
         {!state.aboutHidden && (
           <div className={aboutContent}>
             <p>
-              <strong>
-                This web-based app is developed in{' '}
-                <span style={{ color: 'blue' }}>ReactJs.</span>
-              </strong>
+           
+             This web-based app is developed in{' '}
+                <span className={blue}>ReactJs</span> and <span className={blue}>CSS Grid.</span>
             </p>
             <p>
-              This is a ToDo App. User can type a task/reminder and it will be listed under Active Todo category.
-              Once the task is completed, user can click on the checkbox. The completed Todo task
-              will be listed under the Completed Todo category. This is to demo the state and event 
-              management features like Checkbox handling and ES6 features of ReactJs
+          Users can edit the field by directly clicking on the required cell.
             </p>
-           
           </div>
         )}
       </div>

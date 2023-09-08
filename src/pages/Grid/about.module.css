@@ -24,6 +24,7 @@
 .arrow {
   color: #e10600;
   margin-right:3px;
+
 }
 
 .codeLink:link,
@@ -31,4 +32,8 @@
   font-family: arial;
   font-size: 14px;
   color: blue;
+}
+
+.blue {
+  color:blue
 }
