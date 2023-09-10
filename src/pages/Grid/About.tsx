@@ -29,7 +29,7 @@ function About() {
             <p>
            
              This web-based app is developed in{' '}
-                <span className={blue}>ReactJs</span> and <span className={blue}>CSS Grid.</span>
+                <span className={blue}>ReactJs</span> with TypeScript and <span className={blue}>CSS Grid.</span>
             </p>
             <p>
           Users can edit the field by directly clicking on the required cell.

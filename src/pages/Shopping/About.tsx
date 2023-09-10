@@ -42,7 +42,7 @@ function About() {
               <p>
                 <strong>
                   This web-based app is developed in {' '}
-                  <span style={{ color: 'blue' }}>ReactJs.</span>
+                  <span style={{ color: 'blue' }}>ReactJs</span>  with TypeScript.
                 </strong>
               </p>
               <p>This is to demo an online shopping feature. It fetches a free-to-use products API data

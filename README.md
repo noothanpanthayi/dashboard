@@ -1,6 +1,6 @@
 # ReactJs Applications
 
-This web-based app is developed in ReactJs using TypeScript.
+This web-based app is developed in ReactJs with TypeScript.
 
 The following ReactJs features are used to develop the Online Shopping app:
 
