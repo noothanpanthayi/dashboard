@@ -1,15 +1,16 @@
-
 .info {
-    margin-top:10px;
+  margin-top: 10px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 200px 200px 300px;
+  grid-template-columns: 200px 200px 300px 80px;
   border-top: solid 1px silver;
   border-right: solid 1px silver;
   width: fit-content;
   box-sizing: border-box;
+  /* height:300px; */
+  /* overflow:auto; */
 }
 
 .grid div {
@@ -18,11 +19,11 @@
   border-bottom: solid 1px silver;
 }
 
-.grid div:nth-child(-n + 3) {
-    background-color: steelblue;
-    font-weight: bold;
-    color: #fff;
-  }
+.grid div:nth-child(-n + 4) {
+  background-color: steelblue;
+  font-weight: bold;
+  color: #fff;
+}
 
 .grid input {
   border: none;
@@ -48,18 +49,26 @@ div {
   width: -webkit-fill-available;
 }
 
+.readOnlyTxt:focus {
+  outline: dotted 1px silver;
+}
+
+.onEmpty::before {
+  content: "Please type to Enter";
+}
+
 .jsonView {
-    width:700px;
-    border:solid 1px silver;
-    font-size:12px;
-    height:350px;
-    overflow:scroll;
+  width: 700px;
+  border: solid 1px silver;
+  font-size: 12px;
+  height: 350px;
+  overflow: scroll;
 }
 
 .jsonHdr {
-    margin-Top:20px
+  margin-top: 20px;
 }
 
 .infoTxt {
-    max-width: 700px;
+  max-width: 700px;
 }
