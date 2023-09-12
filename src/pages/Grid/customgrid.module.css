@@ -27,6 +27,13 @@
   color: #fff;
 }
 
+.grid div:nth-child(4n) { /*last column*/
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
 .grid input {
   color:#000;
   font-weight: bold;
