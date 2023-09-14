@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react'
 import styles from './customgrid.module.css'
 import { usersListArr } from './data'
 import About from './About'
+import { useEffect } from 'react'
 
 const CustomGrid = () => {
   const [state, setState] = useState({
@@ -14,6 +15,10 @@ const CustomGrid = () => {
     },
     editedElement: '',
     usersListArr,
+    unsortedListArr: [...usersListArr],
+    sortOrder: 'def',
+    orderNum: 0,
+    sortedField:''
   })
 
   const openEdit = (e: React.MouseEventHandler<HTMLSpanElement> | any) => {
@@ -56,58 +61,52 @@ const CustomGrid = () => {
 
   const addUser = () => {
     const tempState: any = { ...state }
-    const usersArr = tempState.usersListArr;
-    const lastUserArr=usersArr[usersArr.length-1];
-   
+    const usersArr = tempState.usersListArr
+    const lastUserArr = usersArr[usersArr.length - 1]
+
     if (
       lastUserArr.name.trim().length === 0 ||
       lastUserArr.email.trim().length === 0 ||
       lastUserArr.username.trim().length === 0
     ) {
-      alert('Please add a user.');
+      alert('Please add a user.')
       return
     }
 
-      const newUserObj = {
-        id:
-          !usersArr || usersArr.length === 0
-            ? 1
-            : usersArr[usersArr.length - 1].id + 1,
-        name: ' ',
-        username: ' ',
-        email: ' ',
-      }
-      const usersListArr = [...tempState.usersListArr, newUserObj]
-  
-      setState((prevState) => {
-        return {
-          ...prevState,
-          usersListArr,
-        }
-      });
+    const newUserObj = {
+      id:
+        !usersArr || usersArr.length === 0
+          ? 1
+          : usersArr[usersArr.length - 1].id + 1,
+      name: ' ',
+      username: ' ',
+      email: ' ',
+    }
+    const usersListArr = [...tempState.usersListArr, newUserObj]
 
+    setState((prevState) => {
+      return {
+        ...prevState,
+        usersListArr,
+      }
+    })
   }
 
   const deleteUser = (e: any) => {
     const tempState = { ...state }
-    const userArr = tempState.usersListArr;
-    let showMsg=false;
-let usersListArr:any;
-    if (userArr.length===1){
-        userArr[0].id=1;
-        userArr[0].name=" ";
-        userArr[0].username=" ";
-        userArr[0].email=" "
-        usersListArr=userArr;
-        showMsg=true;
-    }
-
-    else {
-
-       usersListArr = userArr.filter((row) => {
+    const userArr = tempState.usersListArr
+    let showMsg = false
+    let usersListArr: any
+    if (userArr.length === 1) {
+      userArr[0].id = 1
+      userArr[0].name = ' '
+      userArr[0].username = ' '
+      userArr[0].email = ' '
+      usersListArr = userArr
+    } else {
+      usersListArr = userArr.filter((row) => {
         return row.id !== parseInt(e.target.id)
       })
-  
     }
 
     setState((prevState) => {
@@ -115,9 +114,54 @@ let usersListArr:any;
         ...prevState,
         usersListArr,
       }
-    });
+    })
+  }
+  
 
+  const sortGrid = (e: any) => {
+    const tempState = { ...state }
+    const field: string = e.target.id
 
+    let updatedSortOrder = 'def',
+      orderNum = 0
+
+    if (state.sortOrder === 'def') {
+      orderNum = 1
+      updatedSortOrder = 'asc'
+    } else if (state.sortOrder === 'asc') {
+      orderNum = -1
+      updatedSortOrder = 'des'
+    } else if (state.sortOrder === 'des') {
+      orderNum = 0
+      updatedSortOrder = 'def'
+    }
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        sortOrder: updatedSortOrder,
+        sortedField:field
+      }
+    })
+
+    if (updatedSortOrder !== 'def') {
+      tempState.usersListArr.sort((a: any, b: any) => {
+        if (a[field] < b[field]) return -1 * orderNum
+        else if (a[field] > b[field]) return 1 * orderNum
+        else return 0
+      })
+    }
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        usersListArr:
+          updatedSortOrder === 'def'
+            ? [...tempState.unsortedListArr]
+            : tempState.usersListArr,
+        sortOrder: updatedSortOrder,
+      }
+    })
   }
 
   return (
@@ -132,13 +176,19 @@ let usersListArr:any;
         added row, type the text and press tab key to go to the next column.
       </p>
       <div id="grid" className={grid}>
-        <div>Name</div>
-        <div>Username</div>
-        <div>E-Mail</div>
+        <div className={`${field} ${state.sortedField==='name' && (state.sortOrder==='asc'?arrowIconAsc:state.sortOrder==='des'?arrowIconDes:'')}`} id="name" onClick={sortGrid}>
+          Name
+        </div>
+        <div className={`${field} ${state.sortedField==='username' && (state.sortOrder==='asc'?arrowIconAsc:state.sortOrder==='des'?arrowIconDes:'')}`} id="username" onClick={sortGrid}>
+          Username
+        </div>
+        <div className={`${field} ${state.sortedField==='email' && (state.sortOrder==='asc'?arrowIconAsc:state.sortOrder==='des'?arrowIconDes:'')}`} id="email" onClick={sortGrid}>
+          E-Mail
+        </div>
         <div>Action</div>
         {state?.usersListArr.map(
           ({
-            id,
+            id, 
             name,
             username,
             email,
@@ -299,6 +349,6 @@ let usersListArr:any;
   )
 }
 
-const { grid, readOnlyTxt, info, jsonView, jsonHdr, infoTxt } = styles
+const { grid, readOnlyTxt, info, jsonView, jsonHdr, infoTxt, field, arrowIconDes, arrowIconAsc} = styles
 
 export default CustomGrid

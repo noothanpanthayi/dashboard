@@ -86,3 +86,26 @@ div {
   font-weight: bold;
   max-width: 700px;
 }
+
+.arrowIconDes::after {
+  margin-left:5px;
+  content: "\25bc";
+  font-size: 0.6rem;
+}
+
+.arrowIconAsc::after {
+  margin-left:5px;
+  content: '\25b2';
+  font-size: 0.6rem;
+}
+
+#username {
+  cursor:pointer
+}
+
+.field {
+  cursor:pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
