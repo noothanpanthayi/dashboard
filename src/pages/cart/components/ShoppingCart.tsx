@@ -4,12 +4,17 @@ import { CartItem } from '../types/interface'
 import { ShoppingCartProps } from '../types/types'
 import { useShoppingCart } from '../typescripts/useShoppingCart'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react';
 
 const ShoppingCart = () => {
 
   const { state, cartlist, deleteItem } = useShoppingCart()
   const { right, pointer, grid, bold, totalValue, navHomeButton, buttonSpacer, checkout } = styles;
   const navigate=useNavigate();
+
+  useEffect(()=>{
+    window.scrollTo({ top: 0, left: 0})
+  },[])
 
 
   const HomePage=()=>{
