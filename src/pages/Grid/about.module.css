@@ -10,19 +10,19 @@
 .aboutContent {
   font-family: arial;
   font-weight: bold;
-  color: #666;
+  color: rgb(70, 129, 244);;
 }
 
 .aboutHeader {
   font-weight: bold;
-  color: blue;
+  color: rgb(70, 129, 244);
   font-family: arial;
   text-decoration: underline;
   cursor: pointer;
 }
 
 .arrow {
-  color: #e10600;
+  color: #00a99d;
   margin-right:3px;
 
 }

@@ -1,15 +1,16 @@
 .container {
   min-height: 90vh;
+  margin-top:55px;
 }
 
 .header {
   font-family: arial;
   font-weight: bold;
   margin-top: 30px;
-  color: green;
+  color: royalblue;
 }
 
 .externalLink {
   font-weight: bold;
-  color: blue;
+  color: rgb(70, 129, 244);;
 }

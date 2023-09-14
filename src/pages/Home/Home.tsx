@@ -7,8 +7,15 @@ import CustomGridAbout from '../Grid/About';
 
 const Home = () => {
   return (
+    
     <div className={container}>
-      <div>Online Shopping</div>
+      {/* <div>Online Shopping</div> */}
+      <div className={header}>Article in Medium</div>
+
+      <a  className={externalLink} rel="noreferrer" 
+      target="_blank" 
+      href="https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70">ReactJs Patterns for Delightful DX</a>
+
       <WorldAbout />
       <ToDoAbout/>
       <ShoppingAbout/>
@@ -18,11 +25,7 @@ const Home = () => {
       target="_blank" 
       href="https://noothankrishnan.github.io/jsontohtml">JSON to HTML Table</a> 
 
-      <div className={header}>Article in Medium</div>
-      <a  className={externalLink} rel="noreferrer" 
-      target="_blank" 
-      href="https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70">ReactJs Patterns for Delightful DX</a>
-</div>
+    </div>
  
   )
 

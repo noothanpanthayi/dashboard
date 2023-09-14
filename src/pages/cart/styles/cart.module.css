@@ -42,7 +42,7 @@
 
 .navHomeButton {
   display: flexbox;
-  background-color: darkblue;
+  background-color: rgb(70, 129, 244);
   color:#fff;
   padding:10px;
   max-width: 200px;
