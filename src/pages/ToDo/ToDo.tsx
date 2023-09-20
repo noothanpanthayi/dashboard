@@ -29,6 +29,7 @@ const ToDo = () => {
               <div className={card} key={row.id}>
                 <div>
                   <input
+                    data-testid="checkbox"
                     id={row.id}
                     onChange={updateCheckbox}
                     type="checkbox"
@@ -59,6 +60,7 @@ const ToDo = () => {
             ref={inputTxt}
             type="text"
             autoFocus
+            name="the-inputs-id"
           />
           <button onClick={addToDo} className={button}>
             Add

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 
 export const useToDo = (inputTxt: any) => {
   let todoObj = {
@@ -7,29 +7,30 @@ export const useToDo = (inputTxt: any) => {
     completed: false,
   }
 
-  const deleteRow = (e:React.MouseEventHandler<HTMLDivElement>|any) => {
-  const tempState:any={...state};
-
-  const todoListArr=tempState.todoListArr.filter((row:any)=>{
-    return row.id!==e.target.id
-  });
-
-  setState(prevState=>{
-    return {
-      ...prevState,
-      todoListArr
-    }
-  })
-
-
-  }
-
   const [state, setState] = useState({
     activeTab: 1,
     activeTotal:0,
     completedTotal:0,
     todoListArr: [],
   })
+
+
+  const deleteRow = (e:React.MouseEventHandler<HTMLDivElement>|any) => {
+    const tempState:any={...state};
+  
+    const todoListArr=tempState.todoListArr.filter((row:any)=>{
+      return row.id!==e.target.id
+    });
+  
+    setState(prevState=>{
+      return {
+        ...prevState,
+        todoListArr
+      }
+    })
+  
+  
+    }
 
   const handleEnter = (e: any) => {
     if (e.code === 'Enter') {

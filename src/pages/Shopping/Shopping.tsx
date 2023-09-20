@@ -8,9 +8,11 @@ import { Product } from './interfaces'
 import { ProductProps } from './types'
 import About from './About'
 
+
 const Shopping = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate=useNavigate();
+
 
   const { data, isLoading, error } = useGetProductsQuery(null) //fetch API using RTK Query
 
