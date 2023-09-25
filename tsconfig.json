@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "reference/FormHandling copy.js"  ]
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import  { useState, useEffect } from 'react'
 import styles from './formhandling.module.css'
 
 function FormHandling() {
@@ -159,7 +159,7 @@ function FormHandling() {
             <div>
               <label>Food</label>
             </div>
-            <div className="food">
+            <div className={food}>
               <label htmlFor="veg">Veg</label>
               <input
                 onChange={addToUserData}
@@ -184,12 +184,11 @@ function FormHandling() {
             <div>
               <label>Favorite Movie Genres</label>
             </div>
-            <div className={styles.movie}>
+            <div className={movie}>
               <label htmlFor="action">Action</label>
               <input
                 onChange={addToUserData}
                 id="action"
-                // value={state.userData.movie.value.action}
                 checked={state.userData.movie.value.action}
                 type="checkbox"
               />
@@ -197,7 +196,6 @@ function FormHandling() {
               <input
                 onChange={addToUserData}
                 id="horror"
-                // value={state.userData.movie.value.horror}
                 checked={state.userData.movie.value.horror}
                 type="checkbox"
               />
@@ -205,7 +203,6 @@ function FormHandling() {
               <input
                 onChange={addToUserData}
                 id="drama"
-                // value={state.userData.movie.value.drama}
                 checked={state.userData.movie.value.drama}
                 type="checkbox"
               />
@@ -259,7 +256,7 @@ function FormHandling() {
               }
             </div>
 
-            <div className={styles.buttonContainer}>
+            <div className={buttonContainer}>
               <button onClick={doSubmit}>Submit</button>
             </div>
           </li>
