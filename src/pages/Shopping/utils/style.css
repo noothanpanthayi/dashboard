@@ -22,7 +22,7 @@
     box-shadow: 0px 2px 3px 2px #aaa;
     border-radius: 2px;
     min-height: 266px;
-    width: 500px;
+    max-width: 500px;
     color:#000;
     border-radius: 6px;
     background-color: lemonchiffon;
