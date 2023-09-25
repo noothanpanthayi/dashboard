@@ -35,9 +35,6 @@ const openDialog=()=>{
           </div>
         </div>
       )}
-      <div>
-        <button onClick={openDialog}>Open Dialog</button>
-      </div>
     </>
   )
 }
