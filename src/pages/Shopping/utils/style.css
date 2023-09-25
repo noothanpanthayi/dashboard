@@ -28,6 +28,12 @@
     background-color: lemonchiffon;
 }
 
+@media (max-width:520px){
+    .dialogbox {
+        margin: 20% 10px;
+    }
+}
+
 .closeIcon {
     display:flex;
     justify-content:space-between;
