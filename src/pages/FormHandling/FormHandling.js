@@ -90,7 +90,7 @@ function FormHandling() {
     }
 
     if (tempState.userData.source.value.length === 0) {
-      tempState.userData.source.errorMsg = 'Souce not selected!'
+      tempState.userData.source.errorMsg = 'Source not selected!'
       tempState.formHasError = true
     }
 
