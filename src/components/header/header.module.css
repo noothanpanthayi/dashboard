@@ -9,12 +9,17 @@ header {
   top:0;
   width:-webkit-fill-available;
   z-index: 99999;
-  height:26px
+  height: 35px;
+  align-items: center;
 }
 
 .myNav {
   margin: 0 auto;
   justify-content:center;
+}
+
+.myNav a {
+    padding:7px;
 }
 
 nav a:link,
@@ -39,14 +44,14 @@ a span.bold:visited {
   font-size: 14px;
   display:block;
   position: absolute;
-  top:38px;
-  left:3px;
+  top:46px;
+  left:2px;
   background-color: royalblue;
   color:#fff
 }
 
 .hamburgerMenu ul li {
-  line-height: 25px;
+  line-height:30px;
   padding:5px 20px;
   border-bottom: solid 1px mediumaquamarine;
 }
@@ -58,14 +63,14 @@ a span.bold:visited {
 
 }
 
-@media (max-width:600px){
+@media (max-width:680px){
   nav {
     display:none;
   };
  
 }
 
-@media (min-width:600px){
+@media (min-width:680px){
   .hamburger {
     display:none;
   }
