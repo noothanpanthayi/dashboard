@@ -12,7 +12,6 @@ function App() {
         <AppRouter />
         <Footer/>
       </Router>
-    {/* </div> */}
   
   </>
 }

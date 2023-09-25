@@ -33,3 +33,11 @@
   font-size: 14px;
   color: rgb(70, 129, 244);
 }
+
+.red  {
+  margin-left:10px;
+  font-weight: bold;
+  color:#cc0000;
+  text-decoration: underline;
+  cursor: pointer;
+}

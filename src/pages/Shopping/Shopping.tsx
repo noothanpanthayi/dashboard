@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Fragment, useState} from 'react'
+// import { useNavigate } from 'react-router-dom';
 import styles from './shopping.module.css'
 import { useDispatch } from 'react-redux'
 import { setCartList } from '../../redux/slices/cartlist'
@@ -7,26 +7,46 @@ import { useGetProductsQuery } from '../../redux/api/productsapi'
 import { Product } from './interfaces'
 import { ProductProps } from './types'
 import About from './About'
+import Modal from './utils/Modal'
 
 
 const Shopping = () => {
+  const [dialogOpen, setDialogOpen]=useState(false);
+
+  const [state, setState]=useState({
+    dialogOpen:false,
+    selectedItem:{}
+  })
+
+  const showDialog=()=>{
+    setDialogOpen(true);
+  }
+
+  const closeDialog=()=>{
+    setDialogOpen(false);
+  }
+
   const dispatch = useDispatch();
-  const navigate=useNavigate();
 
 
   const { data, isLoading, error } = useGetProductsQuery(null) //fetch API using RTK Query
 
   const addToCart = (item: Product | any, index: number) => {
-
+    setState(prevState=>{
+      return {
+        ...prevState,
+        selectedItem:item
+      }
+    })
+    showDialog();
     //updating the Redux State
     dispatch(setCartList(item));
-    navigate('/cart');
   }
 
   const { grid, card, header, image, price: displayPrice, footer } = styles //fetching the styles from css module
 
   const Grid = () => {
-    return (
+    return <Fragment>
       <>
         <About />
         {error && <div>error</div>}
@@ -40,7 +60,8 @@ const Shopping = () => {
           ))}
         </div>
       </>
-    )
+    <Modal dialogOpen={dialogOpen} closeDialog={closeDialog} selectedItem={state.selectedItem}/>
+    </Fragment>
   }
 
   function Row({

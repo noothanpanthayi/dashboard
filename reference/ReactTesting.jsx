@@ -1,11 +1,11 @@
-npm run test
+// npm run test
 
-npm test -- --coverage
+// npm test -- --coverage
 
-1. Render a component to test  - render(<App/>)
-2. Find elements
-3. Interact with those elements
-4. Assert that the results are expected
+// 1. Render a component to test  - render(<App/>)
+// 2. Find elements
+// 3. Interact with those elements
+// 4. Assert that the results are expected
 
 Examples:
 =========================================================

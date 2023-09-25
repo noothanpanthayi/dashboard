@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react'
 import styles from './customgrid.module.css'
 import { usersListArr } from './data'
 import About from './About'
-import { useEffect } from 'react'
 
 const CustomGrid = () => {
   const [state, setState] = useState({
@@ -95,7 +94,6 @@ const CustomGrid = () => {
   const deleteUser = (e: any) => {
     const tempState = { ...state }
     const userArr = tempState.usersListArr
-    let showMsg = false
     let usersListArr: any
     if (userArr.length === 1) {
       userArr[0].id = 1

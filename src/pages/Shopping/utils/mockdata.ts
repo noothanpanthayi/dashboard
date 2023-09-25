@@ -22,7 +22,7 @@ export const data={
             ]
         },
         {
-            "id": 1,
+            "id": 2,
             "title": "Toyota",
             "description": "An apple mobile which is nothing like apple",
             "price": 28000,

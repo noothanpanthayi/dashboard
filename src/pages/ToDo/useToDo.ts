@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react'
 
 export const useToDo = (inputTxt: any) => {
   let todoObj = {
@@ -9,28 +9,25 @@ export const useToDo = (inputTxt: any) => {
 
   const [state, setState] = useState({
     activeTab: 1,
-    activeTotal:0,
-    completedTotal:0,
+    activeTotal: 0,
+    completedTotal: 0,
     todoListArr: [],
   })
 
+  const deleteRow = (e: React.MouseEventHandler<HTMLDivElement> | any) => {
+    const tempState: any = { ...state }
 
-  const deleteRow = (e:React.MouseEventHandler<HTMLDivElement>|any) => {
-    const tempState:any={...state};
-  
-    const todoListArr=tempState.todoListArr.filter((row:any)=>{
-      return row.id!==e.target.id
-    });
-  
-    setState(prevState=>{
+    const todoListArr = tempState.todoListArr.filter((row: any) => {
+      return row.id !== e.target.id
+    })
+
+    setState((prevState) => {
       return {
         ...prevState,
-        todoListArr
+        todoListArr,
       }
     })
-  
-  
-    }
+  }
 
   const handleEnter = (e: any) => {
     if (e.code === 'Enter') {
@@ -66,24 +63,6 @@ export const useToDo = (inputTxt: any) => {
     })
   }
 
-//   const getTotal = (tab: number): any => {
-//     const tempState: {
-//       activeTab: number
-//       todoListArr: { id: string; todo: string; completed: boolean }[]
-//     } = { ...state }
-
-  
-
-//     setState(prevState=>{
-//     return {
-//         ...prevState,
-//         activeTotal:prevState.activeTotal
-//     }
-//     })
-
-//     return tot
-//   }
-
   const addToDo = (e: any) => {
     if (!inputTxt.current.value) return
 
@@ -100,17 +79,12 @@ export const useToDo = (inputTxt: any) => {
       completed: false,
     }
 
-
-    // const activeTot: number = tempState.todoListArr.reduce((accum, row):{accum:any, row:any} => {
-    //   if (row?.completed===false) return accum + 1
-    // }, 0)
-    
     setState((prevState: any) => {
       const todoListArr = [...prevState.todoListArr, todoObj]
       return {
         ...prevState,
         todoListArr,
-        activeTotal:prevState.activeTotal+1
+        activeTotal: prevState.activeTotal + 1,
       }
     })
   }
@@ -127,6 +101,5 @@ export const useToDo = (inputTxt: any) => {
     updateCheckbox,
     updateTab,
     deleteRow,
-    
   }
 }

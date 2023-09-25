@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 const ShoppingCart = () => {
 
   const { state, cartlist, deleteItem } = useShoppingCart()
-  const { right, pointer, grid, bold, totalValue, navHomeButton, buttonSpacer, checkout } = styles;
+  const { right, pointer, grid, bold, totalValue, navHomeButton, checkout } = styles;
   const navigate=useNavigate();
 
   useEffect(()=>{

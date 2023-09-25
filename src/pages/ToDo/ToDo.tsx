@@ -6,7 +6,7 @@ import About from './About'
 import { ToDoListProp, ToDoType } from './types'
 
 const ToDo = () => {
-  const inputTxt: MutableRefObject<null> = useRef(null)
+  const inputTxt: MutableRefObject<null> = useRef(null);
 
   const {
     state,
@@ -14,7 +14,7 @@ const ToDo = () => {
     handleEnter,
     updateCheckbox,
     deleteRow,
-  } = useToDo(inputTxt)
+  } = useToDo(inputTxt);
 
   const ToDoList = ({ complete }: ToDoListProp) => {
     return (

@@ -6,6 +6,7 @@ import World from '../pages/World/World';
 import ShoppingCart from '../pages/Cart/components/ShoppingCart';
 import ToDo from '../pages/ToDo/ToDo';
 import CustomGrid from '../pages/Grid/CustomGrid';
+import FormHandling from '../pages/FormHandling';
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,8 @@ const AppRouter = () => {
       <Route  path="/cart" element={<ShoppingCart />}></Route>
       <Route  path="/todo" element={<ToDo />}></Route>
       <Route  path="/grid" element={<CustomGrid />}></Route>
+      <Route  path="/formhandling" element={<FormHandling />}></Route>
+
       
 
     </Routes>

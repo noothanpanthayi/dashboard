@@ -1,12 +1,17 @@
 import {useState} from 'react';
 import styles from './about.module.css';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const {
     aboutContainer,
     aboutHeader,
     arrow,
     codeLink,
-    aboutContent
+    aboutContent,
+    red
   } = styles
 
 function About() {
@@ -14,6 +19,10 @@ function About() {
     const [state, setState] = useState({
         aboutHidden: true,
       })
+
+        const navigate=useNavigate();
+  const {cartlist}:any=useSelector<any>(state=>state.cartlist);
+
 
       function toggleContent() {
         setState((prevState) => {
@@ -33,8 +42,9 @@ function About() {
    {
               !state.aboutHidden && <span className={arrow}>▼</span>
   }
-            <span className={aboutHeader}>
-              Shopping App
+            <span>
+             <span className={aboutHeader}> Shopping App </span> <span onClick={()=>navigate('/cart')} className={red}>Cart <span>({cartlist.length})</span>
+            </span>
             </span>
           </div>
           {!state.aboutHidden && (

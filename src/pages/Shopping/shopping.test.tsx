@@ -5,10 +5,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { data } from './utils/mockdata'
 import { mockhandler } from './utils/mockServer'
 
-describe('Shopping Test Suite ', () => {
+describe('Shopping Test Suite', () => {
+
   mockhandler('https://dummyjson.com/products', data)
 
-  it('should render the products on load of the page ', async () => {
+  it('should render the products on load of the page', async () => {
     renderWithProviders(
       <Router>
         <Shopping />
@@ -27,5 +28,6 @@ describe('Shopping Test Suite ', () => {
     // eslint-disable-next-line
       expect(window.location.pathname).toBe('/cart')
     })
-  })
+  });
+  
 })

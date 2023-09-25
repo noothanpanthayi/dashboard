@@ -14,7 +14,7 @@ export const cartListSlice = createSlice({
   initialState,
   reducers: {
     removeProduct:(state, action)=>{
-         console.log('remove product payload ', action.payload)
+         console.log('remove product payload ', action.payload);
     },
     setCartList: (state, action: PayloadAction<Product>) => {
       state.cartlist.push(action.payload);
