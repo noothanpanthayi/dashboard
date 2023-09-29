@@ -1,5 +1,104 @@
+let name:string;
+let age:number;
+let isStudent:boolean;
+let hobbies:string[];
+let role:[number, string]; //tuple contains fixed amount of values. Only two galues, role=[5,"john"]
+
+let person:Object;//not a recommended way X
+
+use type or interface
+
+type Person={
+  name:string;
+  age?:number //optional
+}
+
+type Person={
+  name:string;
+  age:number | string
+}
+age=20,
+age="Twenty"
+
+let person:Person={
+  name:'John',
+}
+
+let PersonJson=Person[];
+
+function printName(name:string) { //receving variable
+  console.log(name)
+}
+
+let printName:(name:string)=>void;
+
+void returns undefined, never does not return anything
+
+type X={
+  a:string;
+  b:number;
+}
+
+type Y=X & {
+  c:string;
+  d:number;
+}
+
+interface Person{
+  name:string;
+  age?:number
+}
+
+interface Guy extends Person {
+  profession:string;
+}
 
 
+Component
+const App:React.FC=()=>{
+
+}
+
+const [todo, setTodo]=useState<string>("");
+const [todo, setTodo]=useState<string[]>([]); <>targetting the first variable todo
+
+const [todo, setTodo]=useState<string|number>("");
+
+InputField=({todo, setTodo}:{todo:string,setTodo...})
+
+interface Props {
+  todo:string;
+  setTodo:React.Dispatch<React.SetStateAction<string>>
+  handleAdd:()=>void;
+}
+InputField=({todo, setTodo}:Props) -> functional component
+or
+const InputField:React.FC<Props>=({todo, setTodo}) Note:try removing React.FC
+
+export interface Todo {
+  id:number;
+  todo:string;
+  isDone:boolean
+}
+
+const [todos, setTodos]=useState<Todo[]>([]);
+
+const handleAdd=(e:React.FormEvent)=>{
+
+}
+
+const inputRef=useRef<HTMLInputElement>(null);
+
+TodoReducer=(state:Todo[], action)
+======================================================================================================
+  type Actions={
+  type:'add';
+  payload:string}|
+  {
+  type:'remove';
+number
+  }
+  
   const {cartlist}:any=useSelector<any>(state=>state.cartlist);
 
    interface Iproduct {

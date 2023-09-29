@@ -7,6 +7,7 @@ import ShoppingCart from '../pages/Cart/components/ShoppingCart';
 import ToDo from '../pages/ToDo/ToDo';
 import CustomGrid from '../pages/Grid/CustomGrid';
 import FormHandling from '../pages/FormHandling';
+import AMD from '../pages/TypeScriptReference/AMD';
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
       <Route  path="/todo" element={<ToDo />}></Route>
       <Route  path="/grid" element={<CustomGrid />}></Route>
       <Route  path="/formhandling" element={<FormHandling />}></Route>
+      <Route  path="/tsref" element={<AMD />}></Route>
 
       
 
