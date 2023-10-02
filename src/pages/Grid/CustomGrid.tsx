@@ -315,7 +315,6 @@ const CustomGrid = () => {
                       state.editedElement === 'name'
                     ) && (
                       <span
-                        className={readOnlyTxt}
                         onFocus={(e) => e.currentTarget.click()}
                         tabIndex={0}
                         data-name="name"
