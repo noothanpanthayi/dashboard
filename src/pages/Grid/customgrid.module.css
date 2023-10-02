@@ -4,13 +4,16 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 200px 200px 300px 80px;
+  grid-template-columns:100px 200px 200px 300px 80px;
   border-top: solid 1px silver;
   border-right: solid 1px silver;
   width: fit-content;
   box-sizing: border-box;
+  background-color: #fff;
+  box-shadow:2px 2px 6px 2px silver;
   /* height:300px; */
   /* overflow:auto; */
+
 }
 
 .grid div {
@@ -19,9 +22,12 @@
   padding: 5px 5px;
   border-left: solid 1px silver;
   border-bottom: solid 1px silver;
+
+
+  /* cursor: pointer; */
 }
 
-.grid div:nth-child(-n + 4) {
+.grid div:nth-child(-n + 5) {
   background-color: steelblue;
   font-weight: bold;
   color: #fff;
@@ -110,3 +116,13 @@ div {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.selRow {
+  background-color: #c3e6fc;
+}
+
+.deleteIcon {
+  cursor: pointer;
+  width:fit-content
+}
+

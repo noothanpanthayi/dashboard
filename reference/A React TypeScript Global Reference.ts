@@ -169,6 +169,8 @@ const inputText=useRef<HTMLInputElement>(null);
 // Summary
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+//Scenario 1
+
 Event
 e:React.ChangeEvent<HTMLInputElement>
 
@@ -181,6 +183,22 @@ children:ReactNode
 useState
 const [state, setState]=useState<StateObj>({})
 
+//Scenario 2
+const userInput=useRef<HTMLInputElement>(null);
+
+const getUserName=()=>{
+  let userInputCurrent=userInput.current;
+  const lsVal=localStorage.getItem("username");
+   if (userInputCurrent){
+    userInputCurrent.value=lsVal===null?' ':lsVal;
+   }
+ }
+ 
+ useEffect(()=>{
+  getUserName();
+ },[])
+
+ <input type="text" id="name" onChange={saveName} ref={userInput}/>
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // //Reference

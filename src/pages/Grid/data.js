@@ -4,12 +4,14 @@ export const usersListArr =[
       "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
+      "cbchecked":false
     },
     {
       "id": 2,
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
+      "cbchecked":false
     
     },
     {
@@ -17,6 +19,7 @@ export const usersListArr =[
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
+      "cbchecked":false
     
     },
     {
@@ -24,6 +27,7 @@ export const usersListArr =[
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
+      "cbchecked":false
      
     },
     {
@@ -31,6 +35,7 @@ export const usersListArr =[
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
+      "cbchecked":false
      
     },
     {
@@ -38,6 +43,7 @@ export const usersListArr =[
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
+      "cbchecked":false
      
     },
     {
@@ -45,6 +51,7 @@ export const usersListArr =[
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
+      "cbchecked":false
      
     },
     {
@@ -52,6 +59,7 @@ export const usersListArr =[
       "name": "Nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
+      "cbchecked":false
     
     },
     {
@@ -59,6 +67,7 @@ export const usersListArr =[
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
+      "cbchecked":false
      
     },
     {
@@ -66,6 +75,7 @@ export const usersListArr =[
       "name": "Clementina DuBuque",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
+      "cbchecked":false
     
     }
   ]

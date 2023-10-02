@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import styles from '../styles/cart.module.css'
+
 import { CartItem } from '../types/interface'
 import { ShoppingCartProps } from '../types/types'
 import { useShoppingCart } from '../typescripts/useShoppingCart'

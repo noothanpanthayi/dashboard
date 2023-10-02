@@ -1,6 +1,7 @@
 import { render, screen, fireEvent, cleanup } from '@testing-library/react'
-import React from 'react'
+import React, { Dispatch } from 'react'
 import ToDo from '../ToDo'
+import { JsxElement } from 'typescript'
 
 // /* eslint-disable */
 
@@ -95,7 +96,20 @@ describe('Test ToDo Component ', () => {
   })
 
   it('should update the state', async () => {
-    const data:any = [
+    type ToDoList={
+            id: string,
+            todo: string,
+            completed: boolean,
+    }
+
+    interface ToDoObj{
+        activeTab: number;
+        activeTotal: number;
+        completedTotal: number;
+        todoListArr:ToDoList[]
+    }
+
+    const data:ToDoObj[] = [
       {
         activeTab: 1,
         activeTotal: 0,
@@ -116,7 +130,7 @@ describe('Test ToDo Component ', () => {
     ]
 
     // eslint-disable-next-line
-    jest.spyOn(React, 'useState').mockImplementation(() => data)
+    jest.spyOn(React, 'useState').mockImplementation(():any=>data)
     let { container } = render(<ToDo />)
     // eslint-disable-next-line
     expect(container.getElementsByClassName('card')).toHaveLength(2)

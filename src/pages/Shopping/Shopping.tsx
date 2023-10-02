@@ -31,7 +31,8 @@ const Shopping = () => {
 
   const { data, isLoading, error } = useGetProductsQuery(null) //fetch API using RTK Query
 
-  const addToCart = (item: Product | any, index: number) => {
+  const addToCart = (item: Product, index: number) => {
+    console.log('Item ', item);
     setState(prevState=>{
       return {
         ...prevState,
@@ -66,7 +67,7 @@ const Shopping = () => {
 
   function Row({
     item,
-    item: { id, title, price, images },
+    item: { id, title, description, price, images },
     index,
   }: ProductProps) {
     //Type ProductProps specifies the type for the props

@@ -8,6 +8,8 @@ import ToDo from '../pages/ToDo/ToDo';
 import CustomGrid from '../pages/Grid/CustomGrid';
 import FormHandling from '../pages/FormHandling';
 import AMD from '../pages/TypeScriptReference/AMD';
+import InputToLS from '../pages/inputToLS';
+import CheckAll from '../pages/checkAll';
 
 const AppRouter = () => {
   return (
@@ -23,6 +25,11 @@ const AppRouter = () => {
       <Route  path="/grid" element={<CustomGrid />}></Route>
       <Route  path="/formhandling" element={<FormHandling />}></Route>
       <Route  path="/tsref" element={<AMD />}></Route>
+      <Route  path="/inputtols" element={<InputToLS />}></Route>
+      <Route  path="/checkall" element={<CheckAll />}></Route>
+
+
+
 
       
 

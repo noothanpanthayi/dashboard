@@ -7,6 +7,12 @@ export const useToDo = (inputTxt: any) => {
     completed: false,
   }
 
+  type TypeToDoObj ={
+    id: string,
+    todo: string,
+    completed: boolean,
+  }
+
   const [state, setState] = useState({
     activeTab: 1,
     activeTotal: 0,
@@ -35,8 +41,8 @@ export const useToDo = (inputTxt: any) => {
     }
   }
 
-  const updateTab = (e: any) => {
-    setState((prevState): any => {
+  const updateTab = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setState((prevState) => {
       return {
         ...prevState,
         activeTab: parseInt(e.target.id),
@@ -44,14 +50,16 @@ export const useToDo = (inputTxt: any) => {
     })
   }
 
-  const updateCheckbox = (e: any) => {
+  const updateCheckbox = (e:any) => {
     const tempState = { ...state }
 
-    const selectedObj: any = tempState.todoListArr.find(
-      (row: { id: string; todo: string; completed: boolean }) => {
+    const selectedObj:TypeToDoObj|any= tempState.todoListArr.find(
+      (row: TypeToDoObj) => {
         return row.id === e.target.id
       },
     )
+
+    console.log("Update Checkbox ", selectedObj)
 
     selectedObj.completed = !selectedObj?.completed
 

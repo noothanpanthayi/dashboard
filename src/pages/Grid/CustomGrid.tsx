@@ -6,6 +6,7 @@ import About from './About'
 const CustomGrid = () => {
   const [state, setState] = useState({
     editedId: 0,
+    allChecked: false,
     editedObj: {
       id: ' ',
       skill: ' ',
@@ -14,15 +15,16 @@ const CustomGrid = () => {
     },
     editedElement: '',
     usersListArr,
+    allchecked: false,
     unsortedListArr: [...usersListArr],
     sortOrder: 'def',
     orderNum: 0,
-    sortedField:''
+    sortedField: '',
   })
 
   const openEdit = (e: React.MouseEventHandler<HTMLSpanElement> | any) => {
     const tempState = { ...state }
-    const editedId = e.target.id.toString()
+    const editedId = e.target.id
     const editedElement = e.currentTarget.getAttribute('data-name')
     const editedObj = tempState.usersListArr.find((usersListObj) => {
       return parseInt(e.target.id) === usersListObj.id
@@ -114,7 +116,6 @@ const CustomGrid = () => {
       }
     })
   }
-  
 
   const sortGrid = (e: any) => {
     const tempState = { ...state }
@@ -138,7 +139,7 @@ const CustomGrid = () => {
       return {
         ...prevState,
         sortOrder: updatedSortOrder,
-        sortedField:field
+        sortedField: field,
       }
     })
 
@@ -162,6 +163,55 @@ const CustomGrid = () => {
     })
   }
 
+  const selectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const tempState = { ...state }
+    tempState.allChecked = !tempState.allChecked
+    const auto = tempState.usersListArr
+    let allCheck = false
+    let checkedVal: boolean = state.allChecked === true ? true : false
+
+    if (checkedVal) {
+      allCheck = false
+    } else {
+      allCheck = true
+    }
+
+    auto.forEach((row) => {
+      row.cbchecked = allCheck
+    })
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        allChecked: tempState.allChecked,
+        auto,
+      }
+    })
+  }
+
+  const rowCheck = (e: React.ChangeEvent<HTMLInputElement> | any) => {
+    const tempState = { ...state }
+    const auto = tempState.usersListArr
+    // const selectedRowIndex = e.currentTarget.getAttribute('data-index');
+    // if (selectedRowIndex) tempState.selectedRow = selectedRowIndex
+
+    const selectedRow = auto.find((row) => {
+      return row.id === parseInt(e.target.id)
+    })
+
+    if (selectedRow) {
+      selectedRow.cbchecked = !selectedRow?.cbchecked
+    }
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        // selectedRow: tempState.selectedRow,
+        auto,
+      }
+    })
+  }
+
   return (
     <>
       <About />
@@ -174,33 +224,92 @@ const CustomGrid = () => {
         added row, type the text and press tab key to go to the next column.
       </p>
       <div id="grid" className={grid}>
-        <div className={`${field} ${state.sortedField==='name' && (state.sortOrder==='asc'?arrowIconAsc:state.sortOrder==='des'?arrowIconDes:'')}`} id="name" onClick={sortGrid}>
+        <div>
+          <input
+            id="selectAll"
+            checked={state.allChecked}
+            onChange={selectAll}
+            type="checkbox"
+          />
+        </div>
+        <div
+          className={`${field} ${
+            state.sortedField === 'name' &&
+            (state.sortOrder === 'asc'
+              ? arrowIconAsc
+              : state.sortOrder === 'des'
+              ? arrowIconDes
+              : '')
+          }`}
+          id="name"
+          onClick={sortGrid}
+        >
           Name
         </div>
-        <div className={`${field} ${state.sortedField==='username' && (state.sortOrder==='asc'?arrowIconAsc:state.sortOrder==='des'?arrowIconDes:'')}`} id="username" onClick={sortGrid}>
+        <div
+          className={`${field} ${
+            state.sortedField === 'username' &&
+            (state.sortOrder === 'asc'
+              ? arrowIconAsc
+              : state.sortOrder === 'des'
+              ? arrowIconDes
+              : '')
+          }`}
+          id="username"
+          onClick={sortGrid}
+        >
           Username
         </div>
-        <div className={`${field} ${state.sortedField==='email' && (state.sortOrder==='asc'?arrowIconAsc:state.sortOrder==='des'?arrowIconDes:'')}`} id="email" onClick={sortGrid}>
+        <div
+          className={`${field} ${
+            state.sortedField === 'email' &&
+            (state.sortOrder === 'asc'
+              ? arrowIconAsc
+              : state.sortOrder === 'des'
+              ? arrowIconDes
+              : '')
+          }`}
+          id="email"
+          onClick={sortGrid}
+        >
           E-Mail
         </div>
         <div>Action</div>
         {state?.usersListArr.map(
-          ({
-            id, 
-            name,
-            username,
-            email,
-          }: {
-            id: number
-            name: string
-            username: string
-            email: string
-          }) => {
+          (
+            {
+              id,
+              name,
+              username,
+              email,
+              cbchecked,
+            }: {
+              id: number
+              name: string
+              username: string
+              email: string
+              cbchecked: boolean
+            },
+            index,
+          ) => {
             const rowId: string = id.toString()
             return (
               <Fragment key={rowId}>
                 <>
-                  <div>
+                  <div
+                    id={rowId}
+                    onClick={rowCheck}
+                    className={cbchecked ? selRow : ''}
+                  >
+                    <input
+                      id={id.toString()}
+                      data-index={index}
+                      onChange={() => false}
+                      type="checkbox"
+                      checked={cbchecked}
+                    />
+                  </div>
+                  <div className={cbchecked ? selRow : ''}>
                     {!(
                       state.editedId.toString() === rowId &&
                       state.editedElement === 'name'
@@ -235,7 +344,7 @@ const CustomGrid = () => {
                         </span>
                       )}
                   </div>
-                  <div>
+                  <div className={cbchecked ? selRow : ''}>
                     {!(
                       state.editedId.toString() === rowId &&
                       state.editedElement === 'username'
@@ -270,7 +379,7 @@ const CustomGrid = () => {
                       )}
                   </div>
 
-                  <div>
+                  <div className={cbchecked ? selRow : ''}>
                     {!(
                       state.editedId.toString() === rowId &&
                       state.editedElement === 'email'
@@ -303,12 +412,14 @@ const CustomGrid = () => {
                         </span>
                       )}
                   </div>
-                  <div
-                    id={rowId}
-                    style={{ cursor: 'pointer' }}
-                    onClick={deleteUser}
-                  >
-                    🗑️
+                  <div className={cbchecked ? selRow : ''}>
+                    <span
+                      id={rowId}
+                      className={deleteIcon}
+                      onClick={deleteUser}
+                    >
+                      🗑️
+                    </span>
                   </div>
                 </>
               </Fragment>
@@ -318,8 +429,8 @@ const CustomGrid = () => {
       </div>
       <div
         style={{
-          maxWidth: 780,
-          marginTop: 5,
+          maxWidth: 881,
+          marginTop: 15,
           display: 'flex',
           justifyContent: 'right',
         }}
@@ -347,6 +458,18 @@ const CustomGrid = () => {
   )
 }
 
-const { grid, readOnlyTxt, info, jsonView, jsonHdr, infoTxt, field, arrowIconDes, arrowIconAsc} = styles
+const {
+  grid,
+  readOnlyTxt,
+  info,
+  jsonView,
+  jsonHdr,
+  infoTxt,
+  field,
+  arrowIconDes,
+  arrowIconAsc,
+  deleteIcon,
+  selRow,
+} = styles
 
 export default CustomGrid

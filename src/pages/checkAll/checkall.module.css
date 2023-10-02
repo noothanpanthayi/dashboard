@@ -1,0 +1,27 @@
+.grid {
+    margin-top:50px;
+    display:grid;
+    grid-template-columns: 50px 100px 100px 100px 100px;
+    border-top:solid 1px silver;
+    border-right:solid 1px silver;
+    width:fit-content;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px 2px silver;
+}
+
+.grid div {
+    border-bottom:solid 1px silver;
+    border-left:solid 1px silver;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.grid div:nth-child(-n+5){
+font-weight: bold;
+background-color: lightblue;
+}
+
+.selRow {
+    background-color: orange;
+
+}

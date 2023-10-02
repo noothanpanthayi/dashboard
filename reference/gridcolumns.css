@@ -1,0 +1,72 @@
+1. Columns
+Last column in a 5-column grid:
+
+.item:nth-child(5n) { /* ... */ }
+Fourth (second last) column in a 5-column grid:
+
+.item:nth-child(5n-1) { /* ... */ }
+First (5th last) column in a 5-column grid:
+
+.item:nth-child(5n-4) { /* ... */ }
+2. Rows
+First row in a 5-column grid (first five cells):
+
+.item:nth-child(-n+5) { /* ... */ }
+Second row in a 5-column grid (cells from 6 to 10):
+
+.item:nth-child(n+6):nth-child(-n+10) { /* ... */ }
+Third row in a 5-column grid (cells from 11 to 15):
+
+.item:nth-child(n+11):nth-child(-n+15) { /* ... */ }
+Last row in a 5-column grid with 20 cells (cells from 16 onward):
+
+.item:nth-child(n+16) { /* ... */ }
+Share
+Improve this answer
+Follow
+edited Mar 24 at 13:33
+Peter Mortensen's user avatar
+Peter Mortensen
+
+2. Rows
+First row in a 5-column grid (first five cells):
+
+.item:nth-child(-n+5) { /* ... */ }
+Second row in a 5-column grid (cells from 6 to 10):
+
+.item:nth-child(n+6):nth-child(-n+10) { /* ... */ }
+Third row in a 5-column grid (cells from 11 to 15):
+
+.item:nth-child(n+11):nth-child(-n+15) { /* ... */ }
+Last row in a 5-column grid with 20 cells (cells from 16 onward):
+
+.item:nth-child(n+16) { /* ... */ }
+
+================================================
+working
+================================================
+
+.grid div {
+    border-bottom: solid 1px silver;
+    border-left: solid 1px silver;
+    text-align: left;
+    padding: 3px;
+  }
+  
+  .grid div:nth-child(3n-2) { //column 1
+    /*firstColumn yellow*/
+    background-color: greenyellow;
+  }
+  
+  .grid div:nth-child(3n-1) {  //column 2
+    background-color: lightblue;
+  }
+  .grid div:nth-child(3n) {    //column 3 ()
+    background-color: orange;
+  }
+  
+  .grid div:nth-child(-n + 3) {
+    font-weight: bold;
+    color: green;
+    background-color: lightgreen;
+  }
