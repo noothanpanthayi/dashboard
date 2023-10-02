@@ -213,7 +213,7 @@ const CustomGrid = () => {
   }
 
   return (
-    <>
+    <div className={pageContainer}>
       <About />
       <div className={info}></div>
       <p className={infoTxt}>
@@ -429,7 +429,6 @@ const CustomGrid = () => {
       </div>
       <div
         style={{
-          maxWidth: 797,
           marginTop: 15,
           display: 'flex',
           justifyContent: 'right',
@@ -454,7 +453,7 @@ const CustomGrid = () => {
       <div className={jsonView}>
         <pre>{JSON.stringify(state.usersListArr, null, 3)}</pre>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -470,6 +469,7 @@ const {
   arrowIconAsc,
   deleteIcon,
   selRow,
+  pageContainer
 } = styles
 
 export default CustomGrid
