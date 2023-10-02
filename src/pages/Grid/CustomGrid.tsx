@@ -429,7 +429,7 @@ const CustomGrid = () => {
       </div>
       <div
         style={{
-          maxWidth: 881,
+          maxWidth: 797,
           marginTop: 15,
           display: 'flex',
           justifyContent: 'right',
