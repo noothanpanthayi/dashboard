@@ -1,14 +1,25 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 import styles from './home.module.css'
 import { useNavigate } from 'react-router-dom'
-
-import ShoppingAbout from '../Shopping/About'
-import WorldAbout from '../World/About'
-import ToDoAbout from '../ToDo/About'
-import CustomGridAbout from '../Grid/About'
+import { ScreenMode } from '../../App';
 
 const Home = () => {
   const navigate = useNavigate();
+  const screenModeContext:any=useContext(ScreenMode);
+
+  const toggleScreenMode=()=>{
+    document.body.style.backgroundColor='green';
+    console.log(document.body.style.backgroundColor)
+
+    screenModeContext.setState((prevState:{screenmode:string})=>{
+      return {
+        ...prevState,
+        screenmode:prevState.screenmode==='dark'?'light':'dark'
+      }
+    })
+    
+  }
+
   const apps = [
     {
       title: 'Custom Grid',
@@ -122,12 +133,11 @@ const Home = () => {
     }
   }
 
-  return (
-    <Fragment>
-      <div className={pageHeader}>ReactJs Applications</div>
+  return <Fragment>
+<div className={pageHeader}>ReactJs Applications</div>
       <div className={grid}>
-        {apps.map((app) => {
-          return (
+        {apps.map((app, index) => {
+          return <Fragment key={index}>
             <>
               <div
                 title={`Navigate to ${app.title} page`}
@@ -140,13 +150,12 @@ const Home = () => {
                 </div>
               </div>
             </>
-          )
+            </Fragment>
         })}
       </div>
-    </Fragment>
-  )
+      </Fragment>
 }
 
-const { grid, title, content, card, header, externalLink, pageHeader } = styles
+const { grid, title, content, card, header, externalLink, pageHeader, light, dark } = styles
 
 export default Home

@@ -34,7 +34,9 @@
   box-shadow:2px 3px 6px 1px silver;
   cursor: pointer;
   height:326px;
-
+  background-color: #fff;
+  color:#666;
+  font-weight:bold
 }
 
 .card:hover {
@@ -58,7 +60,7 @@
 }
 
 .pageHeader {
-  margin-top:45px;
+  margin-top:55px;
   display:flex;
   justify-content: center;
   font-weight: bold;
@@ -66,4 +68,16 @@
   font-family:arial;
   color:#666;
   text-shadow: 2px 2px 2px silver;
+}
+
+.light {
+  background-color:#fff;
+  color:#000;
+  height:96vh
+}
+
+.dark {
+  background-color:#000;
+  color:#fff;
+  height:96vh
 }

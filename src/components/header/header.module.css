@@ -85,5 +85,6 @@ a span.bold:visited {
   margin:0 auto;
 }
 
-
-
+.pointer {
+  cursor: pointer;
+}
