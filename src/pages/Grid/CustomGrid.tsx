@@ -94,8 +94,10 @@ const CustomGrid = () => {
       return {
         ...prevState,
         usersListArr,
+        filtered:false
       }
     })
+    console.log("added ", state)
   }
 
   const deleteUser = (e: any) => {
@@ -228,6 +230,8 @@ const CustomGrid = () => {
   }
 
   const handleSearch = () => {
+    const tempState={...state};
+    const usersListArr=tempState.usersListArr;
 
     const filteredUsersList = usersListArr.filter((row) => {
       return (
@@ -282,10 +286,8 @@ const CustomGrid = () => {
         To edit, just click on the cell, then use left/right arrow for
         correction or start typing to replace the entire text. Once editing is
         complete, just press Enter or click outside the cell. You can also sort and search the grid.
-        {/* To add a new user,
-        click on the Add button, then click on the first empty cell of the newly
-        added row, type the text and press tab key to go to the next column. */}
-
+        To add a new user, click on the Add button, then click on the first empty cell of the newly
+        added row, type the text and press tab key to go to the next column.
       </p>
 
       <div
@@ -298,6 +300,7 @@ const CustomGrid = () => {
         <label className={search}>Search</label>
         <input
           className={searchInput}
+          autoFocus
           placeholder="Type a text to search"
           type="text"
           onChange={getUserInputTxt}
@@ -510,7 +513,7 @@ const CustomGrid = () => {
           justifyContent: 'right',
         }}
       >
-        {/* <button
+        <button
           style={{
             cursor: 'pointer',
             width: 100,
@@ -522,7 +525,7 @@ const CustomGrid = () => {
           onClick={addUser}
         >
           Add
-        </button> */}
+        </button>
       </div>
 
       <div className={jsonHdr}>JSON data of the above grid</div>
