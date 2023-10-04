@@ -223,7 +223,10 @@ const CustomGrid = () => {
     cbchecked: boolean
   }
 
-  const userInputTxt = useRef(null)
+  // const userInputTxt = useRef(null)
+
+
+  const userInputRef=useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     console.log('State ', state);
@@ -232,7 +235,10 @@ const CustomGrid = () => {
     }, 500)
 
     return () => {
-      clearTimeout(timerHandler)
+      clearTimeout(timerHandler);
+      if (userInputRef.current)
+    
+      userInputRef.current.focus();
     }
   }, [state, state.userInputTxt])
 
@@ -269,6 +275,7 @@ const CustomGrid = () => {
     })
   }
 
+
   return (
     <div className={pageContainer}>
       <About />
@@ -292,7 +299,7 @@ const CustomGrid = () => {
         }}
       >
        <label className={search}>Search</label>
-       <input className={searchInput} placeholder="Type a text to search" type="text" onChange={getUserInputTxt} />
+       <input ref={userInputRef} className={searchInput} placeholder="Type a text to search" type="text" onChange={getUserInputTxt} />
 
       </div>
       <div id="grid" className={grid}>

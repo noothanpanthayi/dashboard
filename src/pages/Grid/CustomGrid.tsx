@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import styles from './customgrid.module.css'
 import { usersListArr } from './data'
 import About from './About'
@@ -120,6 +120,7 @@ const CustomGrid = () => {
       return {
         ...prevState,
         usersListArr,
+        filtered:false
       }
     })
   }
@@ -250,6 +251,8 @@ const CustomGrid = () => {
     })
   }
 
+  const userInputRef=useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     const timerHandler = setTimeout(() => {
       handleSearch()
@@ -262,7 +265,9 @@ const CustomGrid = () => {
           ...prevState,
           filtered: false,
         }
-      })
+      });
+      // if (userInputRef.current)
+      // userInputRef.current.focus();
     }
   }, [state.userInputTxt])
 
@@ -299,8 +304,8 @@ const CustomGrid = () => {
       >
         <label className={search}>Search</label>
         <input
+         ref={userInputRef}
           className={searchInput}
-          autoFocus
           placeholder="Type a text to search"
           type="text"
           onChange={getUserInputTxt}
