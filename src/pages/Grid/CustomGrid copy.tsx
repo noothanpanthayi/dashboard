@@ -1,11 +1,10 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useRef, useState, useEffect } from 'react'
 import styles from './customgrid.module.css'
 import { usersListArr } from './data'
 import About from './About'
 
 const CustomGrid = () => {
   const [state, setState] = useState({
-    refreshBool: false,
     userInputTxt: '',
     editedId: 0,
     allChecked: false,
@@ -17,7 +16,6 @@ const CustomGrid = () => {
       rate: 0,
     },
     editedElement: '',
-    originalUsersList: [...usersListArr],
     usersListArr,
     filteredUsersList: [],
     allchecked: false,
@@ -139,7 +137,7 @@ const CustomGrid = () => {
       orderNum = 0
       updatedSortOrder = 'def'
     }
-
+   
     setState((prevState) => {
       return {
         ...prevState,
@@ -147,27 +145,22 @@ const CustomGrid = () => {
         sortedField: field,
       }
     })
+    console.log('sort area')
     if (updatedSortOrder !== 'def') {
-      tempState[state.filtered ? 'filteredUsersList' : 'usersListArr'].sort(
-        (a: any, b: any) => {
-          if (a[field] < b[field]) return -1 * orderNum
-          else if (a[field] > b[field]) return 1 * orderNum
-          else return 0
-        },
-      )
+      tempState.usersListArr.sort((a: any, b: any) => {
+        if (a[field] < b[field]) return -1 * orderNum
+        else if (a[field] > b[field]) return 1 * orderNum
+        else return 0
+      })
     }
-
-    const usersListArr =
-      updatedSortOrder === 'def'
-        ? [...tempState.unsortedListArr]
-        : tempState[state.filtered ? 'filteredUsersList' : 'usersListArr']
 
     setState((prevState) => {
       return {
         ...prevState,
-        refreshBool: !prevState.refreshBool,
-        usersListArr,
-        filtered: false,
+        usersListArr:
+          updatedSortOrder === 'def'
+            ? [...tempState.unsortedListArr]
+            : tempState.usersListArr,
         sortOrder: updatedSortOrder,
       }
     })
@@ -202,6 +195,8 @@ const CustomGrid = () => {
   const rowCheck = (e: React.ChangeEvent<HTMLInputElement> | any) => {
     const tempState = { ...state }
     const auto = tempState.usersListArr
+    // const selectedRowIndex = e.currentTarget.getAttribute('data-index');
+    // if (selectedRowIndex) tempState.selectedRow = selectedRowIndex
 
     const selectedRow = auto.find((row) => {
       return row.id === parseInt(e.target.id)
@@ -214,6 +209,7 @@ const CustomGrid = () => {
     setState((prevState) => {
       return {
         ...prevState,
+        // selectedRow: tempState.selectedRow,
         auto,
       }
     })
@@ -227,7 +223,22 @@ const CustomGrid = () => {
     cbchecked: boolean
   }
 
+  const userInputTxt = useRef(null)
+
+  useEffect(() => {
+    console.log('State ', state);
+    const timerHandler = setTimeout(() => {
+      handleSearch()
+    }, 500)
+
+    return () => {
+      clearTimeout(timerHandler)
+    }
+  }, [state, state.userInputTxt])
+
   const handleSearch = () => {
+    const tempState = { ...state }
+    const usersListArr: UsersListArr[] = tempState.usersListArr
 
     const filteredUsersList = usersListArr.filter((row) => {
       return (
@@ -245,22 +256,6 @@ const CustomGrid = () => {
       }
     })
   }
-
-  useEffect(() => {
-    const timerHandler = setTimeout(() => {
-      handleSearch()
-    }, 500)
-
-    return () => {
-      clearTimeout(timerHandler)
-      setState((prevState) => {
-        return {
-          ...prevState,
-          filtered: false,
-        }
-      })
-    }
-  }, [state.userInputTxt])
 
   const getUserInputTxt = (e: any) => {
     const tempState = { ...state }
@@ -285,6 +280,9 @@ const CustomGrid = () => {
         click on the Add button, then click on the first empty cell of the newly
         added row, type the text and press tab key to go to the next column.
       </p>
+      {/* <input type="text" 
+      // onChange={handleSearch} 
+      ref={userInputTxt} /> */}
 
       <div
         style={{
@@ -293,13 +291,9 @@ const CustomGrid = () => {
           justifyContent: 'right',
         }}
       >
-        <label className={search}>Search</label>
-        <input
-          className={searchInput}
-          placeholder="Type a text to search"
-          type="text"
-          onChange={getUserInputTxt}
-        />
+       <label className={search}>Search</label>
+       <input className={searchInput} placeholder="Type a text to search" type="text" onChange={getUserInputTxt} />
+
       </div>
       <div id="grid" className={grid}>
         <div>
@@ -353,7 +347,6 @@ const CustomGrid = () => {
           E-Mail
         </div>
         <div>Action</div>
-
         {state[state.filtered ? 'filteredUsersList' : 'usersListArr'].map(
           (
             {
@@ -416,6 +409,8 @@ const CustomGrid = () => {
                             data-name="name"
                             type="text"
                             value={name}
+
+                            // placeholder='Click here to type'
                           />
                         </span>
                       )}
@@ -449,6 +444,7 @@ const CustomGrid = () => {
                             data-name="username"
                             type="text"
                             value={username}
+                            // placeholder='Click here to type'
                           />
                         </span>
                       )}
@@ -482,6 +478,7 @@ const CustomGrid = () => {
                             data-name="email"
                             type="text"
                             value={email}
+                            // placeholder='Click here to type'
                           />
                         </span>
                       )}
@@ -525,13 +522,7 @@ const CustomGrid = () => {
 
       <div className={jsonHdr}>JSON data of the above grid</div>
       <div className={jsonView}>
-        <pre>
-          {JSON.stringify(
-            state[state.filtered ? 'filteredUsersList' : 'usersListArr'],
-            null,
-            3,
-          )}
-        </pre>
+        <pre>{JSON.stringify(state.usersListArr, null, 3)}</pre>
       </div>
     </div>
   )
@@ -551,7 +542,7 @@ const {
   selRow,
   pageContainer,
   search,
-  searchInput,
+  searchInput
 } = styles
 
 export default CustomGrid

@@ -13,7 +13,7 @@
   box-shadow:2px 2px 6px 2px silver;
   /* height:300px; */
   /* overflow:auto; */
-
+  margin-top:3px;
 }
 
 .grid div {
@@ -127,4 +127,17 @@ div {
 
 .pageContainer {
   width:fit-content
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-right:5px;
+}
+
+.searchInput {
+  border:solid 1px silver;
+  font-size:18px;
+  border-radius:6px;
 }
