@@ -1,0 +1,26 @@
+.light {
+  border: solid 1px silver;
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  margin: 20px;
+}
+
+.red {
+  background-color: darkred;
+}
+
+.yellow {
+  background-color: goldenrod;
+}
+
+.green {
+  background-color: green;
+}
+
+.container {
+  background-color: #000;
+  border-radius:6px;
+  width: fit-content;
+  padding: 5px 0;
+}

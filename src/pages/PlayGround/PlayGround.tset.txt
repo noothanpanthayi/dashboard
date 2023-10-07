@@ -1,0 +1,16 @@
+import {
+    render,
+    screen,
+    fireEvent,
+    cleanup,
+    waitFor,
+  } from '@testing-library/react';
+
+import PlayGround from './PlayGround';
+
+describe('Grid Testing Suite', () => {
+    it('should render the grid page', () => {
+      render(<CustomGrid />);
+    })
+
+  });

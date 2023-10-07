@@ -10,6 +10,9 @@ import FormHandling from '../pages/FormHandling';
 import AMD from '../pages/TypeScriptReference/AMD';
 import InputToLS from '../pages/inputToLS';
 import CheckAll from '../pages/checkAll';
+import TrafficLight from '../pages/TrafficLight';
+import TextManipulation from '../pages/PlayGround';
+import TicTacToe from '../pages/tictactoe/TicTacToe';
 
 const AppRouter = () => {
   return (
@@ -27,6 +30,12 @@ const AppRouter = () => {
       <Route  path="/tsref" element={<AMD />}></Route>
       <Route  path="/inputtols" element={<InputToLS />}></Route>
       <Route  path="/checkall" element={<CheckAll />}></Route>
+      <Route  path="/trafficlight" element={<TrafficLight />}></Route>
+      <Route  path="/textmanipulation" element={<TextManipulation />}></Route>
+      <Route  path="/tictactoe" element={<TicTacToe />}></Route>
+
+
+
 
 
 

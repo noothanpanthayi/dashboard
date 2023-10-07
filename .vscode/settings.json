@@ -1,0 +1,16 @@
+{
+    "favorites.resources": [
+        {
+            "filePath": "src\\pages\\Grid\\customgrid.test.js",
+            "group": "Default"
+        },
+        {
+            "filePath": "src\\pages\\Shopping\\shopping.test.tsx",
+            "group": "Default"
+        },
+        {
+            "filePath": "reference\\todo.test.tsx",
+            "group": "Default"
+        }
+    ]
+}

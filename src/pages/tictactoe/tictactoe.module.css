@@ -1,0 +1,75 @@
+.container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  width: fit-content;
+}
+
+.container div {
+  border-bottom: solid 3px #000;
+  border-left: solid 3px #000;
+  height: 100px;
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gameResult {
+  font-family: "arial";
+  color: #cc0066;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resultLabel {
+  font-family: "arial";
+  color: green;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.turn {
+  font-family: "arial";
+  color: #cc0066;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.blink {
+  animation: blinker 1s infinite
+}
+
+@keyframes blinker {
+  60% {
+    opacity: 0;
+  }
+}
+
+
+.button {
+    background-color: blue;
+    margin-top:10px;
+    border-radius: 6;
+    white-space:nowrap;
+   padding:5px 10px;
+   width:fit-content
+}
+
+.btnCenter {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main {
+    max-width: fit-content;
+}
