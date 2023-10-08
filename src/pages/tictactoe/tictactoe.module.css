@@ -73,3 +73,11 @@
 main {
     max-width: fit-content;
 }
+
+.oColor{
+    background-color: palegoldenrod;
+}
+
+.xColor {
+    background-color: lightgreen;
+}

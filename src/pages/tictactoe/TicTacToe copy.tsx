@@ -4,7 +4,7 @@ import styles from './tictactoe.module.css'
 function TicTacToe() {
   const [state, setState] = useState({
     tttCells: new Array(9).fill(''),
-    lastSymbol: '🦜',
+    lastSymbol: 'O',
     gameResult: '',
     playersTurn: 'Player 1',
     gameEnd: true,
@@ -14,7 +14,7 @@ function TicTacToe() {
     if (state.gameEnd) return
     const iswon = false
     const tempState = { ...state }
-    const nextSymbol = state.lastSymbol === '🦁' ? '🦜' : '🦁'
+    const nextSymbol = state.lastSymbol === 'X' ? 'O' : 'X'
     if (!tempState.tttCells[parseInt(e.target.id)])
       tempState.tttCells[parseInt(e.target.id)] = nextSymbol
     const row1 = [
@@ -63,14 +63,15 @@ function TicTacToe() {
       ...state.tttCells[6],
     ].join('');
 
-    const xoro=['🦁🦁🦁','🦜🦜🦜'];
+    const xoro=['XXX','OOO'];
+
     if (xoro.includes(row1) || xoro.includes(row2)||xoro.includes(row3)||
     xoro.includes(col1) || xoro.includes(col2)|| xoro.includes(col3) ||
     xoro.includes(diag1) || xoro.includes(diag2))
     {
       tempState.gameResult = `Congratulations, ${tempState.playersTurn} has Won!`
       tempState.gameEnd = true
-    } else if (state.tttCells.join('').length===18){
+    } else if (state.tttCells.join('').length===9){
       tempState.gameResult = `Game ended in a draw`
       tempState.gameEnd = true
     }
@@ -110,7 +111,7 @@ function TicTacToe() {
       return {
         ...prevState,
         tttCells: new Array(9).fill(''),
-        lastSymbol:'🦜',
+        lastSymbol:'O',
         gameEnd: false,
         playersTurn: 'Player 1',
         gameResult: '',
@@ -124,7 +125,7 @@ function TicTacToe() {
   //     setState((prevState)=>{
   //       return {
   //         ...prevState,
-  //         lastSymbol:'🦁'
+  //         lastSymbol:'X'
   //       }
   //     })
   //    }
@@ -136,7 +137,7 @@ function TicTacToe() {
           {state.tttCells.map((item, index) => {
             return (
               <Fragment key={index}>
-                <div className={`${item==='🦁'?xColor:item==='🦜'?oColor:''}`} onClick={updateCell} id={index.toString()}>
+                <div className={`${item==='X'?xColor:item==='O'?oColor:''}`} onClick={updateCell} id={index.toString()}>
                   {item}
                 </div>
               </Fragment>
