@@ -59,8 +59,6 @@ export const useToDo = (inputTxt: any) => {
       },
     )
 
-    console.log("Update Checkbox ", selectedObj)
-
     selectedObj.completed = !selectedObj?.completed
 
     setState((prevState: any) => {

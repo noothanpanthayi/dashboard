@@ -16,7 +16,8 @@ function TicTacToe() {
     const tempState = { ...state }
     const nextSymbol = state.lastSymbol === '🦁' ? '🦜' : '🦁'
     if (!tempState.tttCells[parseInt(e.target.id)])
-      tempState.tttCells[parseInt(e.target.id)] = nextSymbol
+      tempState.tttCells[parseInt(e.target.id)] = nextSymbol;
+    
     const row1 = [
       ...state.tttCells[0],
       ...state.tttCells[1],
@@ -118,17 +119,7 @@ function TicTacToe() {
     })
   }
 
-  // useEffect(()=>{
-  //    return ()=>
-  //    {
-  //     setState((prevState)=>{
-  //       return {
-  //         ...prevState,
-  //         lastSymbol:'🦁'
-  //       }
-  //     })
-  //    }
-  // })
+
   return (
     <>
       <main>

@@ -5,6 +5,8 @@
   border-top: solid 3px #000;
   border-right: solid 3px #000;
   width: fit-content;
+  background-color: #fff;
+  box-shadow:2px 2px 6px 2px silver;
 }
 
 .container div {

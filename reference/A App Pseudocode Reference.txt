@@ -1,0 +1,37 @@
+=================================================================
+TicTacToe
+=================================================================
+const [state, setState] = useState({
+    tttCells: new Array(9).fill(''),
+    lastSymbol: '🦜',
+    gameResult: '',
+    playersTurn: 'Player 1',
+    gameEnd: true,
+  })
+
+1. Initialize ttt cells array with empty string (new Array(9).fill(''))
+2. Iterate the cells array and display it
+3. OnClick, get the toggled symbol and place it on the clicked cells
+4. Get the current rows, cols and diagonals sequence
+5. Match if those shows the same
+  const xoro=['🦁🦁🦁','🦜🦜🦜'];
+    if (xoro.includes(row1) || xoro.includes(row2)||xoro.includes(row3)||
+    xoro.includes(col1) || xoro.includes(col2)|| xoro.includes(col3) ||
+    xoro.includes(diag1) || xoro.includes(diag2)){
+    }
+6. Check if all cells are filled for finding game end.
+7. Add a Start and End button.
+
+=================================================================
+To Do
+=================================================================
+1. Click on Add button
+2. Assign the todo into the todoObj, get the id from the last id+1
+with completed, false.
+3. create a new array with the existing state array and add the newly
+added todoObj (const todoListArr = [...prevState.todoListArr, todoObj]) 
+and update the state.
+4. For marking completion, on clicking of the checkbox, find the clicked row
+using find (row.id====e.target.id). Toggle the completed value and update the array.
+5. Filter the temp array and return the rows except the deleted row and update the state.
+
