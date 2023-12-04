@@ -1,7 +1,7 @@
 import styles from './App.module.css'
 import { HashRouter } from 'react-router-dom'
 import Header from './components/header/header'
-import AppRouter from './router/Router'
+import AppRouter from './Router'
 import Footer from './components/footer/footer'
 import { createContext, useMemo, useState } from 'react'
 

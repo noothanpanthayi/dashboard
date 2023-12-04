@@ -3,7 +3,7 @@ import Home from '../pages/Home/Home'
 import Shopping from '../pages/Shopping/Shopping';
 import styles from './router.module.css'
 import World from '../pages/World/World';
-import ShoppingCart from '../pages/Cart/components/ShoppingCart';
+import ShoppingCart from '../pages/cart/components/ShoppingCart';
 import ToDo from '../pages/ToDo/ToDo';
 import CustomGrid from '../pages/Grid/CustomGrid';
 import FormHandling from '../pages/FormHandling';

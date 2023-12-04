@@ -82,7 +82,7 @@ const Header = () => {
                   isActive ? 'active' : ''
                 }
               >
-                WorldInfo
+                World Info
               </NavLink>
               <NavLink
                 to="/shopping"

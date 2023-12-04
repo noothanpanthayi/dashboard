@@ -1,0 +1,124 @@
+
+
+
+
+const PlayButton = ({doPlay}) => (
+  <button
+    onClick={doPlay}
+    aria-label="Play button"
+    type="button"
+    className="player-controls__btn player-controls__play-btn"
+  />
+);
+
+const PauseButton = ({doPlay}) => (
+  <button
+    onClick={doPlay}
+    aria-label="Pause button"
+    type="button"
+    className="player-controls__btn player-controls__pause-btn"
+  />
+);
+
+const NextButton = ({goNext}) => (
+  <button
+    onClick={goNext}
+    aria-label="Next button"
+    type="button"
+    className="player-controls__btn player-controls__next-btn"
+  />
+);
+
+const PreviousButton = () => (
+  <button
+    aria-label="Previous button"
+    type="button"
+    className="player-controls__btn player-controls__prev-btn"
+  />
+);
+
+const App = () => {
+  const tracks = [
+    {
+      id: 1,
+      name: 'Yesterday',
+      artist: 'Beatles',
+    },
+    {
+      id: 2,
+      name: 'Nothing else matters',
+      artist: 'Metallica',
+    },
+    {
+      id: 3,
+      name: 'Always',
+      artist: 'Bon Jovi',
+    },
+    {
+      id: 4,
+      name: 'Waka Waka',
+      artist: 'Shakira',
+    },
+  ];
+  const [selectedTrack, setSelectedTrack] = React.useState(tracks[0]);
+
+  const [isPaused, setPaused] = React.useState(true);
+
+  const onNextButtonClick = () => {
+    // TODO: Write your code here
+  };
+  const onPreviousButtonClick = () => {
+    // TODO: Write your code here
+  };
+  
+  const doPlay=()=>{
+  setPaused(!isPaused);
+}
+
+  const goNext=()=>{
+  const nextId=(tracks.id)+1
+   setSelectedTrack(tracks[nextId])
+}
+
+  const goPrevious=()=>{
+   setSelectedTrack(tracks[3])
+}
+
+  const renderTracks = () => tracks.map((track) => (
+    <div id={track.id} className={`tracks-list__item ${selectedTrack.id === track.id ? 'tracks-list__item--selected' : ''}`} key={track.id}>
+      <span className="tracks-list__name">{track.name}</span>
+      <span className="tracks-list__artist">
+        &nbsp;—&nbsp;
+        {track.artist}
+      </span>
+    </div>
+  ));
+
+  return (
+    <main>
+      <div className="tracks-list">
+        <h2 className="tracks-list__title">Tracks</h2>
+        {renderTracks()}
+      </div>
+      <div className="player-controls">
+        <PreviousButton onClick={goPrevious}/>
+        {
+          !isPaused &&  <PlayButton doPlay={doPlay}/>
+        }
+        {
+          isPaused && <PauseButton doPlay={doPlay}/>
+        }
+        <NextButton goNext={goNext}/>
+        <div className="player-controls__track">
+          <span className="track__name">{selectedTrack.name}</span>
+          <span className="track__artist">{selectedTrack.artist}</span>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
