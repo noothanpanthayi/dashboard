@@ -13,6 +13,7 @@ import CheckAll from '../pages/checkAll';
 import TrafficLight from '../pages/TrafficLight';
 import TextManipulation from '../pages/PlayGround';
 import TicTacToe from '../pages/tictactoe/TicTacToe';
+import DragnDrop from '../pages/dnd/DragnDrop';
 
 const AppRouter = () => {
   return (
@@ -33,6 +34,8 @@ const AppRouter = () => {
       <Route  path="/trafficlight" element={<TrafficLight />}></Route>
       <Route  path="/textmanipulation" element={<TextManipulation />}></Route>
       <Route  path="/tictactoe" element={<TicTacToe />}></Route>
+      <Route  path="/dnd" element={<DragnDrop />}></Route>
+
 
 
 
