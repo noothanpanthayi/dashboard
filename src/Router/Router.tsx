@@ -14,6 +14,7 @@ import TrafficLight from '../pages/TrafficLight';
 import TextManipulation from '../pages/PlayGround';
 import TicTacToe from '../pages/tictactoe/TicTacToe';
 import DragnDrop from '../pages/dnd/DragnDrop';
+import RandomUser from '../pages/randomuser/RandomUser';
 
 const AppRouter = () => {
   return (
@@ -35,6 +36,8 @@ const AppRouter = () => {
       <Route  path="/textmanipulation" element={<TextManipulation />}></Route>
       <Route  path="/tictactoe" element={<TicTacToe />}></Route>
       <Route  path="/dnd" element={<DragnDrop />}></Route>
+      <Route  path="/randomuser" element={<RandomUser />}></Route>
+
 
 
 
