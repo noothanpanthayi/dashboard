@@ -1,8 +1,8 @@
 footer {
     font-size:12px;
     width:-webkit-fill-available;
-    position:fixed;
-    bottom:0;
+    position:fixed; 
+     bottom:0;
     background-color:darkgray;
     color:#fff;
     padding:5px;

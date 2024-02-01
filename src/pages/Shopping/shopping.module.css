@@ -1,7 +1,17 @@
 .grid {
     display:grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr))
+    height:92vh;
+    overflow-y: scroll;
+    scrollbar-width: none;  
+    -ms-overflow-style: none; 
+    margin-top:40px;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
 }
+
+.grid::-webkit-scrollbar {
+  display: none
+}
+
 .card {
     position: relative;
     border:solid 1px silver;
@@ -12,7 +22,7 @@
 
 .header {
     color:#fff;
-    background-color:steelblue;
+    background-color:blue;
     padding:3px;
     text-align: center;
 }
@@ -25,7 +35,7 @@
     padding:3px;
     width:-webkit-fill-available;
     text-align: center;
-    background-color: green;
+    background-color: darkblue;
 }
 
 .card button {

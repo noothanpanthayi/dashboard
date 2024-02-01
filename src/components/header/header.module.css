@@ -1,9 +1,24 @@
+
 header {
-  background-color: green;
+  background-color: darkblue;
   color: #fff;
   padding: 5px;
   margin-bottom: 10px;
   text-align: left;
+  position:fixed;
+  top:0;
+  width:-webkit-fill-available;
+  animation-name:hdrAnim;
+  animation-duration: 10s;
+}
+
+@keyframes hdrAnim {
+  0%   {background-color: green;}
+  25%  {background-color: darkgreen;}
+  50%  {background-color: red;}
+  50%  {background-color: darkred;}
+  50%  {background-color: blue;}
+  50%  {background-color: darkblue;}
 }
 
 nav {
