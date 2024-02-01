@@ -1,6 +1,0 @@
-npx create-react-app my-app --template typescript
-npm install @reduxjs/toolkit
-
-npm i react-router-dom 
-npm install react-redux
-
