@@ -22,6 +22,24 @@ const Home = () => {
 
   const apps = [
     {
+      title: 'Tic Tac Toe',
+      url: '/tictactoe',
+      description: (
+        <Fragment>
+          <p>
+          The Tic-Tac-Toe game is a classic, two-player game where users take turns marking spaces on a 3x3 grid. 
+          </p>
+          <p>
+          Players can choose to play as X or O, with the goal of getting three in a row horizontally, vertically, or diagonally. 
+          </p>
+          <p>
+          The game automatically detects wins and draws, and allows players to restart at any time.
+          </p>
+         
+        </Fragment>
+      ),
+    },
+    {
       title: 'Custom Grid',
       url: '/grid',
       description: (
@@ -38,22 +56,18 @@ const Home = () => {
         </Fragment>
       ),
     },
-
     {
-      title: 'World Info',
-      url: '/world',
-
+      title: 'Article in Medium',
+      url: 'https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70',
       description: (
         <Fragment>
           <p>
-            This is to demo a search feature which fetches the details of a user
-            typed country from a free-to-use API.
+          ReactJs Patterns for Delightful DX
           </p>
           <p>
-            {' '}
-            Debounce concept is incorporated to improve the performance of the
-            search.
+           This is an article in Medium which helps to write consistent, readable and maintainable ReactJs Code to provide a delightful developer experience.
           </p>
+        
         </Fragment>
       ),
     },
@@ -72,6 +86,25 @@ const Home = () => {
         </Fragment>
       ),
     },
+    {
+      title: 'World Info',
+      url: '/world',
+
+      description: (
+        <Fragment>
+          <p>
+            This is to demo a search feature which fetches the details of a user
+            typed country from a free-to-use API.
+          </p>
+          <p>
+            {' '}
+            Debounce concept is incorporated to improve the performance of the
+            search.
+          </p>
+        </Fragment>
+      ),
+    },
+   
     {
       title: 'To Do',
       url: '/todo',
@@ -107,21 +140,7 @@ const Home = () => {
         </Fragment>
       ),
     },
-    {
-      title: 'Article in Medium',
-      url: 'https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70',
-      description: (
-        <Fragment>
-          <p>
-          ReactJs Patterns for Delightful DX
-          </p>
-          <p>
-           This is an article in Medium which helps to write consistent, readable and maintainable ReactJs Code to provide a delightful developer experience.
-          </p>
-        
-        </Fragment>
-      ),
-    },
+ 
   ]
 
   const doNavigate = (url: any) => {

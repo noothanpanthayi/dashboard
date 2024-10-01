@@ -135,18 +135,18 @@ function TicTacToe() {
           })}
         </div>
         {state.gameEnd === false && (
-          <div className={`${turn} ${blink}`}>{state.playersTurn}'s turn</div>
+          <div className={`${turn} ${blink}`}>{state.playersTurn}'s turn - Please click inside a cell!</div>
         )}
         {state.gameResult && (
           <div className={gameResult}>
-            <span className={resultLabel}>Result:</span>
-            {!state.gameResult ? 'Game in Progress' : state.gameResult}
+            {/* <span className={resultLabel}>Result:</span> */}
+            {!state.gameResult ? 'Game in Progress' : state.gameResult}!
           </div>
         )}
         {state.gameEnd === true && (
           <div className={btnCenter}>
             <button onClick={startGame} className={button}>
-              Start/ReStart Game
+              Start New Game
             </button>
           </div>
         )}
