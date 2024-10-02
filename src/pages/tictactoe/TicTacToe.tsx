@@ -11,7 +11,13 @@ function TicTacToe() {
   })
 
   function updateCell(e: any) {
+
+    if (state.gameEnd && state.tttCells.join('').length===0){
+      alert("Please click on the Start New Game Button")
+    }
+
     if (state.gameEnd) return
+
     const iswon = false
     const tempState = { ...state }
     const nextSymbol = state.lastSymbol === '🦁' ? '🦜' : '🦁'
@@ -63,7 +69,6 @@ function TicTacToe() {
       ...state.tttCells[4],
       ...state.tttCells[6],
     ].join('');
-
     const xoro=['🦁🦁🦁','🦜🦜🦜'];
     if (xoro.includes(row1) || xoro.includes(row2)||xoro.includes(row3)||
     xoro.includes(col1) || xoro.includes(col2)|| xoro.includes(col3) ||
@@ -123,6 +128,7 @@ function TicTacToe() {
   return (
     <>
       <main>
+      <div className={title}>Tic-Tac-Toe</div>
         <div className={container}>
           {state.tttCells.map((item, index) => {
             return (
@@ -169,7 +175,7 @@ function TicTacToe() {
 const {
   container,
   gameResult,
-  resultLabel,
+  title,
   turn,
   blink,
   button,
