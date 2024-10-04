@@ -63,14 +63,24 @@ a span.bold:visited {
 
 }
 
-@media (max-width:680px){
+@media (max-width:790px){
   nav {
     display:none;
   };
+
+  .hamburger {
+    font-size: 32px;
+  }
  
 }
 
-@media (min-width:680px){
+.hamburger {
+  font-size: 32px;
+  font-weight: bold;
+  color:#fff
+}
+
+@media (min-width:790px){
   .hamburger {
     display:none;
   }

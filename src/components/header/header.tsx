@@ -59,17 +59,27 @@ const Header = () => {
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
+                  isActive ? 'active' : 'bold'
                 }
               >
                 Dashboard
+              </NavLink>
+              <NavLink
+                to="/tictactoe"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Tic-Tac-Toe
               </NavLink>
               <NavLink
                 to="/grid"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
+                  isActive ? 'active' : 'bold'
                 }
               >
                 Custom Grid
@@ -79,7 +89,7 @@ const Header = () => {
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
+                  isActive ? 'active' : 'bold'
                 }
               >
                 World Info
@@ -89,7 +99,7 @@ const Header = () => {
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
+                  isActive ? 'active' : 'bold'
                 }
               >
                 Online Shopping
@@ -99,7 +109,7 @@ const Header = () => {
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
+                  isActive ? 'active' : 'bold'
                 }
               >
                 ToDo
@@ -109,7 +119,7 @@ const Header = () => {
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
+                  isActive ? 'active' : 'bold'
                 }
               >
                 Form Handling
@@ -141,6 +151,18 @@ const Header = () => {
                 }
               >
                 Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/tictactoe"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Tic-Tac-Toe
               </NavLink>
             </li>
             <li>
