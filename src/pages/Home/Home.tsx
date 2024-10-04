@@ -22,20 +22,41 @@ const Home = () => {
 
   const apps = [
     {
-      title: 'Tic Tac Toe',
+      title: 'Tic-Tac-Toe',
       url: '/tictactoe',
       description: (
         <Fragment>
           <p>
-          The Tic-Tac-Toe game is a classic, two-player game where users take turns marking spaces on a 3x3 grid. 
+          The Tic-Tac-Toe game is a classic, <br/><span>two-player game</span> where users take turns marking spaces on a 3x3 grid. 
           </p>
           <p>
-          Players can choose to play as X or O, with the goal of getting three in a row horizontally, vertically, or diagonally. 
+          Players can choose to play as X or O, with the goal of getting three in a row <span>horizontally</span>, 
+          <span> vertically</span>, or <span>diagonally</span>. 
           </p>
           <p>
-          The game automatically detects wins and draws, and allows players to restart at any time.
+          <span>The game automatically detects wins and draws, and allows players to restart at any time.
+          </span>
           </p>
          
+        </Fragment>
+      ),
+    },
+    {
+      title: 'Online Shopping',
+      url: '/shopping',
+      description: (
+        <Fragment>
+          <p>
+            This is to demo an <span>Online Shopping</span> feature. 
+          </p>
+          <p>
+            It fetches a free-to-use
+            products <span>API data</span> from a <span>remote server</span> using <br/><span>React Tookit and RTK Query 
+            </span>.
+          </p>
+          <p>
+            <span>RTK CreateSlice</span> is used to manage the state of the shopping cart.
+          </p>
         </Fragment>
       ),
     },
@@ -49,43 +70,16 @@ const Home = () => {
             and columns.
           </p>
           <p>
-            Users can edit the field by directly clicking on the cell. This also
+            Users can edit the field like an <span>Excel Sheet</span> by directly clicking on the cell. This also
             has Add and Sort feature.
           </p>
-          <p>CSS Grid is used to display the grid layout</p>
+          <p><span>CSS Grid</span> is used to display the grid layout</p>
         </Fragment>
       ),
     },
-    {
-      title: 'Article in Medium',
-      url: 'https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70',
-      description: (
-        <Fragment>
-          <p>
-          ReactJs Patterns for Delightful DX
-          </p>
-          <p>
-           This is an article in Medium which helps to write consistent, readable and maintainable ReactJs Code to provide a delightful developer experience.
-          </p>
-        
-        </Fragment>
-      ),
-    },
-    {
-      title: 'Online Shopping',
-      url: '/shopping',
-      description: (
-        <Fragment>
-          <p>
-            This is to demo an online shopping feature. It fetches a free-to-use
-            products API data from a remote server using React Toolkit Query.
-          </p>
-          <p>
-            React CreateSlice is used to manage the state of the shopping cart.
-          </p>
-        </Fragment>
-      ),
-    },
+    
+   
+   
     {
       title: 'World Info',
       url: '/world',
@@ -93,12 +87,12 @@ const Home = () => {
       description: (
         <Fragment>
           <p>
-            This is to demo a search feature which fetches the details of a user
+            This is to demo a <span>Search feature</span> which fetches the details of a user
             typed country from a free-to-use API.
           </p>
           <p>
             {' '}
-            Debounce concept is incorporated to improve the performance of the
+            <span>Debounce feature</span> is incorporated to improve the performance of the
             search.
           </p>
         </Fragment>
@@ -115,12 +109,29 @@ const Home = () => {
             </p>
             <p>
              User can type a
-            task/reminder and it will be listed under Active Todo category. Once
-            the task is completed, user can click on the checkbox. The completed
-            Todo task will be moved to the Completed Todo category.
+            task and it will be listed under <span>Active Todo</span> category. 
+            </p>
+            <p>Once the task is completed, user can click on the checkbox. The completed
+            Todo task will be moved to the <span>Completed Todo</span> category.
             </p>
          
           .
+        </Fragment>
+      ),
+    },
+    {
+      title: 'Article in Medium',
+      url: 'https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70',
+      description: (
+        <Fragment>
+          <p>
+          <span>ReactJs Patterns for Delightful DX</span>
+          </p>
+          <p>
+           This is an article in <span>Medium</span> which helps 
+            to write <span>consistent, readable and maintainable ReactJs code</span> to provide a delightful developer experience.
+          </p>
+        
         </Fragment>
       ),
     },
@@ -134,7 +145,7 @@ const Home = () => {
           </p>
           <p>
           It manages
-          textboxes, radio buttons, checkboxes, drop down list, textarea and
+          <span>Textboxes, Radio Buttons, Checkboxes, Drop Down List, Textarea</span> and
           validates when user submit the form.
           </p>
         </Fragment>
