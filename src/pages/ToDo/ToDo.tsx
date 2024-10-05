@@ -16,7 +16,7 @@ const ToDo = () => {
     deleteRow,
   } = useToDo(inputTxt);
 
-  const ToDoList = ({ complete }: ToDoListProp) => {
+  const ToDoList = ({ complete, header }: ToDoListProp) => {
     return (
       <div className={todoGrid}>
         {state.todoListArr
@@ -36,7 +36,7 @@ const ToDo = () => {
                     checked={row.completed}
                   />
                 </div>
-                <div className={todo} id={row.id} onClick={updateCheckbox}>
+                <div className={`${header}__todo`} id={row.id} onClick={updateCheckbox}>
                   {row.todo}
                 </div>
                 <div id={row.id} onClick={deleteRow} className={trash}>
@@ -66,13 +66,13 @@ const ToDo = () => {
             Add
           </button>
         </div>
-        <div className={greenHdr}>Active Todo</div>
+        <div id="pending" className={greenHdr}>Active Todo</div>
         <div>
-          <ToDoList complete />
+          <ToDoList complete header="greenHdr" />
         </div>
-        <div className={maroonHdr}>Completed Todo</div>
+        <div id="completed" className={maroonHdr}>Completed Todo</div>
         <div>
-          <ToDoList complete={false} />
+          <ToDoList complete={false} header="maroonHdr" />
         </div>
       </div>
     </>
@@ -89,6 +89,7 @@ const {
   greenHdr,
   trash,
   maroonHdr,
+  greenHdr__todo
 } = styles
 
 export default ToDo

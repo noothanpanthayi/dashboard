@@ -6,5 +6,6 @@ export type ToDoType={
 }
 
 export type ToDoListProp={
-    complete:boolean
+    complete:boolean,
+    header:string
 }
