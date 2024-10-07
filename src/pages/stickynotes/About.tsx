@@ -35,6 +35,7 @@ function About({aboutHidden}:{aboutHidden:boolean}) {
             <ul>
               <li><strong>Add a Sticky Note</strong>: Click on Add Sticky Note </li>
               <li><strong>Write a Note</strong>: Just click inside the sticky note and start writing</li>
+              <li><strong>Save the Note</strong>: Just click outside the sticky note. Now navigate away or refresh the page</li>
               <li><strong>Delete a Note</strong>: Just double click on a sticky note and confirm</li>
               <li><strong>Remove all Sticky Notes:</strong>Click on the Remove all Sticky Notes link</li>
             </ul>

@@ -42,7 +42,7 @@ const Home = () => {
       ),
     },
     {
-      title: 'Stick Notes',
+      title: 'Sticky Notes',
       url: '/stickynotes',
       description: (
         <Fragment>
