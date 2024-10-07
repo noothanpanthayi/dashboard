@@ -15,6 +15,7 @@ import TextManipulation from '../pages/PlayGround';
 import TicTacToe from '../pages/tictactoe/TicTacToe';
 import DragnDrop from '../pages/dnd/DragnDrop';
 import RandomUser from '../pages/randomuser/RandomUser';
+import { Stickynotes } from '../pages/stickynotes/Stickynotes';
 
 const AppRouter = () => {
   return (
@@ -37,16 +38,7 @@ const AppRouter = () => {
       <Route  path="/tictactoe" element={<TicTacToe />}></Route>
       <Route  path="/dnd" element={<DragnDrop />}></Route>
       <Route  path="/randomuser" element={<RandomUser />}></Route>
-
-
-
-
-
-
-
-
-
-      
+      <Route  path="/stickynotes" element={<Stickynotes />}></Route>
 
     </Routes>
     </div>

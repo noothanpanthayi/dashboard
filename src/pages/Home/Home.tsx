@@ -42,6 +42,28 @@ const Home = () => {
       ),
     },
     {
+      title: 'Stick Notes',
+      url: '/stickynotes',
+      description: (
+        <Fragment>
+          <p>
+          This React application mimics the <span>classic Sticky Note experience</span>. 
+          Users can freely create a sticky note and enter any text. It can be easily edited and deleted.
+          </p>
+          <p>
+          <span>It is automatically saved when the user clicks outside the sticky note. 
+         
+          </span>
+         
+          </p>
+          <p>
+             <span>When the page is refreshed, the saved notes are retrieved</span>
+          </p>
+         
+        </Fragment>
+      ),
+    },
+    {
       title: 'Online Shopping',
       url: '/shopping',
       description: (

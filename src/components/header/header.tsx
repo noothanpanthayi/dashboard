@@ -75,6 +75,16 @@ const Header = () => {
                 Tic-Tac-Toe
               </NavLink>
               <NavLink
+                to="/stickynotes"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Sticky Notes
+              </NavLink>
+              <NavLink
                 to="/grid"
                 className={({
                   isActive,
@@ -163,6 +173,18 @@ const Header = () => {
                 }
               >
                 Tic-Tac-Toe
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/stickynotes"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Sticky Notes
               </NavLink>
             </li>
             <li>

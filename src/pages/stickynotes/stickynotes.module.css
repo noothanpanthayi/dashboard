@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: caveat;
+    src: url(Caveat-Regular.ttf);
+  }
+
+.container {
+    margin-top:20px;
+    min-height: 300px;
+}
+
+.stickybtns {
+    width:auto;
+    font-family:"caveat";
+    display:flex;
+    padding:10px;
+    margin:0 auto;
+    color:black;
+    font-size:36px;
+    font-weight:bold;
+    text-wrap: nowrap;
+    box-shadow:2px 4px 12px #666;
+    margin:0 10px;
+    /* justify-content:center; */
+    justify-content:space-between;
+}
+
+.addnote {
+    background-color:orange;
+    color:blue
+}
+
+.removenote {
+    display:flex;
+    /* background-color:silver; */
+    color:blue;
+    font-weight:bold;
+    align-items: center;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.stickynote {
+    font-family: caveat;
+    box-sizing: border-box;
+    font-size:30px;
+    max-width: 250px;
+    height:280px;
+    color:blue;
+    font-weight:bold;
+    padding:15px;
+    box-shadow:2px 4px 12px #666;
+    overflow:auto
+    
+}
+
+.stickynote::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.stickynote:hover {
+    box-shadow: 2px 4px 12px rebeccapurple;
+    transform: scale(1.01); 
+    transition: transform .2s;
+}
+
+.grid {
+    min-height:600px;
+    border:solid 10px #fff;
+    padding:30px;
+    margin-top:20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    grid-row-gap:20px;
+    grid-column-gap:20px;
+    box-shadow:2px 4px 12px #666;
+}
+
+.buttons {
+    display:flex;
+    justify-content: space-between
+}
+
+.closebtn {
+    display:flex;
+    justify-content: right;
+    cursor:pointer
+}

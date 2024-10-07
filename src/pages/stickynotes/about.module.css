@@ -1,0 +1,35 @@
+.aboutContainer {
+  margin-top: 55px;
+}
+
+.aboutContainer p {
+  font-weight: bold;
+  color: #666;
+}
+
+.aboutContent {
+  font-family: arial;
+  font-weight: bold;
+  color: #666;
+}
+
+.aboutHeader {
+  font-weight: bold;
+  color: rgb(70, 129, 244);;
+  font-family: arial;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.arrow {
+  color: #00a99d;
+  margin-right:3px;
+
+}
+
+.codeLink:link,
+.codeLink:visited {
+  font-family: arial;
+  font-size: 14px;
+  color: blue;
+}
