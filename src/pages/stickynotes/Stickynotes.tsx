@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import styles from './stickynotes.module.css';
 import About from './About';
+import { Switch } from '@mui/material';
 
 
 export const Stickynotes = () => {
@@ -16,6 +17,7 @@ export const Stickynotes = () => {
     stickynotes: StickyNote[];
     editmode:boolean;
     draggedItem:any;
+    writable:boolean
   }
 
   const [state, setState] = useState<STATE>({
@@ -30,7 +32,8 @@ export const Stickynotes = () => {
     }
     ],
     editmode:false,
-    draggedItem:{}
+    draggedItem:{},
+    writable:true
   })
 
   let dragItemId: any;
@@ -84,6 +87,7 @@ export const Stickynotes = () => {
     //  e.target?.classList.remove('redsquare')
 
     setState((prevState) => {
+      localStorage.setItem('state', JSON.stringify(prevState))
       return {
         ...prevState,
         stickynotes: tempState.stickynotes,
@@ -100,6 +104,8 @@ export const Stickynotes = () => {
           return stickynote.id === e.target.id
         },
       )
+
+      console.log('selectedStickyNote ', selectedStickyNote);
 
       selectedStickyNote.notes = e.target.innerText;
 
@@ -157,6 +163,10 @@ export const Stickynotes = () => {
   }
 
   useEffect(()=>{
+    console.log("State stickynotes ", state.stickynotes)
+  })
+
+  useEffect(()=>{
       let lsString:any=localStorage?.getItem("state");
       let localState:Storage=JSON.parse(lsString)
 
@@ -181,8 +191,11 @@ export const Stickynotes = () => {
   }
 
   const deleteNote=(e:any)=>{
-    let updatedStickyNotes:any='';
-    const response=window.confirm("Do you want to delete this Sticky Note?");
+    let updatedStickyNotes:any='', response=false;
+
+    if (!state.writable){
+       response=window.confirm("Do you want to delete this Sticky Note?");
+    }
     if (response){
       const tempState={...state};
       const stickynotes=tempState.stickynotes.filter(stickynote=>{
@@ -197,13 +210,41 @@ export const Stickynotes = () => {
     }
   }
 
+  const handleSwitch=()=>{
+    setState(prevState=>{
+      return {
+        ...prevState,
+        writable:!state.writable
+      }
+    })
+  }
+
+  const handleKeyDown=(e:any)=>{
+    if (e.key==='Enter') e.preventDefault();
+  }
+
   return <>
     <About aboutHidden={true}/>
     <div className={container}>
       <div className={buttons}>
 
       <button className={`${stickybtns} ${addnote}`} onClick={addNote}>Add Sticky Note</button>
+      <div className={rwmode}>
+      <Switch   
+                
+                checked={state.writable}
+                onChange={handleSwitch}
+                color="default"
+                inputProps={{ 'aria-label': 'controlled' }}
+              />{' '}
+              {
+                 state.writable?
+                 <span className={disableEditTxt}>Disable Edit for Drag n Drop</span>:
+                 <span className={enableEditTxt}>Enable Edit</span>
+              }
       <div className={`${removenote}`} onClick={removestickynotes}>Remove All Sticky Notes</div>
+      </div>
+    
   
       </div>
       
@@ -213,7 +254,7 @@ export const Stickynotes = () => {
           return (
             <Fragment key={id}>
               <div 
-                draggable
+                draggable={!state.writable}
                 onDragStart={(e) => handleDragStart(e, id)}
                 onDrop={(e) => handleDrop(e, id)}
                 onDoubleClick={deleteNote}
@@ -223,8 +264,9 @@ export const Stickynotes = () => {
                 style={{ transform: tiltangle, backgroundColor: `#${color}` }}
                 onFocus={()=>state.editmode=true}
                 onBlur={saveNote}
-                contentEditable="true"
-                suppressContentEditableWarning={true}
+                contentEditable={state.writable}
+                onKeyDown={handleKeyDown}
+                // suppressContentEditableWarning={true}
                 className={stickynote}
               >
                 {notes}
@@ -238,4 +280,4 @@ export const Stickynotes = () => {
   </>
 }
 
-const { stickynote, grid, container, stickybtns, addnote,removenote, buttons, closebtn} = styles
+const { stickynote, grid, container, stickybtns, addnote,removenote, buttons, disableEditTxt, enableEditTxt, rwmode} = styles

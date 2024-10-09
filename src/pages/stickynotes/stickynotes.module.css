@@ -86,3 +86,23 @@
     justify-content: right;
     cursor:pointer
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.rwmode {
+    background-color:rgb(255, 249, 177);
+    width: 300px;
+    padding: 10px;
+}
+
+.disableEditTxt{
+    color:green;
+    font-weight: bold;
+}
+
+.enableEditTxt{
+    color:green;
+    font-weight: bold;
+}
