@@ -13,8 +13,9 @@ export const Stickynotes = () => {
   }
 
   interface STATE {
-    stickynotes: StickyNote[],
-    editmode:boolean
+    stickynotes: StickyNote[];
+    editmode:boolean;
+    draggedItem:any;
   }
 
   const [state, setState] = useState<STATE>({
@@ -28,8 +29,67 @@ export const Stickynotes = () => {
       notefull:false
     }
     ],
-    editmode:false
+    editmode:false,
+    draggedItem:{}
   })
+
+  let dragItemId: any;
+
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>, id: string) => {
+    
+    dragItemId = id;
+
+    const draggedItem = state.stickynotes.find((item) => {
+      return item.id === id;
+    });
+
+    const { target } = e;
+    if (target instanceof HTMLElement) {
+      const classList = target.classList; // DOMTokenList
+      classList.remove("redsquare");
+    }
+
+    setState((prev: any) => {
+      return {
+        ...prev,
+        draggedItem,
+      };
+    });
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>, id: string) => {
+    const { target } = e;
+    if (target instanceof HTMLElement) {
+      const classList = target.classList; // DOMTokenList
+      classList.remove("redsquare");
+    }
+
+    const tempState: any = { ...state };
+
+    const draggedIndex = state.stickynotes.findIndex((item) => {
+      return item.id === state.draggedItem.id;
+    });
+
+    const droppedIndex = state.stickynotes.findIndex((item) => {
+      return item.id === id;
+    });
+
+    const droppedItem = state.stickynotes.find((item) => {
+      return item.id === id;
+    });
+
+    tempState.stickynotes.splice(droppedIndex, 1, tempState.draggedItem);
+    tempState.stickynotes.splice(draggedIndex, 1, droppedItem);
+
+    //  e.target?.classList.remove('redsquare')
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        stickynotes: tempState.stickynotes,
+      };
+    });
+  };
 
   const saveNote = (e: any) => {
     setState((prevState: any) => {
@@ -71,7 +131,7 @@ export const Stickynotes = () => {
         'f9fa46',
     ]
 
-    const tilts = [-1, 5, -2, 4, -3, 3, -4, 2, -5]
+    const tilts = [-1, 5, -2, 4, -3, 3, -4, 2, -5,1]
     const tiltdeg = String(tilts[Math.floor(Math.random() * tilts.length)])
     const color = noteColors[Math.floor(Math.random() * noteColors.length)]
 
@@ -152,8 +212,13 @@ export const Stickynotes = () => {
           const tiltangle = `rotate(${tiltdeg}deg)`
           return (
             <Fragment key={id}>
-              <div
+              <div 
+                draggable
+                onDragStart={(e) => handleDragStart(e, id)}
+                onDrop={(e) => handleDrop(e, id)}
                 onDoubleClick={deleteNote}
+                onDragOver={(e) => e.preventDefault()}
+
                 id={id}
                 style={{ transform: tiltangle, backgroundColor: `#${color}` }}
                 onFocus={()=>state.editmode=true}
