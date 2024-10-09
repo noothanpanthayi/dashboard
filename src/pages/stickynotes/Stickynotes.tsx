@@ -105,8 +105,6 @@ export const Stickynotes = () => {
         },
       )
 
-      console.log('selectedStickyNote ', selectedStickyNote);
-
       selectedStickyNote.notes = e.target.innerText;
 
       localStorage.setItem('state', JSON.stringify(prevState))
@@ -162,9 +160,6 @@ export const Stickynotes = () => {
     })
   }
 
-  useEffect(()=>{
-    console.log("State stickynotes ", state.stickynotes)
-  })
 
   useEffect(()=>{
       let lsString:any=localStorage?.getItem("state");
@@ -181,13 +176,18 @@ export const Stickynotes = () => {
   },[])
 
   const removestickynotes=()=>{
-    localStorage.removeItem("state");
-    setState(prevState=>{
-      return {
-        ...prevState,
-        stickynotes:[]
-      }
-    })
+    const ans=window.confirm("Are you sure you want to remove all sticky notes?");
+    if (ans){
+      localStorage.removeItem("state");
+      setState(prevState=>{
+        return {
+          ...prevState,
+          stickynotes:[]
+        }
+      })
+
+    }
+   
   }
 
   const deleteNote=(e:any)=>{
@@ -266,7 +266,7 @@ export const Stickynotes = () => {
                 onBlur={saveNote}
                 contentEditable={state.writable}
                 onKeyDown={handleKeyDown}
-                // suppressContentEditableWarning={true}
+                suppressContentEditableWarning={true}
                 className={stickynote}
               >
                 {notes}
