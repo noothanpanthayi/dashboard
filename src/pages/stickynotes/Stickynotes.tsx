@@ -128,7 +128,6 @@ export const Stickynotes = () => {
       'c9df56',
       'ff9d48',
       'b6d7a8',
-      'ff0000',
       '77ccc7',
       'eca2c4',
       '6ed8fa',
@@ -298,6 +297,7 @@ export const Stickynotes = () => {
                     onKeyDown={handleKeyDown}
                     suppressContentEditableWarning={true}
                     className={stickynote}
+                    title={state.writable?"Just Click and Start Writing":"Mouse Left Button Down, Drag and Drop"}
                   >
                     {notes}
                   </div>
