@@ -209,6 +209,10 @@ export const Stickynotes = () => {
         return stickynote.id !== e.target.id
       })
       setState((prevState) => {
+        localStorage.setItem('state', JSON.stringify({
+          ...prevState,
+          stickynotes,
+        }))
         return {
           ...prevState,
           stickynotes,
