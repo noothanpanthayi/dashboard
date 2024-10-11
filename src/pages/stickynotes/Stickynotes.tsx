@@ -115,6 +115,12 @@ export const Stickynotes = () => {
   }
 
   const addNote = () => {
+    
+    if (state.stickynotes.length>=30) {
+      alert("You have reached the maximum of 30 sticky notes");
+      return
+    }
+
     const noteColors = [
       'fff9b1',
       'daf7a1',
