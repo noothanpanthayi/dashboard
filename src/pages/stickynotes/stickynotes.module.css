@@ -33,7 +33,7 @@
 .removenote {
     display:flex;
     /* background-color:silver; */
-    color:blue;
+    color:#cc0066;
     font-weight:bold;
     align-items: center;
     cursor:pointer;
@@ -93,16 +93,20 @@
 
 .rwmode {
     background-color:rgb(255, 249, 177);
+    border:solid 1px goldenrod;
     width: 300px;
     padding: 10px;
 }
 
 .disableEditTxt{
-    color:green;
+    color:blue;
     font-weight: bold;
+    cursor:pointer
+
 }
 
 .enableEditTxt{
-    color:green;
+    color:blue;
     font-weight: bold;
+    cursor:pointer
 }
