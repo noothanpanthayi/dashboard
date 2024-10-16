@@ -22,26 +22,6 @@ const Home = () => {
 
   const apps = [
     {
-      title: 'Tic-Tac-Toe',
-      url: '/tictactoe',
-      description: (
-        <Fragment>
-          <p>
-          The Tic-Tac-Toe game is a classic, <br/><span>two-player game</span> where users take turns marking spaces on a 3x3 grid. 
-          </p>
-          <p>
-          Players can choose to play as X or O, with the goal of getting three in a row <span>horizontally</span>, 
-          <span> vertically</span>, or <span>diagonally</span>. 
-          </p>
-          <p>
-          <span>The game automatically detects wins and draws, and allows players to restart at any time.
-          </span>
-          </p>
-         
-        </Fragment>
-      ),
-    },
-    {
       title: 'Sticky Notes',
       url: '/stickynotes',
       description: (
@@ -63,6 +43,27 @@ const Home = () => {
         </Fragment>
       ),
     },
+    {
+      title: 'Tic-Tac-Toe',
+      url: '/tictactoe',
+      description: (
+        <Fragment>
+          <p>
+          The Tic-Tac-Toe game is a classic, <br/><span>two-player game</span> where users take turns marking spaces on a 3x3 grid. 
+          </p>
+          <p>
+          Players can choose to play as X or O, with the goal of getting three in a row <span>horizontally</span>, 
+          <span> vertically</span>, or <span>diagonally</span>. 
+          </p>
+          <p>
+          <span>The game automatically detects wins and draws, and allows players to restart at any time.
+          </span>
+          </p>
+         
+        </Fragment>
+      ),
+    },
+    
     {
       title: 'Online Shopping',
       url: '/shopping',
@@ -120,6 +121,26 @@ const Home = () => {
         </Fragment>
       ),
     },
+    {
+      title: 'Server Side Rendering',
+      url: 'https://noothankrishnan.vercel.app/products',
+      description: (
+        <Fragment>
+          
+          <p>
+            This is a <span>NextJs</span> (<span>ReactJs-based framework</span>) 
+            page to showcase the power of <span>Server Side Rendering(SSR).</span>
+            &nbsp;It renders dynamic web pages on the server, 
+            improving <span>SEO</span> and providing faster page loads.
+          </p>
+          <p>
+          This demo features a product listing page that fetches data from a public API,&nbsp;
+          <span>renders on the server</span>.
+          </p>
+        
+        </Fragment>
+      ),
+    },
    
     {
       title: 'To Do',
@@ -141,6 +162,7 @@ const Home = () => {
         </Fragment>
       ),
     },
+    
     {
       title: 'Article in Medium',
       url: 'https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70',
@@ -178,7 +200,7 @@ const Home = () => {
 
   const doNavigate = (url: any) => {
     if (url.includes('http')){
-      window.open('https://medium.com/@noothankrishnan_88771/reactjs-patterns-for-delightful-dx-68a7ec795b70')
+      window.open(url)
     }
     else {
       navigate(url)
