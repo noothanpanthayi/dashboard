@@ -63,7 +63,22 @@ const Home = () => {
         </Fragment>
       ),
     },
-    
+    {
+      title: 'MERN Application on Vercel',
+      url: 'https://autodealerclient.vercel.app/',
+      description: (
+        <Fragment>
+          <p>
+          This is a <span>Node.js</span>, <span>Express</span>, <span>MongoDB</span>, <span>ReactJs</span> 
+          &nbsp;application hosted on <span>Vercel Cloud Platform </span>.
+          </p>
+          <p>
+           This application uses React on the front end and built using Node.js and Express on the server-side logic. 
+           Data is managed and stored in a MongoDB database.
+          </p>
+        </Fragment>
+      ),
+    },
     {
       title: 'Online Shopping',
       url: '/shopping',
