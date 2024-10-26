@@ -17,7 +17,7 @@ export const Stickynotes = () => {
     saveNote,
     handleDrop,
     handleDragStart,
-  } = useStickyNotes(); //Custom Hook
+  } = useStickyNotes();
 
   return (
     <>
@@ -35,7 +35,7 @@ export const Stickynotes = () => {
               checked={state.writable}
               onChange={() => handleSwitch("s")}
               color="default"
-              inputProps={{ "aria-label": "controlled" }}
+              inputProps={{ "aria-label": "Edit Toggle" }}
             />{" "}
             {
               <span
@@ -58,6 +58,7 @@ export const Stickynotes = () => {
               return (
                 <Fragment key={id}>
                   <div
+                    role="note"
                     draggable={!state.writable}
                     onDragStart={(e) => handleDragStart(e, id)}
                     onDrop={(e) => handleDrop(e, id)}

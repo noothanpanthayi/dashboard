@@ -12,5 +12,6 @@
             "filePath": "reference\\todo.test.tsx",
             "group": "Default"
         }
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
