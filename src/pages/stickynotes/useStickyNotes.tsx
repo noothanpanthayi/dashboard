@@ -98,6 +98,10 @@ export const useStickyNotes=()=>{
         })
       }
     
+      const genRandomNum=(min:number, max:number)=>{
+        return Math.floor(Math.random()*(max-min+1))+min;
+      }
+
       const addNote = () => {
         
         if (state.stickynotes.length>=30) {
@@ -122,9 +126,11 @@ export const useStickyNotes=()=>{
           'f9fa46',
         ]
     
-        const tilts = [-1, 5, -2, 4, -3, 3, -4, 2, -5, 1]
-        const tiltdeg = String(tilts[Math.floor(Math.random() * tilts.length)])
-        const color = noteColors[Math.floor(Math.random() * noteColors.length)]
+        const tilts = [-1, 5, -2, 4, -3, 3, -4, 2, -5, 1];
+
+        const tiltdeg=tilts[genRandomNum(0,tilts.length-1)].toString();
+        const color=noteColors[genRandomNum(0,noteColors.length-1)].toString();
+
         const tempStickynotes = [...state.stickynotes]
         tempStickynotes.sort((a, b) => Number(a.id) - Number(b.id))
     
