@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dashboard/static/css/main.3447e736.css",
-    "main.js": "/dashboard/static/js/main.46d8fa44.js",
+    "main.js": "/dashboard/static/js/main.e8c3fcc6.js",
     "static/media/Caveat-Regular.ttf": "/dashboard/static/media/Caveat-Regular.419940188ab4de524042.ttf",
     "index.html": "/dashboard/index.html",
     "main.3447e736.css.map": "/dashboard/static/css/main.3447e736.css.map",
-    "main.46d8fa44.js.map": "/dashboard/static/js/main.46d8fa44.js.map"
+    "main.e8c3fcc6.js.map": "/dashboard/static/js/main.e8c3fcc6.js.map"
   },
   "entrypoints": [
     "static/css/main.3447e736.css",
-    "static/js/main.46d8fa44.js"
+    "static/js/main.e8c3fcc6.js"
   ]
 }
