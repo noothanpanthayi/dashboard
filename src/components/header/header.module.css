@@ -41,7 +41,8 @@ a span.bold:visited {
 
 .hamburgerMenu {
   z-index: 1;
-  font-size: 14px;
+  font-size: 19px;
+  font-weight: bold;
   display:block;
   position: absolute;
   top:46px;
@@ -52,7 +53,7 @@ a span.bold:visited {
 
 .hamburgerMenu ul li {
   line-height:30px;
-  padding:5px 20px;
+  padding:10px 48px;
   border-bottom: solid 1px mediumaquamarine;
 }
 
@@ -63,7 +64,7 @@ a span.bold:visited {
 
 }
 
-@media (max-width:900px){
+@media (max-width:1226px){
   nav {
     display:none;
   };
@@ -80,7 +81,7 @@ a span.bold:visited {
   color:#fff
 }
 
-@media (min-width:900px){
+@media (min-width:1226px){
   .hamburger {
     display:none;
   }

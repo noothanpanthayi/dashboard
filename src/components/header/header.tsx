@@ -65,16 +65,6 @@ const Header = () => {
                 Dashboard
               </NavLink>
               <NavLink
-                to="/tictactoe"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : 'bold'
-                }
-              >
-                Tic-Tac-Toe
-              </NavLink>
-              <NavLink
                 to="/stickynotes"
                 className={({
                   isActive,
@@ -84,6 +74,17 @@ const Header = () => {
               >
                 Sticky Notes
               </NavLink>
+              <NavLink
+                to="/tictactoe"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Tic-Tac-Toe
+              </NavLink>
+             
               <NavLink
                 to="/grid"
                 className={({
@@ -133,6 +134,29 @@ const Header = () => {
                 }
               >
                 Form Handling
+              </NavLink>
+              <NavLink
+                to="https://autodealerclient.vercel.app/"
+                target="_blank"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                NodeJs App
+              </NavLink>
+             
+              <NavLink
+                to="https://noothankrishnan.vercel.app/products"
+                target="_blank"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                NextJs SSR
               </NavLink>
               <Switch
                checked={darkMode}
@@ -245,6 +269,32 @@ const Header = () => {
                 }
               >
                 Form Handling
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="https://autodealerclient.vercel.app/"
+                target="_blank"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                NodeJs App
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="https://noothankrishnan.vercel.app/products"
+                target="_blank"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                NextJs SSR
               </NavLink>
             </li>
           </ul>

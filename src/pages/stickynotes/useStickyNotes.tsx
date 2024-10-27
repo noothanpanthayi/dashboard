@@ -160,10 +160,6 @@ export const useStickyNotes=()=>{
         })
       }, [])
     
-      useEffect(() => {
-        console.log('State ', state)
-      })
-    
       const removestickynotes = () => {
         const ans = window.confirm(
           'Are you sure you want to remove all sticky notes?',
