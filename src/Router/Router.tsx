@@ -16,6 +16,7 @@ import TicTacToe from '../pages/tictactoe/TicTacToe';
 import DragnDrop from '../pages/dnd/DragnDrop';
 import RandomUser from '../pages/randomuser/RandomUser';
 import { Stickynotes } from '../pages/stickynotes/Stickynotes';
+import LgDataTable from '../pages/lgdatatable/LgDataTable';
 
 const AppRouter = () => {
   return (
@@ -39,6 +40,8 @@ const AppRouter = () => {
       <Route  path="/dnd" element={<DragnDrop />}></Route>
       <Route  path="/randomuser" element={<RandomUser />}></Route>
       <Route  path="/stickynotes" element={<Stickynotes />}></Route>
+      <Route  path="/lgdatatable" element={<LgDataTable />}></Route>
+
 
     </Routes>
     </div>

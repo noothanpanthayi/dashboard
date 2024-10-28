@@ -84,7 +84,17 @@ const Header = () => {
               >
                 Tic-Tac-Toe
               </NavLink>
-             
+              <NavLink
+                to="/lgdatatable"
+                target="_blank"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Large Data Set
+              </NavLink>
               <NavLink
                 to="/grid"
                 className={({
@@ -105,6 +115,7 @@ const Header = () => {
               >
                 World Info
               </NavLink>
+             
               <NavLink
                 to="/shopping"
                 className={({
@@ -146,8 +157,9 @@ const Header = () => {
               >
                 NodeJs App
               </NavLink>
+           
              
-              <NavLink
+              {/* <NavLink
                 to="https://noothankrishnan.vercel.app/products"
                 target="_blank"
                 className={({
@@ -157,7 +169,7 @@ const Header = () => {
                 }
               >
                 NextJs SSR
-              </NavLink>
+              </NavLink> */}
               <Switch
                checked={darkMode}
                 onChange={handleSwitch}

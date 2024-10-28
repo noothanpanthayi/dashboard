@@ -64,6 +64,24 @@ const Home = () => {
       ),
     },
     {
+      title: 'Managing Large Data Sets',
+      url: '/lgdatatable',
+      description: (
+        <Fragment>
+          <p>
+            Using Virtualized Table, React app efficiently handles large data sets of 
+            data
+          </p>
+
+          <p>
+          This ReactJS table is handling <span>100,000</span> rows with smooth scrolling by using the virtualization feature
+          </p>
+          
+          
+        </Fragment>
+      ),
+    },
+    {
       title: 'MERN Application on Vercel',
       url: 'https://autodealerclient.vercel.app/',
       description: (
