@@ -86,7 +86,6 @@ const Header = () => {
               </NavLink>
               <NavLink
                 to="/lgdatatable"
-                target="_blank"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
