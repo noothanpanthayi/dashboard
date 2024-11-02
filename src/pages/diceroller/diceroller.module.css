@@ -1,0 +1,65 @@
+
+.container {
+    margin-top:150px;
+    max-width:2024px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    font-size:20px;
+    font-weight: bold;
+    padding:10px 20px;
+    width:200px;
+    cursor: pointer;
+    color:#fff;
+    border:none;
+    background-color:rgb(70, 129, 244);
+}
+
+.button:disabled {
+  cursor:default!important;    
+  color:#9E9E9E!important;
+  background-color:#E0E0E0!important;
+}
+
+.dicearea {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100px;
+}
+
+.dicearea div{
+    margin:0 5px;
+}
+
+.congrats{
+  margin:0 auto;
+  height:30px;
+  font-size:28px;
+  font-weight: bold;  
+  color:green;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:60px;
+}
+
+.rolled{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: blue;
+}
+
+.total {
+    color:#cc0066;
+}
+
+.max {
+    color:green;
+}

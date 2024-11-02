@@ -155,6 +155,25 @@ const Home = () => {
       ),
     },
     {
+      title: 'Dice Roller App',
+      url: '/diceroller',
+
+      description: (
+        <Fragment>
+<p>
+This <span></span>React app simulates a two-dice roll. Each time you click the button, it generates random numbers for both dice and displays the corresponding dice faces.
+</p>
+<p>
+It counts each dice roll and tracks the total until both dice show 6 simultaneously or max attempts reaches 20.
+</p>
+<p>
+The app features a mix of animated and static dice images, creating a dynamic and engaging experience.
+</p>
+
+        </Fragment>
+      ),
+    },
+    {
       title: 'Server Side Rendering',
       url: 'https://noothankrishnan.vercel.app/products',
       description: (
