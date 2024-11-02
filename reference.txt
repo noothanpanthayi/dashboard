@@ -1,2 +1,128 @@
  <div className={rolled}>Dice Rolled&nbsp;{state.rolledTimes}
         &nbsp;Times to Attain a Total of&nbsp;12</div>
+
+
+
+        =======================================
+        Mock state
+        import {
+  render,
+  fireEvent,
+  screen,
+  getByText,
+  waitFor,
+  act,
+} from "@testing-library/react";
+import DiceRoller from "./DiceRoller";
+import { allFakers } from "@faker-js/faker";
+import React from "react";
+
+test("On load the page has the specified text, images and button", () => {
+  render(<DiceRoller />);
+
+  const text = screen.getByText("Dice Rolled 0 Times to Attain a Total of 12");
+  expect(text).toBeInTheDocument();
+
+  const altTexts = screen.getAllByAltText("diceresult");
+  expect(altTexts.length).toBe(2);
+
+  const image1 = altTexts[0];
+  const image2 = altTexts[0];
+
+  expect(image1).toHaveAttribute("src", "dice2.png");
+  expect(image2).toHaveAttribute("src", "dice2.png");
+});
+
+test("Dice rolled 1 time after clicking on the button", async () => {
+  render(<DiceRoller />);
+
+  jest.useFakeTimers();
+
+  const button = screen.getByText("Roll Dice");
+  expect(button).toBeInTheDocument();
+
+  fireEvent.click(button);
+
+  act(() => {
+    jest.advanceTimersByTime(1000);
+  });
+
+  const text = screen.getByText("Dice Rolled 1 Times to Attain a Total of 12");
+  expect(text).toBeInTheDocument();
+});
+
+test("When 20 times, clicked it should show the alert for max 20 times", async () => {
+  render(<DiceRoller />);
+
+  jest.useFakeTimers();
+  global.alert = jest.fn();
+
+  const button = screen.getByText("Roll Dice");
+
+
+    act(() => {
+        for (let i = 0; i <=20; i++) {
+            fireEvent.click(button);
+      jest.advanceTimersByTime(2000);
+        }
+    });
+
+
+expect(global.alert).toHaveBeenCalledWith("Max Times 20 Completed, Game Over!");
+
+});
+
+test("When 22 times, clicked it should show the alert for max 20 times", async () => {
+
+    type StateType = { activeIndex1: number; activeIndex2: number; rolledTimes: number; gameOver: boolean; };
+
+    const mockSetState = jest.fn(); 
+
+    const initState = 
+    { activeIndex1: 5, activeIndex2: 5, rolledTimes: 1, gameOver: true, rolling:false}
+    
+    
+    jest.spyOn(React, 'useState').mockImplementation((initialState) => [
+        { ...initialState, 
+          ...initState
+        }, 
+        mockSetState
+    ]);
+
+  render(<DiceRoller />);
+  
+    const button = screen.getByText("Roll Dice");
+    fireEvent.click(button);
+
+    const congrats=screen.getByRole("alert");
+    expect(congrats).toHaveTextContent("Congratulations!");
+  
+    
+  });
+
+
+
+        ======================================
+
+        =====================================
+        test("When 22 times, clicked it should show the alert for max 20 times", async () => {
+  render(<DiceRoller />);
+
+  jest.useFakeTimers();
+  global.alert = jest.fn();
+
+  const button = screen.getByText("Roll Dice");
+
+  act(() => {
+    for (let i = 0; i <= 20; i++) {
+      fireEvent.click(button);
+      jest.advanceTimersByTime(1000);
+    }
+  });
+
+  await waitFor(() => {
+    const congrats = screen.getByRole("alert");
+    expect(congrats).toBeInTheDocument();
+  });
+});
+==================================================

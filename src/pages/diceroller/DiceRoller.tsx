@@ -84,7 +84,7 @@ const DiceRoller = () => {
 
         <div className={rolled}>Dice Rolled&nbsp;{state.rolledTimes}
         &nbsp;Times to Attain a Total of&nbsp;12</div>
-        <div className={congrats}>
+        <div  role="alert" className={congrats}>
 
         {(state.activeIndex1+state.activeIndex2) === 10 && !state.rolling 
         && (    <div>Congratulations!</div>
