@@ -21,6 +21,8 @@
     text-wrap: nowrap;
     box-shadow:2px 4px 12px #666;
     margin:0 10px;
+    cursor: pointer;
+    border:none;
     /* justify-content:center; */
     justify-content:space-between;
 }
