@@ -145,7 +145,7 @@ const Header = () => {
               >
                 Form Handling
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/ssr"
                 className={({
                   isActive,
@@ -154,7 +154,7 @@ const Header = () => {
                 }
               >
                 SSR App
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 to="/mern"
                 className={({

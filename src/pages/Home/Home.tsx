@@ -173,26 +173,26 @@ The app features a mix of animated and static dice images, creating a dynamic an
         </Fragment>
       ),
     },
-    {
-      title: 'Server Side Rendering',
-      url: '/ssr',
-      description: (
-        <Fragment>
+    // {
+    //   title: 'Server Side Rendering',
+    //   url: '/ssr',
+    //   description: (
+    //     <Fragment>
           
-          <p>
-            This is a <span>NextJs</span> (<span>ReactJs-based framework</span>) 
-            page to showcase the power of <span>Server Side Rendering(SSR).</span>
-            &nbsp;It renders dynamic web pages on the server, 
-            improving <span>SEO</span> and providing faster page loads.
-          </p>
-          <p>
-          This demo features a product listing page that fetches data from a public API,&nbsp;
-          <span>renders on the server</span>.
-          </p>
+    //       <p>
+    //         This is a <span>NextJs</span> (<span>ReactJs-based framework</span>) 
+    //         page to showcase the power of <span>Server Side Rendering(SSR).</span>
+    //         &nbsp;It renders dynamic web pages on the server, 
+    //         improving <span>SEO</span> and providing faster page loads.
+    //       </p>
+    //       <p>
+    //       This demo features a product listing page that fetches data from a public API,&nbsp;
+    //       <span>renders on the server</span>.
+    //       </p>
         
-        </Fragment>
-      ),
-    },
+    //     </Fragment>
+    //   ),
+    // },
    
     {
       title: 'To Do',
