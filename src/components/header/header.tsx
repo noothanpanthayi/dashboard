@@ -146,15 +146,24 @@ const Header = () => {
                 Form Handling
               </NavLink>
               <NavLink
-                to="https://autodealerclient.vercel.app/"
-                target="_blank"
+                to="/ssr"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
                   isActive ? 'active' : 'bold'
                 }
               >
-                NodeJs App
+                SSR App
+              </NavLink>
+              <NavLink
+                to="/mern"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                MERN App
               </NavLink>
            
              
@@ -292,7 +301,7 @@ const Header = () => {
                   isActive ? 'active' : ''
                 }
               >
-                NodeJs App
+                MERN App
               </NavLink>
             </li>
             <li>

@@ -83,7 +83,7 @@ const Home = () => {
     },
     {
       title: 'MERN Application on Vercel',
-      url: 'https://autodealerclient.vercel.app/',
+      url: '/mern',
       description: (
         <Fragment>
           <p>
@@ -175,7 +175,7 @@ The app features a mix of animated and static dice images, creating a dynamic an
     },
     {
       title: 'Server Side Rendering',
-      url: 'https://noothankrishnan.vercel.app/products',
+      url: '/ssr',
       description: (
         <Fragment>
           

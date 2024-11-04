@@ -1,0 +1,9 @@
+
+.iframe {
+    border:none;
+    width:-webkit-fill-available;
+    height:90vh;
+    margin-top:50px;
+    overflow: hidden;
+    overflow-x: hidden; overflow-y: hidden;
+}

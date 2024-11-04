@@ -18,6 +18,8 @@ import RandomUser from '../pages/randomuser/RandomUser';
 import { Stickynotes } from '../pages/stickynotes/Stickynotes';
 import LgDataTable from '../pages/lgdatatable/LgDataTable';
 import DiceRoller from '../pages/diceroller/DiceRoller';
+import SSR from '../pages/ssr/SSR';
+import MERN from '../pages/mern/MERN';
 
 const AppRouter = () => {
   return (
@@ -43,6 +45,10 @@ const AppRouter = () => {
       <Route  path="/stickynotes" element={<Stickynotes />}></Route>
       <Route  path="/lgdatatable" element={<LgDataTable />}></Route>
       <Route  path="/diceroller" element={<DiceRoller />}></Route>
+      <Route  path="/ssr" element={<SSR/>}></Route>
+      <Route  path="/mern" element={<MERN/>}></Route>
+
+
 
 
 
