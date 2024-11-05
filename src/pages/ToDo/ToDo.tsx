@@ -62,7 +62,7 @@ const ToDo = () => {
             autoFocus
             name="the-inputs-id"
           />
-          <button onClick={addToDo} className={button}>
+          <button onClick={addToDo} className={tdButton}>
             Add
           </button>
         </div>
@@ -81,7 +81,7 @@ const ToDo = () => {
 
 const {
   container,
-  button,
+  tdButton,
   todoGrid,
   todo,
   userInput,

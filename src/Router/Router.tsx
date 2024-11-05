@@ -47,6 +47,8 @@ const AppRouter = () => {
       <Route  path="/diceroller" element={<DiceRoller />}></Route>
       <Route  path="/ssr" element={<SSR/>}></Route>
       <Route  path="/mern" element={<MERN/>}></Route>
+      <Route  path="/diceroller" element={<DiceRoller/>}></Route>
+
 
 
 

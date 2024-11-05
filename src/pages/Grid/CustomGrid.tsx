@@ -521,9 +521,10 @@ const CustomGrid = () => {
         <button
           style={{
             cursor: 'pointer',
-            width: 100,
-            padding: '3px 10px',
+            width: 150,
+            padding: '7px 10px',
             border: 'none',
+            borderRadius:6,
             color: '#fff',
             backgroundColor: '#4681f4',
           }}

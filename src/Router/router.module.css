@@ -1,15 +1,14 @@
 .container {
-    /* max-width: 1024px; */
-    max-width: 1194px;
-    margin:0 auto 40px auto;
-    z-index: -1;
+  /* max-width: 1024px; */
+  max-width: 1194px;
+  margin: 0 auto;
+  z-index: -1;
 }
 
-
-@media (max-width: 1226px) {
-    .container {
-        max-width: 1024px;
-        margin:0 10px;
-        z-index: -1;
-    }
+@media (max-width: 1428px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1024px;
+    z-index: -1;
+  }
 }

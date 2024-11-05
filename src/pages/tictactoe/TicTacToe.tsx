@@ -151,14 +151,14 @@ function TicTacToe() {
         )}
         {state.gameEnd === true && (
           <div className={btnCenter}>
-            <button onClick={startGame} className={button}>
+            <button onClick={startGame} className={tttButton}>
               Start New Game
             </button>
           </div>
         )}
         {state.gameEnd === false && (
           <div className={btnCenter}>
-            <button onClick={endGame} className={button}>
+            <button onClick={endGame} className={tttButton}>
               Stop Game
             </button>
           </div>
@@ -178,7 +178,7 @@ const {
   title,
   turn,
   blink,
-  button,
+  tttButton,
   btnCenter,
   oColor,
   xColor

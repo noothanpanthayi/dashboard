@@ -16,7 +16,6 @@ const Header = () => {
     }
     else {
       document.body.style.backgroundColor='#000'
-
     }
     setDarkMode(!darkMode);
 
@@ -105,6 +104,16 @@ const Header = () => {
                 Custom Grid
               </NavLink>
               <NavLink
+                to="/diceroller"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Dice Roller
+              </NavLink>
+              <NavLink
                 to="/world"
                 className={({
                   isActive,
@@ -145,7 +154,7 @@ const Header = () => {
               >
                 Form Handling
               </NavLink>
-              {/* <NavLink
+              <NavLink
                 to="/ssr"
                 className={({
                   isActive,
@@ -154,7 +163,7 @@ const Header = () => {
                 }
               >
                 SSR App
-              </NavLink> */}
+              </NavLink>
               <NavLink
                 to="/mern"
                 className={({
@@ -209,18 +218,6 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/tictactoe"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                Tic-Tac-Toe
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/stickynotes"
                 className={({
                   isActive,
@@ -233,6 +230,32 @@ const Header = () => {
             </li>
             <li>
               <NavLink
+                to="/tictactoe"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Tic-Tac-Toe
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/lgdatatable"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Large Data Set
+              </NavLink>
+            </li>
+           
+          
+            <li>
+              <NavLink
                 to="/grid"
                 className={({
                   isActive,
@@ -241,6 +264,18 @@ const Header = () => {
                 }
               >
                 Custom Grid
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/diceroller"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Dice Roller
               </NavLink>
             </li>
             <li>
@@ -293,6 +328,18 @@ const Header = () => {
             </li>
             <li>
               <NavLink
+                to="/ssr"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                SSR App
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="https://autodealerclient.vercel.app/"
                 target="_blank"
                 className={({
@@ -302,19 +349,6 @@ const Header = () => {
                 }
               >
                 MERN App
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="https://noothankrishnan.vercel.app/products"
-                target="_blank"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                NextJs SSR
               </NavLink>
             </li>
           </ul>
