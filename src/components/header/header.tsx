@@ -162,7 +162,7 @@ const Header = () => {
                   isActive ? 'active' : 'bold'
                 }
               >
-                SSR App
+                SSR
               </NavLink>
               <NavLink
                 to="/mern"
@@ -172,7 +172,7 @@ const Header = () => {
                   isActive ? 'active' : 'bold'
                 }
               >
-                MERN App
+                MERN
               </NavLink>
            
              
@@ -335,7 +335,7 @@ const Header = () => {
                   isActive ? 'active' : ''
                 }
               >
-                SSR App
+                SSR
               </NavLink>
             </li>
             <li>
@@ -348,7 +348,7 @@ const Header = () => {
                   isActive ? 'active' : ''
                 }
               >
-                MERN App
+                MERN
               </NavLink>
             </li>
           </ul>

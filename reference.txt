@@ -1,3 +1,5 @@
+npx eslint src 
+ 
  <div className={rolled}>Dice Rolled&nbsp;{state.rolledTimes}
         &nbsp;Times to Attain a Total of&nbsp;12</div>
 

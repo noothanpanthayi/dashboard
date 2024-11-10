@@ -92,13 +92,12 @@ const Home = () => {
       description: (
         <Fragment>
           <p>
-            This <span>Next.js</span> application utilizes the <span>App Router feature</span>, fetching
-            product data via an HTTP request and rendering the list server-side. 
+            This <span>Next.js</span> application utilizes the <span>App Router feature</span>. 
+            It sends an HTTP request to it's backend server.
+            The server queries the <span>PostgreSQL</span> database 
+            to retrieve the product list, renders it server-side, and sends it to the client. 
             </p>
-            <p>
-            Once the page is sent to the client, it undergoes <span>hydration</span> and 'Add
-            to Cart' button becomes fully interactive on the frontend, providing
-            a seamless user experience.
+            <p>Upon reaching the client, the data is hydrated, and the 'Add to Cart' button becomes active
           </p>
         </Fragment>
       ),
@@ -195,10 +194,10 @@ const Home = () => {
             It counts each dice roll and tracks the total until both dice show 6
             simultaneously or max attempts reaches 20.
           </p>
-          <p>
+          {/* <p>
             The app features a mix of animated and static dice images, creating
             a dynamic and engaging experience.
-          </p>
+          </p> */}
         </Fragment>
       ),
     },

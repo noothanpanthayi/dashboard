@@ -34,7 +34,7 @@
   border-radius:6px;
   box-shadow:2px 3px 6px 1px silver;
   cursor: pointer;
-  height:326px;
+  height:278px;
   background-color: #fff;
   color:#666;
   font-weight:bold
@@ -63,13 +63,13 @@
 }
 
 .pageHeader {
-  margin-top:55px;
+  margin:54px 0 12px 0;
   display:flex;
   justify-content: center;
   font-weight: bold;
   font-size:25px;
   font-family:arial;
-  color:#000;
+  color:darkviolet;
   text-shadow: 2px 2px 2px silver;
 }
 

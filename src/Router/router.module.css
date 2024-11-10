@@ -1,6 +1,7 @@
 .container {
   /* max-width: 1024px; */
-  max-width: 1194px;
+  max-width: 1290px;
+  font-size:14px;
   margin: 0 auto;
   z-index: -1;
 }
