@@ -268,6 +268,80 @@ const Home = () => {
   return (
     <Fragment>
       <div className={pageHeader}>ReactJs Applications</div>
+      <div className={hiLites}>
+        <div className={hlTitle}>Tech Stacks used to develop these Apps</div>
+        <div className={hlGrid}>
+          <ul>
+            <li>ReactJs Library</li>
+            <li>Custom Hooks</li>
+          </ul>
+          <ul>
+            <li>Redux</li>
+            <li>RTK Query</li>
+          </ul>
+          <ul>
+            <li>TypeScript</li>
+            <li>ES6/JavaScript</li>
+          </ul>
+          <ul>
+            <li>React Testing Library</li>
+            <li>Jest</li>
+          </ul>
+          <ul>
+            <li>NextJs Framework</li>
+            <li>Vercel Cloud</li>
+          </ul>
+          <ul>
+            <li>NodeJs</li>
+            <li>Express</li>
+          </ul>
+          <ul>
+            <li>PostGreSQL</li>
+            <li>MongoDB</li>
+
+          </ul>
+          {/* <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul> */}
+          {/* <ul>
+            <li>Git/Github</li>
+            <li>ES6/JavaScript</li>
+          </ul> */}
+          {/* <ul>
+            <li>Responsive Web</li>
+            <li>ES6/JavaScript</li>
+          </ul> */}
+          {/* <ul>
+            <li>Redux</li>
+            <li>Redux Toolkit</li>
+          </ul>
+         
+          <ul>
+            <li>Virtualized Table</li>
+            <li>RTK Query</li>
+          </ul> */}
+          {/* <ul>
+            <li>NextJs</li>
+            <li>ServerSide Rendering</li>
+          </ul> */}
+          {/* <ul>
+            <li>CSS Module</li>
+            <li>NextJs </li>
+          </ul>
+          <ul>
+            <li>NodeJs</li>
+            <li>Express</li>
+          </ul>
+          <ul>
+            <li>PostGreSQL</li>
+            <li>Express</li>
+          </ul> */}
+         
+         
+          
+        </div>
+      </div>
       <div className={grid}>
         {apps.map((app, index) => {
           return (
@@ -302,6 +376,10 @@ const {
   pageHeader,
   light,
   dark,
+  hiLites,
+  hlTitle,
+  hlGrid
 } = styles;
+
 
 export default Home;

@@ -88,3 +88,36 @@
 .card p span {
   color:#000;
 }
+
+
+
+.hlTitle {
+  display: flex;
+  justify-content: center;
+  color: green;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 0 0 15px 0;
+
+}
+
+.hiLites{
+  margin:10px 50px;
+  /* border:solid 2px silver */
+}
+
+.hlGrid {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  grid-row-gap:2px;
+  grid-column-gap: 2px;
+  font-weight: bold;
+  color:blue;
+  font-size:16px;
+}
+
+.hlGrid li {
+  max-width: max-content;
+  line-height: 25px;
+  list-style-type: disc;
+}
