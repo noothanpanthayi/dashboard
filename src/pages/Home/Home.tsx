@@ -92,17 +92,20 @@ const Home = () => {
       description: (
         <Fragment>
           <p>
-            This <span>Next.js</span> application utilizes the <span>App Router feature</span>. 
-            It sends an HTTP request to it's backend server.
-            The server queries the <span>PostgreSQL</span> database 
-            to retrieve the product list, renders it server-side, and sends it to the client. 
-            </p>
-            <p>Upon reaching the client, the data is hydrated, and the 'Add to Cart' button becomes active
+            This <span>Next.js</span> application utilizes the{" "}
+            <span>App Router feature</span>. It sends an HTTP request to it's
+            backend server. The server queries the <span>PostgreSQL</span>{" "}
+            database to retrieve the product list, renders it server-side, and
+            sends it to the client.
+          </p>
+          <p>
+            Upon reaching the client, the data is hydrated, and the 'Add to
+            Cart' button becomes active
           </p>
         </Fragment>
       ),
     },
-    
+
     {
       title: "Online Shopping",
       url: "/shopping",
@@ -201,7 +204,6 @@ const Home = () => {
         </Fragment>
       ),
     },
-  
 
     {
       title: "To Do",
@@ -269,15 +271,15 @@ const Home = () => {
     <Fragment>
       <div className={pageHeader}>ReactJs Applications</div>
       <div className={hiLites}>
-        <div className={hlTitle}>Tech Stacks used to develop these Apps</div>
+        <div className={hlTitle}>Tech Stacks and features used to develop these Apps</div>
         <div className={hlGrid}>
           <ul>
             <li>ReactJs Library</li>
-            <li>Custom Hooks</li>
+            <li>Redux/RTK Query</li>
           </ul>
           <ul>
-            <li>Redux</li>
-            <li>RTK Query</li>
+            <li>Custom Hooks</li>
+            <li>React Virtualization</li>
           </ul>
           <ul>
             <li>TypeScript</li>
@@ -298,7 +300,6 @@ const Home = () => {
           <ul>
             <li>PostGreSQL</li>
             <li>MongoDB</li>
-
           </ul>
           {/* <ul>
             <li>Git</li>
@@ -337,9 +338,6 @@ const Home = () => {
             <li>PostGreSQL</li>
             <li>Express</li>
           </ul> */}
-         
-         
-          
         </div>
       </div>
       <div className={grid}>
@@ -378,8 +376,7 @@ const {
   dark,
   hiLites,
   hlTitle,
-  hlGrid
+  hlGrid,
 } = styles;
-
 
 export default Home;
