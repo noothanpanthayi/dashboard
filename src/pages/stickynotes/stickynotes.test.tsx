@@ -83,6 +83,7 @@ test("Focus on Card and make sure it is editable, add text and verify", () => {
 
 test("Delete a Sticky Note", () => {
   render(<Stickynotes />);
+  window.confirm = jest.fn(() => true);
 
   const toggleSwitch = screen.getByRole("checkbox", { name: "Edit Toggle" });
   fireEvent.click(toggleSwitch);
@@ -90,8 +91,14 @@ test("Delete a Sticky Note", () => {
   const dragDropLink=screen.getByText("Drag/Drop");
   fireEvent.click(dragDropLink);
 
-  window.confirm = jest.fn(() => true);
   fireEvent.dblClick(getAllRole("note")[0]);
+  expect(getAllRole("note").length).toBe(1);
+  const note=screen.queryByRole("note")
+  expect(note).toBeInTheDocument();
+  if (note)
+  fireEvent.dblClick(note);
+  const addButton = screen.getByText("Add Sticky Note");
+  fireEvent.click(addButton);
   expect(getAllRole("note").length).toBe(1);
 });
 
