@@ -6,7 +6,6 @@ import { useStickyNotes } from "./useStickyNotes";
 import { StickyNote } from "./types";
 
 export const Stickynotes = () => {
-
   const {
     state,
     handleKeyDown,
