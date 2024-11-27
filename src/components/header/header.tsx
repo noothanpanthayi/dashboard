@@ -74,14 +74,24 @@ const Header = () => {
                 Sticky Notes
               </NavLink>
               <NavLink
-                to="/tictactoe"
+                to="/grid"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
                   isActive ? 'active' : 'bold'
                 }
               >
-                Tic-Tac-Toe
+                Custom Grid
+              </NavLink>
+              <NavLink
+                to="/shopping"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Online Shopping
               </NavLink>
               <NavLink
                 to="/lgdatatable"
@@ -94,24 +104,34 @@ const Header = () => {
                 Large Data Set
               </NavLink>
               <NavLink
-                to="/grid"
+                to="/mern"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
                   isActive ? 'active' : 'bold'
                 }
               >
-                Custom Grid
+                MERN
               </NavLink>
               <NavLink
-                to="/diceroller"
+                to="/ssr"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
                   isActive ? 'active' : 'bold'
                 }
               >
-                Dice Roller
+                SSR
+              </NavLink>
+              <NavLink
+                to="/tictactoe"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Tic-Tac-Toe
               </NavLink>
               <NavLink
                 to="/world"
@@ -123,17 +143,20 @@ const Header = () => {
               >
                 World Info
               </NavLink>
-             
+              
               <NavLink
-                to="/shopping"
+                to="/diceroller"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
                   isActive ? 'active' : 'bold'
                 }
               >
-                Online Shopping
+                Dice Roller
               </NavLink>
+             
+             
+            
               <NavLink
                 to="/todo"
                 className={({
@@ -154,39 +177,7 @@ const Header = () => {
               >
                 Form Handling
               </NavLink>
-              <NavLink
-                to="/ssr"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : 'bold'
-                }
-              >
-                SSR
-              </NavLink>
-              <NavLink
-                to="/mern"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : 'bold'
-                }
-              >
-                MERN
-              </NavLink>
-           
              
-              {/* <NavLink
-                to="https://noothankrishnan.vercel.app/products"
-                target="_blank"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : 'bold'
-                }
-              >
-                NextJs SSR
-              </NavLink> */}
               <Switch
                checked={darkMode}
                 onChange={handleSwitch}
@@ -230,32 +221,6 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/tictactoe"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                Tic-Tac-Toe
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/lgdatatable"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                Large Data Set
-              </NavLink>
-            </li>
-           
-          
-            <li>
-              <NavLink
                 to="/grid"
                 className={({
                   isActive,
@@ -264,30 +229,6 @@ const Header = () => {
                 }
               >
                 Custom Grid
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/diceroller"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                Dice Roller
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/world"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                WorldInfo
               </NavLink>
             </li>
             <li>
@@ -302,6 +243,84 @@ const Header = () => {
                 Online Shopping
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/lgdatatable"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Large Data Set
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="https://autodealerclient.vercel.app/"
+                target="_blank"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                MERN
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/ssr"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                SSR
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/tictactoe"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Tic-Tac-Toe
+              </NavLink>
+            </li>
+          
+            <li>
+              <NavLink
+                to="/world"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                WorldInfo
+              </NavLink>
+            </li>
+          
+         
+            <li>
+              <NavLink
+                to="/diceroller"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Dice Roller
+              </NavLink>
+            </li>
+           
+           
             <li>
               <NavLink
                 to="/todo"
@@ -326,31 +345,8 @@ const Header = () => {
                 Form Handling
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/ssr"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                SSR
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="https://autodealerclient.vercel.app/"
-                target="_blank"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                MERN
-              </NavLink>
-            </li>
+           
+           
           </ul>
         </div>
       )}

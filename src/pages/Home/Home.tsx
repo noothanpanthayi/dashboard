@@ -45,62 +45,22 @@ const Home = () => {
         </Fragment>
       ),
     },
+    
     {
-      title: "Tic-Tac-Toe",
-      url: "/tictactoe",
+      title: "Custom Grid",
+      url: "/grid",
       description: (
         <Fragment>
           <p>
-            The Tic-Tac-Toe game is a classic, <br />
-            <span>two-player game</span> where users take turns marking spaces
-            on a 3x3 grid.
+            Grid is used to display the data in tabular format which has rows
+            and columns.
           </p>
           <p>
-            Players can choose to play as X or O, with the goal of getting three
-            in a row <span>horizontally</span>,<span> vertically</span>, or{" "}
-            <span>diagonally</span>.
+            Users can edit the field like an <span>Excel Sheet</span> by
+            directly clicking on the cell. This also has Add and Sort feature.
           </p>
           <p>
-            <span>
-              The game automatically detects wins and draws, and allows players
-              to restart at any time.
-            </span>
-          </p>
-        </Fragment>
-      ),
-    },
-    {
-      title: "Managing Large Data Sets",
-      url: "/lgdatatable",
-      description: (
-        <Fragment>
-          <p>
-            Using Virtualized Table, React app efficiently handles large data
-            sets of data
-          </p>
-
-          <p>
-            This ReactJS table is handling <span>100,000</span> rows with smooth
-            scrolling by using the virtualization feature
-          </p>
-        </Fragment>
-      ),
-    },
-    {
-      title: "Server Side Rendering",
-      url: "/ssr",
-      description: (
-        <Fragment>
-          <p>
-            This <span>Next.js</span> application utilizes the{" "}
-            <span>App Router feature</span>. It sends an HTTP request to it's
-            backend server. The server queries the <span>PostgreSQL</span>{" "}
-            database to retrieve the product list, renders it server-side, and
-            sends it to the client.
-          </p>
-          <p>
-            Upon reaching the client, the data is hydrated, and the 'Add to
-            Cart' button becomes active
+            <span>CSS Grid</span> is used to display the grid layout
           </p>
         </Fragment>
       ),
@@ -127,39 +87,18 @@ const Home = () => {
       ),
     },
     {
-      title: "Custom Grid",
-      url: "/grid",
+      title: "Managing Large Data Sets",
+      url: "/lgdatatable",
       description: (
         <Fragment>
           <p>
-            Grid is used to display the data in tabular format which has rows
-            and columns.
+            Using Virtualized Table, React app efficiently handles large data
+            sets of data
           </p>
-          <p>
-            Users can edit the field like an <span>Excel Sheet</span> by
-            directly clicking on the cell. This also has Add and Sort feature.
-          </p>
-          <p>
-            <span>CSS Grid</span> is used to display the grid layout
-          </p>
-        </Fragment>
-      ),
-    },
 
-    {
-      title: "World Info",
-      url: "/world",
-
-      description: (
-        <Fragment>
           <p>
-            This is to demo a <span>Search feature</span> which fetches the
-            details of a user typed country from a free-to-use API.
-          </p>
-          <p>
-            {" "}
-            <span>Debounce feature</span> is incorporated to improve the
-            performance of the search.
+            This ReactJS table is handling <span>100,000</span> rows with smooth
+            scrolling by using the virtualization feature
           </p>
         </Fragment>
       ),
@@ -182,6 +121,72 @@ const Home = () => {
         </Fragment>
       ),
     },
+    {
+      title: "Server Side Rendering",
+      url: "/ssr",
+      description: (
+        <Fragment>
+          <p>
+            This <span>Next.js</span> application utilizes the{" "}
+            <span>App Router feature</span>. It sends an HTTP request to it's
+            backend server. The server queries the <span>PostgreSQL</span>{" "}
+            database to retrieve the product list, renders it server-side, and
+            sends it to the client.
+          </p>
+          <p>
+            Upon reaching the client, the data is hydrated, and the 'Add to
+            Cart' button becomes active
+          </p>
+        </Fragment>
+      ),
+    },
+    {
+      title: "Tic-Tac-Toe",
+      url: "/tictactoe",
+      description: (
+        <Fragment>
+          <p>
+            The Tic-Tac-Toe game is a classic, <br />
+            <span>two-player game</span> where users take turns marking spaces
+            on a 3x3 grid.
+          </p>
+          <p>
+            Players can choose to play as X or O, with the goal of getting three
+            in a row <span>horizontally</span>,<span> vertically</span>, or{" "}
+            <span>diagonally</span>.
+          </p>
+          <p>
+            <span>
+              The game automatically detects wins and draws, and allows players
+              to restart at any time.
+            </span>
+          </p>
+        </Fragment>
+      ),
+    },
+   
+  
+
+ 
+    {
+      title: "World Info",
+      url: "/world",
+
+      description: (
+        <Fragment>
+          <p>
+            This is to demo a <span>Search feature</span> which fetches the
+            details of a user typed country from a free-to-use API.
+          </p>
+          <p>
+            {" "}
+            <span>Debounce feature</span> is incorporated to improve the
+            performance of the search.
+          </p>
+        </Fragment>
+      ),
+    },
+    
     {
       title: "Dice Roller App",
       url: "/diceroller",
