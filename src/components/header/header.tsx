@@ -186,7 +186,7 @@ const Header = () => {
                   isActive ? 'active' : 'bold'
                 }
               >
-                Movie Saga
+                Movie List
               </NavLink>
              
               <Switch
