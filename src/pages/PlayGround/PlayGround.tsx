@@ -6,7 +6,7 @@ function TextManipulation() {
   useEffect(() => {
     console.log('rendered ', text)
   })
-  const { text, updateText } = useText()
+  const { text, updateText } = useText();
 
   return (
     <Fragment>

@@ -20,6 +20,7 @@ import LgDataTable from '../pages/lgdatatable/LgDataTable';
 import DiceRoller from '../pages/diceroller/DiceRoller';
 import SSR from '../pages/ssr/SSR';
 import MERN from '../pages/mern/MERN';
+import MovieSaga from '../pages/movieSaga/MovieSaga';
 
 const AppRouter = () => {
   return (
@@ -48,8 +49,9 @@ const AppRouter = () => {
       <Route  path="/ssr" element={<SSR/>}></Route>
       <Route  path="/mern" element={<MERN/>}></Route>
       <Route  path="/diceroller" element={<DiceRoller/>}></Route>
+      <Route  path="/moviesaga" element={<MovieSaga/>}></Route>
 
-
+      
 
 
 

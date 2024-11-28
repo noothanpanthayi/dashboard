@@ -35,7 +35,6 @@ interface ChildProps {
 
 const CoffeeView=({propsData, setCounter, counter, incrementByTen, sendMessage, 
   sendObj, updateTxt}:ChildProps)=>{
-  console.log("props ", propsData)
   return <>
   <h1>{sendMessage()}</h1>
   <button onClick={()=>setCounter(counter+1)}>Increment</button>

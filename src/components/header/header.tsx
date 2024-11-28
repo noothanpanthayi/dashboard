@@ -177,6 +177,17 @@ const Header = () => {
               >
                 Form Handling
               </NavLink>
+              
+              <NavLink
+                to="/moviesaga"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Movie Saga
+              </NavLink>
              
               <Switch
                checked={darkMode}
@@ -345,6 +356,7 @@ const Header = () => {
                 Form Handling
               </NavLink>
             </li>
+
            
            
           </ul>

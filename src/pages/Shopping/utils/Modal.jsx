@@ -31,7 +31,7 @@ const openDialog=()=>{
               <div className='bold'><span className="atocInfo">Item:</span><span className='item'>{selectedItem.title}</span></div>
               <div className='bold'><span className="atocInfo">Price:</span><span className='item'>{selectedItem.price}</span></div>
             </div>
-            <div class="buttonContainer"><button onClick={closeDialog}>Close</button></div>
+            <div className="buttonContainer"><button onClick={closeDialog}>Close</button></div>
           </div>
         </div>
       )}
