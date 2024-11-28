@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dashboard/static/css/main.ae8d6744.css",
+    "main.css": "/dashboard/static/css/main.5af568f8.css",
     "main.js": "/dashboard/static/js/main.5013875e.js",
     "static/media/Caveat-Regular.ttf": "/dashboard/static/media/Caveat-Regular.419940188ab4de524042.ttf",
     "static/media/dicerolling.gif": "/dashboard/static/media/dicerolling.034789f96a0e9c3922b4.gif",
@@ -10,11 +10,11 @@
     "static/media/dice3.png": "/dashboard/static/media/dice3.f679f4d147bc97dc3254.png",
     "static/media/dice2.png": "/dashboard/static/media/dice2.fc5581ec050f3498cd5b.png",
     "index.html": "/dashboard/index.html",
-    "main.ae8d6744.css.map": "/dashboard/static/css/main.ae8d6744.css.map",
+    "main.5af568f8.css.map": "/dashboard/static/css/main.5af568f8.css.map",
     "main.5013875e.js.map": "/dashboard/static/js/main.5013875e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae8d6744.css",
+    "static/css/main.5af568f8.css",
     "static/js/main.5013875e.js"
   ]
 }
