@@ -4,8 +4,12 @@ import './navlink.css'
 import { Fragment, useContext, useState } from 'react'
 import { ScreenMode } from '../../App'
 import Switch from '@mui/material/Switch'
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 const Header = () => {
+  const {logout, isAuthenticated}=useAuth0();
+
   const [menuOpen, setMenuOpen] = useState(false)
   const [darkMode,setDarkMode]=useState(false)
   const screenModeContext: any = useContext(ScreenMode)
@@ -187,6 +191,17 @@ const Header = () => {
                 }
               >
                 Movie List
+              </NavLink>
+              <NavLink
+                to="/dasboard"
+                onClick={()=>logout()}
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Logout
               </NavLink>
              
               <Switch
