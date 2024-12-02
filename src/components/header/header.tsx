@@ -193,7 +193,7 @@ const Header = () => {
                 Movie List
               </NavLink>
               <NavLink
-                to="/dasboard"
+                to="/logout"
                 onClick={()=>logout()}
                 className={({
                   isActive,

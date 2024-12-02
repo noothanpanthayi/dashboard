@@ -32,7 +32,6 @@ const {loginWithRedirect, isAuthenticated}=useAuth0();
     {
      !isAuthenticated && <main className={styles.main}>
       <LoginButton/>
-      {/* <LogoutButton/> */}
      </main>
     }
       {

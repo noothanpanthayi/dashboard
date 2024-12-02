@@ -1,0 +1,16 @@
+.button {
+    padding:6px 12px;
+    border-radius:4px;
+    width:fit-content;
+    cursor:pointer;
+    line-height: 1.5;
+    border:solid 1px transparent;
+    font-size: 16px;
+    color:#fff;
+    background-color: #0d6efd;
+}
+
+.button:hover {
+    background-color: blue;
+
+}
