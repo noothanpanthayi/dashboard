@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dashboard/static/css/main.ea51eae8.css",
-    "main.js": "/dashboard/static/js/main.de7fa24f.js",
+    "main.css": "/dashboard/static/css/main.9ce3f42a.css",
+    "main.js": "/dashboard/static/js/main.886b4caa.js",
     "static/media/Caveat-Regular.ttf": "/dashboard/static/media/Caveat-Regular.419940188ab4de524042.ttf",
     "static/media/dicerolling.gif": "/dashboard/static/media/dicerolling.034789f96a0e9c3922b4.gif",
     "static/media/dice6.png": "/dashboard/static/media/dice6.6fdc74fbc66ac181f340.png",
@@ -10,11 +10,11 @@
     "static/media/dice3.png": "/dashboard/static/media/dice3.f679f4d147bc97dc3254.png",
     "static/media/dice2.png": "/dashboard/static/media/dice2.fc5581ec050f3498cd5b.png",
     "index.html": "/dashboard/index.html",
-    "main.ea51eae8.css.map": "/dashboard/static/css/main.ea51eae8.css.map",
-    "main.de7fa24f.js.map": "/dashboard/static/js/main.de7fa24f.js.map"
+    "main.9ce3f42a.css.map": "/dashboard/static/css/main.9ce3f42a.css.map",
+    "main.886b4caa.js.map": "/dashboard/static/js/main.886b4caa.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea51eae8.css",
-    "static/js/main.de7fa24f.js"
+    "static/css/main.9ce3f42a.css",
+    "static/js/main.886b4caa.js"
   ]
 }
