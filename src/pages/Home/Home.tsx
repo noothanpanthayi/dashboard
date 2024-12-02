@@ -281,31 +281,37 @@ const Home = () => {
           <ul>
             <li>ReactJs Library</li>
             <li>Redux/RTK Query</li>
+            <li>Redux Saga</li>
           </ul>
+         
           <ul>
+            <li>React Router</li>
             <li>Custom Hooks</li>
             <li>React Virtualization</li>
           </ul>
           <ul>
             <li>TypeScript</li>
             <li>ES6/JavaScript</li>
+            <li>CSS Module</li>
           </ul>
           <ul>
             <li>React Testing Library</li>
             <li>Jest</li>
+          <li>Mock Service Worker</li>
+
           </ul>
           <ul>
             <li>NextJs Framework</li>
             <li>Vercel Cloud</li>
+            <li>PostGreSQL</li>
           </ul>
           <ul>
             <li>NodeJs</li>
             <li>Express</li>
-          </ul>
-          <ul>
-            <li>PostGreSQL</li>
             <li>MongoDB</li>
           </ul>
+       
+         
           {/* <ul>
             <li>Git</li>
             <li>GitHub</li>
