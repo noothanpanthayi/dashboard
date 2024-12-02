@@ -371,6 +371,19 @@ const Header = () => {
                 Form Handling
               </NavLink>
             </li>
+            <li>
+            <NavLink
+                to="/logout"
+                onClick={()=>logout()}
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Logout
+              </NavLink>
+            </li>
 
            
            
