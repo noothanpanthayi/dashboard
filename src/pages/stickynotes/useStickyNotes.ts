@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { STATE, StickyNote } from "./types";
 
 export const useStickyNotes = () => {
+  
   const [state, setState] = useState<STATE>({
     stickynotes: [
       {
