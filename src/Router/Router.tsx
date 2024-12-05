@@ -27,7 +27,7 @@ const AppRouter = () => {
     <div className={styles.container}>
     <Routes>
 
-      <Route  path="*" element={<Home />} />
+      <Route  path="/" element={<Home />} />
       <Route  path="/dashboard" element={<Home />}></Route>
       <Route  path="/shopping" element={<Shopping />}></Route>
       <Route  path="/world" element={<World />}></Route>
@@ -50,6 +50,7 @@ const AppRouter = () => {
       <Route  path="/mern" element={<MERN/>}></Route>
       <Route  path="/diceroller" element={<DiceRoller/>}></Route>
       <Route  path="/moviesaga" element={<MovieSaga/>}></Route>
+      <Route  path="*" element={<Home />} />
 
       
 
