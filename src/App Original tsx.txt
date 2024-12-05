@@ -29,7 +29,11 @@ const {loginWithRedirect, isAuthenticated}=useAuth0();
  
   return (
     <>
-    
+    {
+     !isAuthenticated && <main className={styles.main}>
+      <LoginButton/>
+     </main>
+    }
       {
         
     <ScreenMode.Provider value={value}>
@@ -37,7 +41,11 @@ const {loginWithRedirect, isAuthenticated}=useAuth0();
       <div className={state.screenmode==='light'?light:dark}>
         <HashRouter>
           <Header />
-       <AppRouter />
+{
+       isAuthenticated && <AppRouter />
+}
+          
+
           <Footer />
         </HashRouter>
         </div>
