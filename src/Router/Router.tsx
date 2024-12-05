@@ -51,12 +51,6 @@ const AppRouter = () => {
       <Route  path="/diceroller" element={<DiceRoller/>}></Route>
       <Route  path="/moviesaga" element={<MovieSaga/>}></Route>
       <Route  path="*" element={<Home />} />
-
-      
-
-
-
-
     </Routes>
     </div>
   )
