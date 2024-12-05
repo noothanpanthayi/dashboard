@@ -50,7 +50,7 @@ const AppRouter = () => {
       <Route  path="/mern" element={<MERN/>}></Route>
       <Route  path="/diceroller" element={<DiceRoller/>}></Route>
       <Route  path="/moviesaga" element={<MovieSaga/>}></Route>
-      <Route  path="*" element={<Home />} />
+      {/* <Route  path="*" element={<Home />} /> */}
     </Routes>
     </div>
   )
