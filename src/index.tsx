@@ -16,15 +16,15 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <Provider store={store}>
-    {/* <Auth0Provider 
+    <Auth0Provider 
     domain={domain} 
     clientId={clientId}
     authorizationParams={{
       redirect_uri: prod?'https://noothanpanthayi.github.io/dashboard/':window.location.origin
   }}
-    > */}
+    >
     
     <App />
-    {/* </Auth0Provider> */}
+    </Auth0Provider>
   </Provider>
 )
