@@ -8,11 +8,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 let prod=process.env.NODE_ENV==='production';
 
-// const domain:any=prod ?process.env.REACT_APP_AUTH0_PROD_DOMAIN:process.env.REACT_APP_AUTH0_DOMAIN
-// const clientId:any=prod ?process.env.REACT_APP_AUTH0_PROD_CLIENT_ID:process.env.REACT_APP_AUTH0_CLIENT_ID;
-
-const domain:any=prod ?process.env.REACT_APP_AWS_AUTH0_PROD_DOMAIN:process.env.REACT_APP_AUTH0_DOMAIN
-const clientId:any=prod ?process.env.REACT_APP_AWS_AUTH0_PROD_CLIENT_ID:process.env.REACT_APP_AUTH0_CLIENT_ID;
+const domain:any=prod ?process.env.REACT_APP_AUTH0_PROD_DOMAIN:process.env.REACT_APP_AUTH0_DOMAIN
+const clientId:any=prod ?process.env.REACT_APP_AUTH0_PROD_CLIENT_ID:process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 const rootElement:HTMLElement | any=document.getElementById('root')
 const root = ReactDOM.createRoot(rootElement);
