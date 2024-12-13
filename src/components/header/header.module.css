@@ -64,7 +64,7 @@ a span.bold:visited {
 
 }
 
-@media (max-width:1530px){
+@media (max-width:1600px){
   nav {
     display:none;
   };
@@ -81,7 +81,7 @@ a span.bold:visited {
   color:#fff
 }
 
-@media (min-width:1530px){
+@media (min-width:1601px){
   .hamburger {
     display:none;
   }
