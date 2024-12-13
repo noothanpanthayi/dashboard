@@ -45,26 +45,6 @@ const Home = () => {
         </Fragment>
       ),
     },
-    
-    {
-      title: "Custom Grid",
-      url: "/grid",
-      description: (
-        <Fragment>
-          <p>
-            Grid is used to display the data in tabular format which has rows
-            and columns.
-          </p>
-          <p>
-            Users can edit the field like an <span>Excel Sheet</span> by
-            directly clicking on the cell. This also has Add and Sort feature.
-          </p>
-          <p>
-            <span>CSS Grid</span> is used to display the grid layout
-          </p>
-        </Fragment>
-      ),
-    },
 
     {
       title: "Online Shopping",
@@ -104,6 +84,47 @@ const Home = () => {
       ),
     },
     {
+      title: "SSR with NextJs & PostGreSQL on AWS",
+      url: "/ssr",
+      description: (
+        <Fragment>
+          <p>
+            This <span>Next.js</span> application hosted on <span>AWS Cloud</span>, utilizes the{" "}
+            <span>App Router feature</span>. It sends an HTTP request to it's
+            backend server. The server queries the <span>PostgreSQL</span>{" "}
+            database to retrieve the product list, renders it server-side, and
+            sends it to the client.
+          </p>
+          <p>
+            Upon reaching the client, the data is hydrated, and the 'Add to
+            Cart' button becomes active
+          </p>
+        </Fragment>
+      ),
+    },
+    {
+      title: "Custom Grid",
+      url: "/grid",
+      description: (
+        <Fragment>
+          <p>
+            Grid is used to display the data in tabular format which has rows
+            and columns.
+          </p>
+          <p>
+            Users can edit the field like an <span>Excel Sheet</span> by
+            directly clicking on the cell. This also has Add and Sort feature.
+          </p>
+          <p>
+            <span>CSS Grid</span> is used to display the grid layout
+          </p>
+        </Fragment>
+      ),
+    },
+
+   
+ 
+    {
       title: "MERN Application on Vercel",
       url: "/mern",
       description: (
@@ -121,25 +142,7 @@ const Home = () => {
         </Fragment>
       ),
     },
-    {
-      title: "Server Side Rendering",
-      url: "/ssr",
-      description: (
-        <Fragment>
-          <p>
-            This <span>Next.js</span> application utilizes the{" "}
-            <span>App Router feature</span>. It sends an HTTP request to it's
-            backend server. The server queries the <span>PostgreSQL</span>{" "}
-            database to retrieve the product list, renders it server-side, and
-            sends it to the client.
-          </p>
-          <p>
-            Upon reaching the client, the data is hydrated, and the 'Add to
-            Cart' button becomes active
-          </p>
-        </Fragment>
-      ),
-    },
+   
     {
       title: "Tic-Tac-Toe",
       url: "/tictactoe",
@@ -302,7 +305,7 @@ const Home = () => {
           </ul>
           <ul>
             <li>NextJs Framework</li>
-            <li>Vercel Cloud</li>
+            <li>AWS Cloud</li>
             <li>PostGreSQL</li>
           </ul>
           <ul>

@@ -78,16 +78,6 @@ const Header = () => {
                 Sticky Notes
               </NavLink>
               <NavLink
-                to="/grid"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : 'bold'
-                }
-              >
-                Custom Grid
-              </NavLink>
-              <NavLink
                 to="/shopping"
                 className={({
                   isActive,
@@ -108,6 +98,28 @@ const Header = () => {
                 Large Data Set
               </NavLink>
               <NavLink
+                to="/ssr"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                SSR on AWS
+              </NavLink>
+              <NavLink
+                to="/grid"
+                className={({
+                  isActive,
+                }: { isActive: boolean; isPending: boolean } | any) =>
+                  isActive ? 'active' : 'bold'
+                }
+              >
+                Custom Grid
+              </NavLink>
+             
+              
+              <NavLink
                 to="/mern"
                 className={({
                   isActive,
@@ -117,16 +129,7 @@ const Header = () => {
               >
                 MERN
               </NavLink>
-              <NavLink
-                to="/ssr"
-                className={({
-                  isActive,
-                }: { isActive: boolean; isPending: boolean } | any) =>
-                  isActive ? 'active' : 'bold'
-                }
-              >
-                SSR
-              </NavLink>
+           
               <NavLink
                 to="/tictactoe"
                 className={({
