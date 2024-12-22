@@ -3,7 +3,7 @@ import styles from './ssr.module.css';
 const SSR = () => {
   return <>
   <div className={styles.container}>
-        <iframe id="myIframe" className={styles.iframe} src="http://54.166.17.121/products" title="description"></iframe>
+        <iframe id="myIframe" className={styles.iframe} src="https://main.d3ce7oqr41spe3.amplifyapp.com/products" title="description"></iframe>
         </div>
         </>
 }
