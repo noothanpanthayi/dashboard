@@ -105,7 +105,7 @@ const Header = () => {
                   isActive ? 'active' : 'bold'
                 }
               >
-                SSR on AWS
+                NextJs on AWS
               </NavLink>
               <NavLink
                 to="/grid"
@@ -306,7 +306,7 @@ const Header = () => {
                   isActive ? 'active' : ''
                 }
               >
-                SSR
+                NextJs on AWS
               </NavLink>
             </li>
             <li>
