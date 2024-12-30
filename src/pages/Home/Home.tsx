@@ -89,7 +89,7 @@ const Home = () => {
       description: (
         <Fragment>
           <p>
-            This <span>Next.js</span> application hosted on <span>AWS Cloud</span>, utilizes the{" "}
+            This <span>Next.js</span> application hosted on <span>AWS</span>, utilizes the{" "}
             <span>App Router feature</span>. It sends an HTTP request to it's
             backend server. The server queries the <span>PostgreSQL</span>{" "}
             database to retrieve the product list, renders it server-side, and
