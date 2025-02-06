@@ -51,7 +51,13 @@ a span.bold:visited {
   color:#fff
 }
 
+.hamburgerMenu ul {
+  margin:0;
+  padding:0
+}
+
 .hamburgerMenu ul li {
+  list-style: none;
   line-height:30px;
   padding:10px 48px;
   border-bottom: solid 1px mediumaquamarine;

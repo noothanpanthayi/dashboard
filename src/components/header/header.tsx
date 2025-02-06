@@ -286,8 +286,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="https://autodealerclient.vercel.app/"
-                target="_blank"
+                to="/mern"
                 className={({
                   isActive,
                 }: { isActive: boolean; isPending: boolean } | any) =>
@@ -374,7 +373,7 @@ const Header = () => {
                 Form Handling
               </NavLink>
             </li>
-            <li>
+            {/* <li> */}
             {/* <NavLink
                 to="/logout"
                 onClick={()=>logout()}
@@ -386,7 +385,7 @@ const Header = () => {
               >
                 Logout
               </NavLink> */}
-            </li>
+            {/* </li> */}
 
            
            

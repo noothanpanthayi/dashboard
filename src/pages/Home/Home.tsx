@@ -284,7 +284,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
           </p>
         </Fragment>
       ),
-    },
+    }
   ];
 
   const doNavigate = (url: any) => {
