@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from "@testing-library/react";
-import { Stickynotes } from "./Stickynotes";
+import Stickynotes from "./Stickynotes";
 
 function getRole(role: string): HTMLElement {
   return screen.getByRole(role);

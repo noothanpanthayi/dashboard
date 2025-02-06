@@ -185,7 +185,7 @@ const Header = () => {
                 Form Handling
               </NavLink>
               
-              <NavLink
+              {/* <NavLink
                 to="/moviesaga"
                 className={({
                   isActive,
@@ -194,8 +194,8 @@ const Header = () => {
                 }
               >
                 Movie List
-              </NavLink>
-              <NavLink
+              </NavLink> */}
+              {/* <NavLink
                 to="/logout"
                 onClick={()=>logout()}
                 className={({
@@ -205,7 +205,7 @@ const Header = () => {
                 }
               >
                 Logout
-              </NavLink>
+              </NavLink> */}
              
               <Switch
                checked={darkMode}
@@ -375,7 +375,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-            <NavLink
+            {/* <NavLink
                 to="/logout"
                 onClick={()=>logout()}
                 className={({
@@ -385,7 +385,7 @@ const Header = () => {
                 }
               >
                 Logout
-              </NavLink>
+              </NavLink> */}
             </li>
 
            

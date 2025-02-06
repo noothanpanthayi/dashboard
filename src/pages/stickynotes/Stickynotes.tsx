@@ -5,7 +5,7 @@ import { Switch } from "@mui/material";
 import { useStickyNotes } from "./useStickyNotes";
 import { StickyNote } from "./types";
 
-export const Stickynotes = () => {
+const Stickynotes = () => {
   
   const {
     state,
@@ -105,3 +105,5 @@ const {
   enableEditTxt,
   rwmode,
 } = styles;
+
+export default Stickynotes 
