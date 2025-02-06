@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[201],{5201:(s,e,r)=>{r.r(e),r.d(e,{default:()=>t});r(2791);const a="ssr_iframe__j1z8y",c="ssr_container__5r+q2";var i=r(184);const t=()=>(0,i.jsx)(i.Fragment,{children:(0,i.jsx)("div",{className:c,children:(0,i.jsx)("iframe",{id:"myIframe",className:a,src:"https://main.d3ce7oqr41spe3.amplifyapp.com/products",title:"description"})})})}}]);
+//# sourceMappingURL=201.0607873c.chunk.js.map
