@@ -97,7 +97,7 @@ const Header = () => {
               >
                 Large Data Set
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/ssr"
                 className={({
                   isActive,
@@ -106,7 +106,7 @@ const Header = () => {
                 }
               >
                 NextJs on AWS
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 to="/grid"
                 className={({
@@ -296,7 +296,7 @@ const Header = () => {
                 MERN
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/ssr"
                 className={({
@@ -307,7 +307,7 @@ const Header = () => {
               >
                 NextJs on AWS
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 to="/tictactoe"
