@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[181],{3181:(e,t,s)=>{s.r(t),s.d(t,{default:()=>c});const r="mern_iframe__46eiu";var a=s(184);const c=()=>(0,a.jsx)("iframe",{className:r,src:"https://autodealerclient.vercel.app/",title:"description"})}}]);
+//# sourceMappingURL=181.f2194011.chunk.js.map
