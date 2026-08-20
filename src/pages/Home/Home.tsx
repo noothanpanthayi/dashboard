@@ -21,6 +21,20 @@ const Home = () => {
 
   const apps = [
     {
+      title: "NextJs Demo",
+      url: "https://next-js-features-theta.vercel.app/",
+      description: (
+        <Fragment>
+          <p>
+            This project showcases a Next.js implementation of pagination and
+            infinite scroll using SSR, ISR, SSG, and CSR rendering strategies.
+          </p>
+          <p>The application includes authentication powered by NextAuth.</p>
+          <p>Both light and dark themes are supported throughout the UI.</p>
+        </Fragment>
+      ),
+    },
+    {
       title: "Sticky Notes",
       url: "/stickynotes",
       description: (
@@ -89,11 +103,11 @@ const Home = () => {
       description: (
         <Fragment>
           <p>
-            This <span>Next.js</span> application hosted on <span>AWS</span>, utilizes the{" "}
-            <span>App Router feature</span>. It sends an HTTP request to it's
-            backend server. The server queries the <span>PostgreSQL</span>{" "}
-            database to retrieve the product list, renders it server-side, and
-            sends it to the client.
+            This <span>Next.js</span> application hosted on <span>AWS</span>,
+            utilizes the <span>App Router feature</span>. It sends an HTTP
+            request to it's backend server. The server queries the{" "}
+            <span>PostgreSQL</span> database to retrieve the product list,
+            renders it server-side, and sends it to the client.
           </p>
           <p>
             Upon reaching the client, the data is hydrated, and the 'Add to
@@ -105,23 +119,23 @@ const Home = () => {
     /*
 This demo illustrates the micro frontend design pattern using Module Federation. A React container application dynamically imports two independent React applications, each developed and deployed separately in the AWS Cloud. The combined application showcases seamless integration and unified display of these micro frontends on a single page, highlighting the benefits of modularity, scalability, and independent deployment.
     */
-// {
-//   title: "Micro Frontend using Module Federation",
-//   url: "/ssr",
-//   description: (
-//     <Fragment>
-//       <p>
-//       This demo illustrates the <span>Micro Frontend</span> design pattern using <span>Module Federation</span>. 
-      
-//       <p>A React container application dynamically imports two independent React applications, 
-//       each developed and deployed separately in the <span>AWS Cloud</span>
-//       </p>
-      
-//       </p>
-     
-//     </Fragment>
-//   ),
-// },
+    // {
+    //   title: "Micro Frontend using Module Federation",
+    //   url: "/ssr",
+    //   description: (
+    //     <Fragment>
+    //       <p>
+    //       This demo illustrates the <span>Micro Frontend</span> design pattern using <span>Module Federation</span>.
+
+    //       <p>A React container application dynamically imports two independent React applications,
+    //       each developed and deployed separately in the <span>AWS Cloud</span>
+    //       </p>
+
+    //       </p>
+
+    //     </Fragment>
+    //   ),
+    // },
     {
       title: "Custom Grid",
       url: "/grid",
@@ -142,8 +156,6 @@ This demo illustrates the micro frontend design pattern using Module Federation.
       ),
     },
 
-   
- 
     {
       title: "MERN Application on Vercel",
       url: "/mern",
@@ -162,7 +174,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
         </Fragment>
       ),
     },
-   
+
     {
       title: "Tic-Tac-Toe",
       url: "/tictactoe",
@@ -187,10 +199,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
         </Fragment>
       ),
     },
-   
-  
 
- 
     {
       title: "World Info",
       url: "/world",
@@ -209,7 +218,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
         </Fragment>
       ),
     },
-    
+
     {
       title: "Dice Roller App",
       url: "/diceroller",
@@ -284,7 +293,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
           </p>
         </Fragment>
       ),
-    }
+    },
   ];
 
   const doNavigate = (url: any) => {
@@ -299,14 +308,16 @@ This demo illustrates the micro frontend design pattern using Module Federation.
     <Fragment>
       <div className={pageHeader}>ReactJs Applications</div>
       <div className={hiLites}>
-        <div className={hlTitle}>Tech Stacks and features used to develop these Apps</div>
+        <div className={hlTitle}>
+          Tech Stacks and features used to develop these Apps
+        </div>
         <div className={hlGrid}>
           <ul>
             <li>ReactJs Library</li>
             <li>Redux/RTK Query</li>
             <li>Redux Saga</li>
           </ul>
-         
+
           <ul>
             <li>React Router</li>
             <li>Custom Hooks</li>
@@ -320,8 +331,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
           <ul>
             <li>React Testing Library</li>
             <li>Jest</li>
-          <li>Mock Service Worker</li>
-
+            <li>Mock Service Worker</li>
           </ul>
           <ul>
             <li>NextJs Framework</li>
@@ -333,8 +343,7 @@ This demo illustrates the micro frontend design pattern using Module Federation.
             <li>Express</li>
             <li>MongoDB</li>
           </ul>
-       
-         
+
           {/* <ul>
             <li>Git</li>
             <li>GitHub</li>
